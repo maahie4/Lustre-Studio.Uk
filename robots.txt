@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Block nothing — the whole site should be indexed
+Disallow:
+
+# Tell all crawlers where the sitemap is
+Sitemap: https://lustrestudio.uk/sitemap.xml
+
+# Allow all major AI crawlers for GEO (ChatGPT, Perplexity, Bing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
