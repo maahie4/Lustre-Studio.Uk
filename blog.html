@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTMN7MHZL9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MTMN7MHZL9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#7A0016">
+    <title>Blog | Lustrestudio | Marketing Insights for Wedding Photographers</title>
+    <meta name="description" content="Marketing guides, Instagram Reel strategies, and growth tips for wedding photographers. Learn how to turn your galleries into inquiries.">
+    <meta name="keywords" content="wedding photography marketing, instagram reels tips, photographer blog, social media for photographers">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lustrestudio.uk/blog.html">
+    <meta property="og:title" content="Blog | Lustrestudio | Marketing Insights for Wedding Photographers">
+    <meta property="og:description" content="Marketing guides, Instagram Reel strategies, and growth tips for wedding photographers.">
+    <meta property="og:image" content="https://lustrestudio.uk/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Inherited Styles from index.html */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-canvas: #FAF8F5;
+            --surface: #F0EAE0;
+            --border: #D4C4B0;
+            --body-text: #8C7B6B;
+            --heading-cta: #3D2E22;
+            --logo-primary: #1A120C;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+        body {
+            font-family: 'Jost', sans-serif;
+            color: var(--body-text);
+            background-color: var(--bg-canvas);
+            line-height: 1.8;
+            letter-spacing: 0.01em;
+            font-weight: 300;
+        }
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            color: var(--heading-cta);
+        }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 4rem; }
+        nav {
+            padding: 2.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img { height: 64px; width: auto; }
+        .nav-links { display: flex; gap: 3rem; }
+        .nav-link {
+            text-decoration: none;
+            color: var(--body-text);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            transition: opacity 0.3s;
+        }
+        .nav-link:hover { opacity: 0.6; }
+        
+        .blog-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        .blog-header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .blog-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 4rem;
+            padding-bottom: 8rem;
+        }
+
+        .blog-card {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        .blog-card-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: var(--surface);
+            border: 0.5px solid var(--border);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .blog-card-image i {
+            font-size: 3rem;
+            color: var(--border);
+        }
+        .blog-card-meta {
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.7rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-cta);
+        }
+        .blog-card h2 {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .blog-card p {
+            font-size: 1rem;
+            color: var(--body-text);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            nav { padding: 1.5rem; }
+            .nav-links { display: none; }
+            .blog-header h1 { font-size: 2.5rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            border-top: 0.5px solid var(--border);
+            padding: 4rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="Lustre-Studio-Logo.png" alt="Lustre Studio Logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="seemywork.html" class="nav-link">Work</a>
+            <a href="website.html" class="nav-link">Websites</a>
+            <a href="blog.html" class="nav-link" style="font-weight: 500;">Blog</a>
+            <a href="index.html#proposal" class="nav-link">Get Free Reel</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="blog-header fade-in">
+            <span style="text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.8rem;">Resource Library</span>
+            <h1>The Lustre Journal</h1>
+            <p>Strategies for wedding photographers who want to dominate Instagram and stay booked.</p>
+        </header>
+
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <a href="instagram-reels-wedding-photographers-2026.html" class="blog-card fade-in">
+                <div class="blog-card-image">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="blog-card-meta">Marketing • April 2026</div>
+                <h2>Instagram Reels for Wedding Photographers: The Complete 2026 Guide</h2>
+                <p>How to turn your wedding galleries into high-performing video content that generates actual inquiries.</p>
+            </a>
+
+            <!-- Placeholder for future blogs -->
+            <div class="blog-card fade-in" style="opacity: 0.5; pointer-events: none;">
+                <div class="blog-card-image">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <div class="blog-card-meta">Strategy • Coming Soon</div>
+                <h2>Booking Your Ideal Client with Short-Form Content</h2>
+                <p>The subtle art of attracting high-ticket couples through cinematic storytelling.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;">© 2026 Lustrestudio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

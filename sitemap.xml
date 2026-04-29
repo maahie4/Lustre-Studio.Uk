@@ -28,4 +28,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog Listing -->
+  <url>
+    <loc>https://lustrestudio.uk/blog.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: Instagram Reels 2026 -->
+  <url>
+    <loc>https://lustrestudio.uk/instagram-reels-wedding-photographers-2026.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
