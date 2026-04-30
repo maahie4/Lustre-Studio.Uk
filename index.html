@@ -3,14 +3,14 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y47ZH5Y44"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y47ZH5Y44"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-8Y47ZH5Y44');
-</script>
+        gtag('config', 'G-8Y47ZH5Y44');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#7A0016">
@@ -201,6 +201,30 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Lustrestudio works primarily with wedding photographers who are already shooting great work but struggle with consistent Instagram content, slow inquiry periods, or spending too much time editing reels themselves."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to film anything new?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. We work entirely from your existing wedding galleries. Send us a Pixieset, Dropbox, or Google Drive link and we handle everything from there. Most photographers have months of unused footage sitting on their hard drives \u2014 that's exactly what we turn into content."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Am I locked into a contract?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All packages are monthly with no minimum commitment. Cancel anytime with 30 days notice. We'd rather earn your loyalty through the quality of the work than lock you in with a contract."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What do I actually send you?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Just a gallery link. We do the rest \u2014 selecting the best moments, building the hook, syncing music, writing the caption, and delivering a finished Reel to your inbox within 48 hours."
               }
             }
           ]
@@ -1611,7 +1635,7 @@
 
     <!-- The Problem Section -->
     <!-- The Problem & Solution Section -->
-    <section id="how-it-works" class="problem-section" style="padding: 6rem 0;">
+    <section id="the-problem" class="problem-section" style="padding: 6rem 0;">
         <div class="container">
             <div class="split-grid">
                 <!-- Left: Problem -->
@@ -1757,6 +1781,35 @@
 
 
 
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works" style="padding: 10rem 0; background-color: var(--surface); border-top: 0.5px solid var(--border);">
+        <div class="container">
+            <span class="mono" style="color: var(--heading-cta); margin-bottom: 2rem; display: block; font-weight: 700; text-align: center;">How It Works</span>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+                <div class="process-step fade-in">
+                    <div class="step-number" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--heading-cta); margin-bottom: 1rem;">Step 01</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--heading-cta);">Send Your Gallery</h3>
+                    <p style="color: var(--body-text); line-height: 1.7;">Drop us a link to your existing wedding gallery. Pixieset, Dropbox, Google Drive, WeTransfer \u2014 anything works. No new shoots needed. No filming required. Just the work you've already done.</p>
+                </div>
+                <div class="process-step fade-in" style="transition-delay: 0.1s;">
+                    <div class="step-number" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--heading-cta); margin-bottom: 1rem;">Step 02</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--heading-cta);">We Edit</h3>
+                    <p style="color: var(--body-text); line-height: 1.7;">We select the best moments, build the hook, sync to music, and craft a caption designed to generate inquiries \u2014 not just likes. Every edit is built specifically for Instagram's algorithm in 2026.</p>
+                </div>
+                <div class="process-step fade-in" style="transition-delay: 0.2s;">
+                    <div class="step-number" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--heading-cta); margin-bottom: 1rem;">Step 03</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--heading-cta);">You Post and Get Booked</h3>
+                    <p style="color: var(--body-text); line-height: 1.7;">Your finished Reel lands in your inbox within 48 hours. Post it, watch the saves and DMs come in, and send us your next gallery.</p>
+                </div>
+            </div>
+            
+            <div class="fade-in" style="text-align: center; margin-top: 4rem;">
+                <p style="font-family: 'Jost', sans-serif; font-size: 1.1rem; color: var(--heading-cta); font-weight: 500;">That's it. No briefs. No back and forth. No learning curve.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="packages" class="packages">
         <div class="container">
@@ -1776,6 +1829,7 @@
                         <li>Caption writing</li>
                     </ul>
                     <a href="#proposal" class="btn">Get Started</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--body-text); text-align: center; line-height: 1.5;">No contracts. No lock-in.<br>Cancel anytime with 30 days notice.</p>
                 </div>
                 <!-- Bookings (Most Popular) -->
                 <div class="package-card fade-in"
@@ -1797,6 +1851,7 @@
                         <li>Performance-based tweaks (what’s working → more of it)</li>
                     </ul>
                     <a href="#proposal" class="btn">Get Started</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--body-text); text-align: center; line-height: 1.5;">No contracts. No lock-in.<br>Cancel anytime with 30 days notice.</p>
                 </div>
                 <!-- Authority -->
                 <div class="package-card fade-in">
@@ -1813,6 +1868,7 @@
                         <li>Monthly content direction & optimization</li>
                     </ul>
                     <a href="#proposal" class="btn">Apply Now</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--body-text); text-align: center; line-height: 1.5;">No contracts. No lock-in.<br>Cancel anytime with 30 days notice.</p>
                 </div>
             </div>
 
@@ -1879,6 +1935,21 @@
                 <div class="faq-item fade-in">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 1.2rem; color: var(--heading-cta);">Will this guarantee bookings?</h3>
                     <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">No one can guarantee bookings. But we do ensure your work is consistently visible in front of the right audience.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 1.2rem; color: var(--heading-cta);">Do I need to film anything new?</h3>
+                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">No. We work entirely from your existing wedding galleries. Send us a Pixieset, Dropbox, or Google Drive link and we handle everything from there. Most photographers have months of unused footage sitting on their hard drives \u2014 that's exactly what we turn into content.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 1.2rem; color: var(--heading-cta);">Am I locked into a contract?</h3>
+                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">No. All packages are monthly with no minimum commitment. Cancel anytime with 30 days notice. We'd rather earn your loyalty through the quality of the work than lock you in with a contract.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 1.2rem; color: var(--heading-cta);">What do I actually send you?</h3>
+                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">Just a gallery link. We do the rest \u2014 selecting the best moments, building the hook, syncing music, writing the caption, and delivering a finished Reel to your inbox within 48 hours.</p>
                 </div>
             </div>
         </div>

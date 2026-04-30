@@ -2,26 +2,88 @@
 <html lang="en">
 
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y47ZH5Y44"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8Y47ZH5Y44');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y47ZH5Y44"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8Y47ZH5Y44');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#7A0016">
-    <title>Blog | Lustrestudio | Marketing Insights for Wedding Photographers</title>
+    <title>Blog — Lustre Studio | Marketing for Wedding Photographers</title>
     <meta name="description" content="Marketing guides, Instagram Reel strategies, and growth tips for wedding photographers. Learn how to turn your galleries into inquiries.">
     <meta name="keywords" content="wedding photography marketing, instagram reels tips, photographer blog, social media for photographers">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en-GB">
+    <meta name="author" content="Lustre Studio">
+    <link rel="canonical" href="https://lustrestudio.uk/blog.html">
+    <meta property="og:site_name" content="Lustre Studio">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Lustre Studio | Marketing for Wedding Photographers">
+    <meta name="twitter:description" content="Instagram Reel strategies, marketing guides, and growth tips for wedding photographers who want to stay booked.">
+    <meta name="twitter:image" content="https://lustrestudio.uk/og-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://lustrestudio.uk/blog.html",
+          "name": "The Lustre Journal",
+          "description": "Marketing strategies, Instagram Reel guides, and growth tips for wedding photographers who want to dominate Instagram and stay booked.",
+          "url": "https://lustrestudio.uk/blog.html",
+          "inLanguage": "en-GB",
+          "publisher": {
+            "@id": "https://lustrestudio.uk/#business"
+          },
+          "isPartOf": {
+            "@id": "https://lustrestudio.uk/#website"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lustrestudio.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://lustrestudio.uk/blog.html"
+              }
+            ]
+          },
+          "blogPost": [
+            {
+              "@type": "BlogPosting",
+              "headline": "Instagram Reels for Wedding Photographers: The Complete 2026 Guide",
+              "url": "https://lustrestudio.uk/instagram-reels-wedding-photographers-2026.html",
+              "datePublished": "2026-04-29",
+              "description": "How to turn your wedding galleries into high-performing video content that generates actual inquiries.",
+              "author": {
+                "@id": "https://lustrestudio.uk/#business"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lustrestudio.uk/blog.html">
-    <meta property="og:title" content="Blog | Lustrestudio | Marketing Insights for Wedding Photographers">
+    <meta property="og:title" content="Blog — Lustre Studio | Marketing for Wedding Photographers">
     <meta property="og:description" content="Marketing guides, Instagram Reel strategies, and growth tips for wedding photographers.">
     <meta property="og:image" content="https://lustrestudio.uk/og-image.png">
 
@@ -149,10 +211,88 @@
             transform: translateY(0);
         }
 
+        .menu-trigger {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            nav {
+                padding: 2.25rem 2rem;
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+
+            .menu-trigger {
+                display: block !important;
+                background: none;
+                border: none;
+                color: var(--heading-cta) !important;
+                font-family: 'Jost', monospace;
+                font-size: 0.9rem;
+                letter-spacing: 0.25em;
+                cursor: pointer;
+                padding: 0.5rem;
+                margin-right: -0.5rem;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--black);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .overlay-close {
+            position: absolute;
+            top: 2.5rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-family: 'Jost', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+        }
+
+        .overlay-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay-link:hover {
+            opacity: 0.5;
+        }
+
         @media (max-width: 768px) {
             .container { padding: 0 1.5rem; }
-            nav { padding: 1.5rem; }
-            .nav-links { display: none; }
             .blog-header h1 { font-size: 2.5rem; }
             .blog-grid { grid-template-columns: 1fr; }
         }
@@ -177,7 +317,18 @@
             <a href="blog.html" class="nav-link" style="font-weight: 500;">Blog</a>
             <a href="index.html#proposal" class="nav-link">Get Free Reel</a>
         </div>
+        <button class="menu-trigger" id="menu-open">MENU</button>
     </nav>
+
+    <!-- Mobile Overlay Navigation -->
+    <div class="mobile-overlay" id="mobile-overlay">
+        <button class="overlay-close" id="menu-close">CLOSE</button>
+        <a href="index.html" class="overlay-link">Home</a>
+        <a href="seemywork.html" class="overlay-link">Work</a>
+        <a href="website.html" class="overlay-link">Websites</a>
+        <a href="blog.html" class="overlay-link">Blog</a>
+        <a href="index.html#proposal" class="overlay-link">Get Free Reel</a>
+    </div>
 
     <div class="container">
         <header class="blog-header fade-in">
@@ -221,6 +372,33 @@
         }, observerOptions);
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Mobile Menu Logic
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const overlayLinks = document.querySelectorAll('.overlay-link');
+
+        if (menuOpen && mobileOverlay) {
+            menuOpen.addEventListener('click', () => {
+                mobileOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (menuClose && mobileOverlay) {
+            menuClose.addEventListener('click', () => {
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        overlayLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
     </script>
 </body>
 
