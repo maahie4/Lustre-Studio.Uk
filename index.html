@@ -228,8 +228,20 @@
               }
             }
           ]
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Golden Glow Photography Owner"
+          },
+          "reviewBody": "Working with this creator was an absolute pleasure. They took my ideas, elevated them, and delivered a reel that perfectly captured my message and personality. The attention to detail, creativity, and quick turnaround genuinely impressed me. I’m so grateful for their talent — highly recommend!"
         }
-
       ]
     }
     </script>
@@ -975,11 +987,44 @@
 
         /* Testimonials */
         .testimonial {
-            background-color: var(--surface);
+            background-color: var(--bg-canvas);
             padding: 5rem;
             border-radius: 2px;
-            box-shadow: none;
             border: 0.5px solid var(--border);
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            line-height: 1.4;
+            color: var(--heading-cta);
+            font-style: italic;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .testimonial-name {
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--heading-cta);
+        }
+
+        .testimonial-role {
+            font-size: 0.7rem;
+            color: var(--body-text);
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
         }
 
         /* Packages (Renamed from Services) */
@@ -1779,6 +1824,24 @@
         </div>
     </section>
 
+    <!-- Testimonial Section -->
+    <section id="reviews" class="testimonials-section" style="padding: 8rem 0; background-color: var(--surface); border-top: 0.5px solid var(--border);">
+        <div class="container">
+            <div class="testimonial fade-in" style="max-width: 1000px; margin: 0 auto;">
+                <div style="font-size: 2rem; color: var(--heading-cta); margin-bottom: 2.5rem; opacity: 0.3;">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-quote">
+                    "Working with this creator was an absolute pleasure. They took my ideas, elevated them, and delivered a reel that perfectly captured my message and personality. The attention to detail, creativity, and quick turnaround genuinely impressed me. I’m so grateful for their talent — highly recommend!"
+                </p>
+                <div class="testimonial-author">
+                    <span class="testimonial-name">BY GOLDEN GLOW PHOTOGRAPHY OWNER</span>
+                    <span class="testimonial-role">Verified Client</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- How It Works Section -->
@@ -1790,12 +1853,12 @@
                 <div class="process-step fade-in">
                     <div class="step-number" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--heading-cta); margin-bottom: 1rem;">Step 01</div>
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--heading-cta);">Send Your Gallery</h3>
-                    <p style="color: var(--body-text); line-height: 1.7;">Drop us a link to your existing wedding gallery. Pixieset, Dropbox, Google Drive, WeTransfer anything works. No new shoots needed. No filming required. Just the work you've already done.</p>
+                    <p style="color: var(--body-text); line-height: 1.7;">Drop us a link to your existing wedding gallery. Pixieset, Dropbox, Google Drive, WeTransfer \u2014 anything works. No new shoots needed. No filming required. Just the work you've already done.</p>
                 </div>
                 <div class="process-step fade-in" style="transition-delay: 0.1s;">
                     <div class="step-number" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--heading-cta); margin-bottom: 1rem;">Step 02</div>
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--heading-cta);">We Edit</h3>
-                    <p style="color: var(--body-text); line-height: 1.7;">We select the best moments, build the hook, sync to music, and craft a caption designed to generate inquiries  not just likes. Every edit is built specifically for Instagram's algorithm in 2026.</p>
+                    <p style="color: var(--body-text); line-height: 1.7;">We select the best moments, build the hook, sync to music, and craft a caption designed to generate inquiries \u2014 not just likes. Every edit is built specifically for Instagram's algorithm in 2026.</p>
                 </div>
                 <div class="process-step fade-in" style="transition-delay: 0.2s;">
                     <div class="step-number" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--heading-cta); margin-bottom: 1rem;">Step 03</div>
@@ -1939,7 +2002,7 @@
                 
                 <div class="faq-item fade-in">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 1.2rem; color: var(--heading-cta);">Do I need to film anything new?</h3>
-                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">No. We work entirely from your existing wedding galleries. Send us a Pixieset, Dropbox, or Google Drive link and we handle everything from there. Most photographers have months of unused footage sitting on their hard drives that's exactly what we turn into content.</p>
+                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">No. We work entirely from your existing wedding galleries. Send us a Pixieset, Dropbox, or Google Drive link and we handle everything from there. Most photographers have months of unused footage sitting on their hard drives \u2014 that's exactly what we turn into content.</p>
                 </div>
                 
                 <div class="faq-item fade-in">
@@ -1949,7 +2012,7 @@
                 
                 <div class="faq-item fade-in">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 1.2rem; color: var(--heading-cta);">What do I actually send you?</h3>
-                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">Just a gallery link. We do the rest selecting the best moments, building the hook, syncing music, writing the caption, and delivering a finished Reel to your inbox within 48 hours.</p>
+                    <p style="color: var(--body-text); line-height: 1.7; font-size: 1.1rem; font-weight: 300;">Just a gallery link. We do the rest \u2014 selecting the best moments, building the hook, syncing music, writing the caption, and delivering a finished Reel to your inbox within 48 hours.</p>
                 </div>
             </div>
         </div>
