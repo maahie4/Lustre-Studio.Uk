@@ -23,7 +23,7 @@
   <!-- Websites page -->
   <url>
     <loc>https://lustrestudio.uk/website.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,6 +40,30 @@
   <url>
     <loc>https://lustrestudio.uk/instagram-reels-wedding-photographers-2026.html</loc>
     <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: Why London Wedding Photographers Are Moving Away From Squarespace -->
+  <url>
+    <loc>https://lustrestudio.uk/why-london-wedding-photographers-moving-away-squarespace-2026.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: New Wedding Photographer Website Guide -->
+  <url>
+    <loc>https://lustrestudio.uk/new-wedding-photographer-first-website-builder.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: Wedding Photographer Cost 2026 -->
+  <url>
+    <loc>https://lustrestudio.uk/wedding-photographer-cost-2026.html</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
