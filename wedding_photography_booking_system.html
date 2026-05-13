@@ -1,0 +1,863 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+  rel="stylesheet">
+<h2 class="sr-only">Wedding Photography Package Builder — Interactive booking and pricing tool</h2>
+<style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+  }
+
+  .wb {
+    font-family: 'Jost', system-ui, sans-serif;
+    color: #0a0a0a;
+    background: #fafafa;
+    min-height: 480px
+  }
+
+  .wb-rule {
+    height: 3px;
+    background: #0a0a0a;
+    width: 100%
+  }
+
+  .step {
+    display: none;
+    padding: 2rem 2rem 1.5rem;
+    animation: fu .35s ease
+  }
+
+  .step.on {
+    display: block
+  }
+
+  @keyframes fu {
+    from {
+      opacity: 0;
+      transform: translateY(10px)
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  .prog {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2rem 0;
+    gap: 0;
+    margin-bottom: 2rem
+  }
+
+  .ps {
+    flex: 1;
+    height: 1px;
+    background: #e0e0dd;
+    position: relative;
+    transition: background .4s
+  }
+
+  .ps.d,
+  .ps.a {
+    background: #0a0a0a
+  }
+
+  .pd {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #e0e0dd;
+    position: absolute;
+    right: -3px;
+    top: -2.5px;
+    transition: background .4s
+  }
+
+  .pd.d,
+  .pd.a {
+    background: #0a0a0a
+  }
+
+  .slabel {
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #bbb;
+    margin-bottom: .4rem
+  }
+
+  .h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    color: #0a0a0a;
+    margin-bottom: .75rem
+  }
+
+  .h1 i {
+    font-style: italic
+  }
+
+  .h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: -.01em;
+    margin-bottom: .35rem
+  }
+
+  .sub {
+    font-size: 12px;
+    font-weight: 300;
+    color: #9a9a97;
+    letter-spacing: .04em;
+    margin-bottom: 1.75rem;
+    line-height: 1.6
+  }
+
+  .div {
+    width: 36px;
+    height: 1px;
+    background: #0a0a0a;
+    margin: 1.25rem 0
+  }
+
+  .cgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #e0e0dd;
+    border: 1px solid #e0e0dd;
+    margin-bottom: 1.5rem
+  }
+
+  .oc {
+    background: #fafafa;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: background .18s;
+    user-select: none
+  }
+
+  .oc:hover {
+    background: #f0f0ed
+  }
+
+  .oc.sel {
+    background: #0a0a0a;
+    color: #fafafa
+  }
+
+  .oc-t {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: .2rem
+  }
+
+  .oc-s {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: .6rem
+  }
+
+  .oc.sel .oc-s {
+    color: #666
+  }
+
+  .oc-p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #bbb;
+    letter-spacing: .02em
+  }
+
+  .oc.sel .oc-p {
+    color: #777
+  }
+
+  .agrid {
+    display: grid;
+    gap: 1px;
+    background: #e0e0dd;
+    border: 1px solid #e0e0dd;
+    margin-bottom: 1.25rem
+  }
+
+  .ac {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    padding: .875rem 1.25rem;
+    cursor: pointer;
+    transition: background .18s;
+    user-select: none
+  }
+
+  .ac:hover {
+    background: #f0f0ed
+  }
+
+  .ac.sel {
+    background: #0a0a0a;
+    color: #fafafa
+  }
+
+  .ac-name {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .01em;
+    margin-bottom: 2px
+  }
+
+  .ac-d {
+    font-size: 10px;
+    font-weight: 300;
+    color: #bbb;
+    letter-spacing: .03em
+  }
+
+  .ac.sel .ac-d {
+    color: #666
+  }
+
+  .ac-r {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+  }
+
+  .ac-p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #bbb;
+    letter-spacing: .02em
+  }
+
+  .ac.sel .ac-p {
+    color: #777
+  }
+
+  .chk {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    transition: all .18s;
+    flex-shrink: 0
+  }
+
+  .ac.sel .chk {
+    border-color: #fafafa;
+    background: #fafafa;
+    color: #0a0a0a
+  }
+
+  .pbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1.125rem 0;
+    border-top: 1px solid #e8e8e5;
+    margin-top: .25rem
+  }
+
+  .pl {
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #bbb
+  }
+
+  .pa {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 300;
+    letter-spacing: -.02em;
+    transition: all .3s
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0a0a0a;
+    color: #fafafa;
+    border: none;
+    padding: .8rem 1.875rem;
+    font-family: 'Jost', system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity .2s
+  }
+
+  .btn:hover {
+    opacity: .82
+  }
+
+  .btn:disabled {
+    opacity: .35;
+    cursor: not-allowed
+  }
+
+  .btn-g {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #bbb;
+    border: none;
+    padding: .8rem 0;
+    font-family: 'Jost', system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .2s
+  }
+
+  .btn-g:hover {
+    color: #0a0a0a
+  }
+
+  .brow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem
+  }
+
+  .fg {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1rem
+  }
+
+  .fl {
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #bbb
+  }
+
+  .fi {
+    border: none;
+    border-bottom: 1px solid #e0e0dd;
+    background: transparent;
+    padding: .45rem 0;
+    font-family: 'Jost', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #0a0a0a;
+    outline: none;
+    transition: border-color .2s;
+    width: 100%
+  }
+
+  .fi:focus {
+    border-bottom-color: #0a0a0a
+  }
+
+  .fi::placeholder {
+    color: #ccc
+  }
+
+  textarea.fi {
+    resize: none;
+    line-height: 1.5
+  }
+
+  .frow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem
+  }
+
+  .sl {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .45rem 0;
+    border-bottom: 1px solid #f0f0ed;
+    font-size: 12px;
+    font-weight: 300
+  }
+
+  .sl:last-child {
+    border-bottom: none
+  }
+
+  .sl .sk {
+    color: #9a9a97;
+    letter-spacing: .02em
+  }
+
+  .sl .sv {
+    font-weight: 400
+  }
+
+  .sl.tot {
+    border-bottom: none;
+    border-top: 1px solid #e0e0dd;
+    padding-top: .75rem;
+    margin-top: .25rem
+  }
+
+  .sl.tot .sk {
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #bbb
+  }
+
+  .sl.tot .sv {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 300
+  }
+
+  .lscore {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    background: #f5f5f3;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e8e8e5
+  }
+
+  .lsbar {
+    flex: 1;
+    height: 1px;
+    background: #e0e0dd
+  }
+
+  .lsfill {
+    height: 100%;
+    background: #0a0a0a;
+    transition: width .5s ease
+  }
+
+  .lsl {
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #bbb;
+    white-space: nowrap
+  }
+
+  .lsv {
+    font-size: 11px;
+    font-weight: 500;
+    color: #0a0a0a;
+    white-space: nowrap;
+    min-width: 28px;
+    text-align: right
+  }
+
+  .suc {
+    text-align: center;
+    padding: 3rem 2rem;
+    display: none
+  }
+
+  .suc.on {
+    display: block;
+    animation: fu .4s ease
+  }
+
+  .suc-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: .3
+  }
+
+  .note {
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: .04em;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-top: 1rem
+  }
+</style>
+
+<div class="wb">
+  <div class="wb-rule"></div>
+
+  <div class="prog" id="prog">
+    <div class="ps d" id="ps0">
+      <div class="pd d" id="pd0"></div>
+    </div>
+    <div class="ps" id="ps1">
+      <div class="pd" id="pd1"></div>
+    </div>
+    <div class="ps" id="ps2">
+      <div class="pd" id="pd2"></div>
+    </div>
+    <div class="ps" id="ps3">
+      <div class="pd" id="pd3"></div>
+    </div>
+    <div class="ps" id="ps4"></div>
+  </div>
+
+  <div class="step on" id="s0">
+    <div class="slabel">Wedding Photography</div>
+    <div class="h1">Build Your<br><i>Photography</i><br>Experience</div>
+    <div class="div"></div>
+    <div class="sub">Answer a few questions to design your perfect package.<br>Receive an instant investment estimate —
+      no awkward emails.</div>
+    <button class="btn" onclick="goTo(1)">Begin &rarr;</button>
+  </div>
+
+  <div class="step" id="s1">
+    <div class="slabel">Step 01 — Coverage</div>
+    <div class="h2">How long should<br>we be there?</div>
+    <div class="sub">Select your preferred coverage window.</div>
+    <div class="cgrid">
+      <div class="oc" data-group="cov" data-val="6h" data-base="2800" onclick="pick(this)">
+        <div class="oc-t">6 Hours</div>
+        <div class="oc-s">Getting ready → first dance</div>
+        <div class="oc-p">From $2,800</div>
+      </div>
+      <div class="oc" data-group="cov" data-val="8h" data-base="3800" onclick="pick(this)">
+        <div class="oc-t">8 Hours</div>
+        <div class="oc-s">Full ceremony + reception</div>
+        <div class="oc-p">From $3,800</div>
+      </div>
+      <div class="oc" data-group="cov" data-val="10h" data-base="4800" onclick="pick(this)">
+        <div class="oc-t">10 Hours</div>
+        <div class="oc-s">All-day extended coverage</div>
+        <div class="oc-p">From $4,800</div>
+      </div>
+      <div class="oc" data-group="cov" data-val="full" data-base="6500" onclick="pick(this)">
+        <div class="oc-t">Full Day</div>
+        <div class="oc-s">Dawn through last dance</div>
+        <div class="oc-p">From $6,500</div>
+      </div>
+    </div>
+    <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price1">—</span></div>
+    <div class="brow">
+      <button class="btn-g" onclick="goTo(0)">&larr; Back</button>
+      <button class="btn" id="btn1" disabled onclick="goTo(2)">Continue &rarr;</button>
+    </div>
+  </div>
+
+  <div class="step" id="s2">
+    <div class="slabel">Step 02 — Wedding Type</div>
+    <div class="h2">Tell us about<br>your wedding</div>
+    <div class="sub">This helps us understand the scale and scope of your day.</div>
+    <div class="cgrid">
+      <div class="oc" data-group="type" data-val="elope" data-mult="0.85" onclick="pick(this)">
+        <div class="oc-t">Elopement</div>
+        <div class="oc-s">Intimate · 2–20 guests</div>
+        <div class="oc-p">—15% off base</div>
+      </div>
+      <div class="oc" data-group="type" data-val="trad" data-mult="1.0" onclick="pick(this)">
+        <div class="oc-t">Traditional</div>
+        <div class="oc-s">Classic · 50–200 guests</div>
+        <div class="oc-p">Standard pricing</div>
+      </div>
+      <div class="oc" data-group="type" data-val="dest" data-mult="1.25" onclick="pick(this)">
+        <div class="oc-t">Destination</div>
+        <div class="oc-s">Travel · international</div>
+        <div class="oc-p">+25% travel rate</div>
+      </div>
+      <div class="oc" data-group="type" data-val="luxury" data-mult="1.75" onclick="pick(this)">
+        <div class="oc-t">Luxury Event</div>
+        <div class="oc-s">Multi-day · high fashion</div>
+        <div class="oc-p">Custom rate</div>
+      </div>
+    </div>
+    <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price2">—</span></div>
+    <div class="brow">
+      <button class="btn-g" onclick="goTo(1)">&larr; Back</button>
+      <button class="btn" id="btn2" disabled onclick="goTo(3)">Continue &rarr;</button>
+    </div>
+  </div>
+
+  <div class="step" id="s3">
+    <div class="slabel">Step 03 — Enhancements</div>
+    <div class="h2">Elevate your<br>experience</div>
+    <div class="sub">Select any additions. Nothing is required.</div>
+    <div class="agrid">
+      <div class="ac" data-val="second" data-price="500" onclick="tog(this)">
+        <div>
+          <div class="ac-name">Second Shooter</div>
+          <div class="ac-d">Two perspectives · full coverage</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$500</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+      <div class="ac" data-val="engage" data-price="450" onclick="tog(this)">
+        <div>
+          <div class="ac-name">Engagement Session</div>
+          <div class="ac-d">Pre-wedding portrait session</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$450</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+      <div class="ac" data-val="drone" data-price="350" onclick="tog(this)">
+        <div>
+          <div class="ac-name">Drone Footage</div>
+          <div class="ac-d">Aerial cinematic imagery</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$350</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+      <div class="ac" data-val="album" data-price="800" onclick="tog(this)">
+        <div>
+          <div class="ac-name">Heirloom Album</div>
+          <div class="ac-d">Italian leather · lay-flat binding</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$800</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+      <div class="ac" data-val="bts" data-price="600" onclick="tog(this)">
+        <div>
+          <div class="ac-name">BTS Content Creator</div>
+          <div class="ac-d">Social-ready reels + behind-the-scenes</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$600</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+      <div class="ac" data-val="super8" data-price="900" onclick="tog(this)">
+        <div>
+          <div class="ac-name">Super 8 Film</div>
+          <div class="ac-d">Vintage 8mm cinematic film reel</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$900</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+      <div class="ac" data-val="express" data-price="300" onclick="tog(this)">
+        <div>
+          <div class="ac-name">Expedited Delivery</div>
+          <div class="ac-d">Gallery delivered within 2 weeks</div>
+        </div>
+        <div class="ac-r"><span class="ac-p">+$300</span>
+          <div class="chk">✓</div>
+        </div>
+      </div>
+    </div>
+    <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price3">—</span></div>
+    <div class="brow">
+      <button class="btn-g" onclick="goTo(2)">&larr; Back</button>
+      <button class="btn" onclick="buildSummary();goTo(4)">Review Package &rarr;</button>
+    </div>
+  </div>
+
+  <div class="step" id="s4">
+    <div class="slabel">Step 04 — Inquiry</div>
+    <div class="h2">Your Package<br>Summary</div>
+
+    <div id="sum-lines" style="margin-bottom:1.5rem;margin-top:1.25rem"></div>
+
+    <div class="div" style="margin-top:0"></div>
+    <div class="slabel" style="margin-top:1rem;margin-bottom:.75rem">Buyer Intent Signal</div>
+    <div class="lscore">
+      <span class="lsl">Lead Quality</span>
+      <div class="lsbar">
+        <div class="lsfill" id="lsfill" style="width:0%"></div>
+      </div>
+      <span class="lsv" id="lsv">—</span>
+    </div>
+
+    <div class="slabel" style="margin-bottom:.75rem">Your Details</div>
+    <div class="frow">
+      <div class="fg"><label class="fl">First Name</label><input class="fi" id="fi-fn" placeholder="Sophia" type="text">
+      </div>
+      <div class="fg"><label class="fl">Last Name</label><input class="fi" id="fi-ln" placeholder="Laurent" type="text">
+      </div>
+      <div class="fg"><label class="fl">Email</label><input class="fi" id="fi-em" placeholder="hello@email.com"
+          type="email"></div>
+      <div class="fg"><label class="fl">Wedding Date</label><input class="fi" id="fi-dt" placeholder="Oct 12, 2026"
+          type="text"></div>
+    </div>
+    <div class="fg" style="margin-bottom:1.25rem"><label class="fl">Tell us about your vision</label><textarea
+        class="fi" id="fi-msg" rows="3" placeholder="Venue, style, anything important to you..."></textarea></div>
+
+    <div class="brow">
+      <button class="btn-g" onclick="goTo(3)">&larr; Back</button>
+      <button class="btn" onclick="submit()">Submit Inquiry &rarr;</button>
+    </div>
+    <p class="note">Your estimated package total will be included in the inquiry so we can respond with an accurate
+      proposal.</p>
+  </div>
+
+  <div class="suc" id="suc">
+    <div class="suc-icon">◆</div>
+    <div class="h2">Inquiry Received</div>
+    <div class="div" style="margin:1rem auto"></div>
+    <div class="sub" id="suc-sub">Thank you. We'll be in touch within 48 hours with a custom proposal.</div>
+    <div class="slabel" style="margin-top:2rem;margin-bottom:.5rem">Your Package Summary</div>
+    <div id="suc-sum" style="max-width:380px;margin:0 auto"></div>
+  </div>
+</div>
+
+<script>
+  const S = { cov: null, covBase: 0, type: null, typeMult: 1, addons: [], addonTotal: 0 };
+  const covLabels = { '6h': '6 Hours', '8h': '8 Hours', '10h': '10 Hours', 'full': 'Full Day' };
+  const typeLabels = { 'elope': 'Elopement', 'trad': 'Traditional Wedding', 'dest': 'Destination Wedding', 'luxury': 'Luxury Multi-Day' };
+  const addonLabels = { 'second': 'Second Shooter', 'engage': 'Engagement Session', 'drone': 'Drone Footage', 'album': 'Heirloom Album', 'bts': 'BTS Content Creator', 'super8': 'Super 8 Film', 'express': 'Expedited Delivery' };
+  const addonPrices = { 'second': 500, 'engage': 450, 'drone': 350, 'album': 800, 'bts': 600, 'super8': 900, 'express': 300 };
+
+  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+
+  function calcTotal() {
+    if (!S.cov) return null;
+    return Math.round(S.covBase * S.typeMult + S.addonTotal);
+  }
+
+  function updatePrice(id) {
+    var t = calcTotal();
+    var el = document.getElementById(id);
+    if (el) el.textContent = t ? fmt(t) : '—';
+  }
+
+  function pick(el) {
+    var g = el.dataset.group;
+    document.querySelectorAll('[data-group="' + g + '"]').forEach(function (e) { e.classList.remove('sel') });
+    el.classList.add('sel');
+    if (g === 'cov') {
+      S.cov = el.dataset.val;
+      S.covBase = parseInt(el.dataset.base);
+      var b = document.getElementById('btn1');
+      if (b) b.disabled = false;
+      updatePrice('price1');
+    } else if (g === 'type') {
+      S.type = el.dataset.val;
+      S.typeMult = parseFloat(el.dataset.mult);
+      var b2 = document.getElementById('btn2');
+      if (b2) b2.disabled = false;
+      updatePrice('price2');
+      updatePrice('price3');
+    }
+  }
+
+  function tog(el) {
+    var v = el.dataset.val;
+    var p = parseInt(el.dataset.price);
+    if (el.classList.contains('sel')) {
+      el.classList.remove('sel');
+      S.addons = S.addons.filter(function (x) { return x !== v });
+      S.addonTotal -= p;
+    } else {
+      el.classList.add('sel');
+      S.addons.push(v);
+      S.addonTotal += p;
+    }
+    updatePrice('price3');
+  }
+
+  function leadScore() {
+    var s = 0;
+    // base from coverage
+    var covScore = { '6h': 15, '8h': 25, '10h': 35, 'full': 45 };
+    s += (covScore[S.cov] || 0);
+    // type bonus
+    var typeScore = { 'elope': 5, 'trad': 15, 'dest': 20, 'luxury': 30 };
+    s += (typeScore[S.type] || 0);
+    // addon score
+    s += Math.min(25, S.addons.length * 7);
+    // total value bonus
+    var t = calcTotal() || 0;
+    if (t > 5000) s += 5;
+    if (t > 8000) s += 10;
+    if (t > 12000) s += 10;
+    return Math.min(100, s);
+  }
+
+  function leadLabel(s) {
+    if (s >= 80) return 'Premium';
+    if (s >= 60) return 'Strong';
+    if (s >= 40) return 'Qualified';
+    return 'Exploring';
+  }
+
+  function buildSummary() {
+    var lines = '';
+    lines += '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
+    lines += '<div class="sl"><span class="sk">Wedding Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
+    if (S.addons.length) {
+      S.addons.forEach(function (a) {
+        lines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
+      });
+    }
+    lines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(calcTotal()) + '</span></div>';
+    document.getElementById('sum-lines').innerHTML = lines;
+
+    var sc = leadScore();
+    document.getElementById('lsfill').style.width = sc + '%';
+    document.getElementById('lsv').textContent = leadLabel(sc);
+  }
+
+  function goTo(n) {
+    document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
+    var el = document.getElementById('s' + n);
+    if (el) el.classList.add('on');
+    updateProgress(n);
+    window.scrollTo(0, 0);
+  }
+
+  function updateProgress(n) {
+    for (var i = 0; i < 5; i++) {
+      var seg = document.getElementById('ps' + i);
+      var dot = document.getElementById('pd' + i);
+      if (seg) {
+        seg.className = 'ps' + (i < n ? ' d' : i === n ? ' a' : '');
+      }
+      if (dot) {
+        dot.className = 'pd' + (i < n ? ' d' : i === n ? ' a' : '');
+      }
+    }
+  }
+
+  function submit() {
+    var fn = document.getElementById('fi-fn').value.trim();
+    var em = document.getElementById('fi-em').value.trim();
+    if (!fn || !em) { alert('Please enter your name and email.'); return; }
+    document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
+    document.getElementById('prog').style.display = 'none';
+    var suc = document.getElementById('suc');
+    var sub = document.getElementById('suc-sub');
+    sub.textContent = 'Thank you, ' + fn + '. We\'ll be in touch within 48 hours with a custom proposal tailored to your ' + fmt(calcTotal()) + ' package.';
+    var sumLines = '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
+    sumLines += '<div class="sl"><span class="sk">Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
+    S.addons.forEach(function (a) {
+      sumLines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
+    });
+    sumLines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(calcTotal()) + '</span></div>';
+    document.getElementById('suc-sum').innerHTML = sumLines;
+    suc.classList.add('on');
+  }
+</script>
