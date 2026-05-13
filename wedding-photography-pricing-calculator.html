@@ -279,6 +279,28 @@
       letter-spacing: 0.25em;
       color: var(--body);
       font-weight: 400;
+      margin-left: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--body);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-link:hover {
+      opacity: 0.6;
     }
 
     .menu-trigger {
@@ -286,7 +308,7 @@
     }
 
     @media (max-width: 1024px) {
-      .nav-tag { display: none; }
+      .nav-tag, .nav-links { display: none; }
       .menu-trigger {
         display: block !important;
         background: none;
@@ -995,10 +1017,20 @@
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="logo">
-    <img src="Lustre-Studio-Logo.png" alt="Lustre Studio Logo">
-  </a>
-  <span class="nav-tag">Pricing Calculator</span>
+  <div style="display:flex; align-items:center;">
+    <a href="/" class="logo">
+      <img src="Lustre-Studio-Logo.png" alt="Lustre Studio Logo">
+    </a>
+    <span class="nav-tag">Pricing Calculator</span>
+  </div>
+  
+  <div class="nav-links">
+    <a href="seemywork" class="nav-link">Work</a>
+    <a href="website" class="nav-link">Websites</a>
+    <a href="blog" class="nav-link">Blog</a>
+    <a href="tools" class="nav-link">Tools</a>
+  </div>
+
   <button class="menu-trigger" id="menu-open">MENU</button>
 </nav>
 
