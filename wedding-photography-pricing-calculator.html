@@ -422,59 +422,6 @@
 
     .freshness-meta strong { color: var(--heading); font-weight: 500; }
 
-    /* ── AI SUMMARIZE BAR ── */
-    .ai-bar {
-      background: var(--white);
-      border-bottom: 0.5px solid var(--border);
-      padding: 0.7rem 4rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .ai-bar-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--body);
-      opacity: 0.6;
-      white-space: nowrap;
-    }
-
-    .ai-links {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .ai-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.3rem 0.75rem;
-      font-size: 0.68rem;
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      text-decoration: none;
-      border-radius: 2px;
-      border: 0.5px solid var(--border);
-      color: var(--heading);
-      background: transparent;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .ai-link:hover {
-      background: var(--heading);
-      color: var(--bg);
-      border-color: var(--heading);
-    }
-
-    .ai-link svg { flex-shrink: 0; }
 
     /* ── HERO ── */
     .hero {
@@ -602,6 +549,7 @@
     .slider-wrap input[type="range"] {
       flex: 1;
       -webkit-appearance: none;
+      appearance: none;
       height: 1px;
       background: var(--border);
       outline: none;
@@ -987,7 +935,6 @@
     @media (max-width: 900px) {
       nav { padding: 1.5rem; }
       .freshness-bar { padding: 0.65rem 1.5rem; }
-      .ai-bar { padding: 0.7rem 1.5rem; }
       .main { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem 5rem; }
       .result-panel { position: static; }
       .result-card { opacity: 1; transform: none; }
@@ -1046,32 +993,6 @@
 
 
 
-<!-- AI SUMMARIZE BAR — GEO signal -->
-<div class="ai-bar" role="complementary" aria-label="Summarize this page with AI">
-  <span class="ai-bar-label">Summarise with AI:</span>
-  <div class="ai-links">
-    <a class="ai-link" href="https://chat.openai.com/?q=summarize+https://lustrestudio.uk/wedding-photography-pricing-calculator" target="_blank" rel="noopener" aria-label="Summarize with ChatGPT">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      ChatGPT
-    </a>
-    <a class="ai-link" href="https://www.perplexity.ai/?q=https://lustrestudio.uk/wedding-photography-pricing-calculator" target="_blank" rel="noopener" aria-label="Summarize with Perplexity">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      Perplexity
-    </a>
-    <a class="ai-link" href="https://claude.ai/new?q=summarize+https://lustrestudio.uk/wedding-photography-pricing-calculator" target="_blank" rel="noopener" aria-label="Summarize with Claude">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      Claude
-    </a>
-    <a class="ai-link" href="https://x.com/i/grok?text=summarize+https://lustrestudio.uk/wedding-photography-pricing-calculator" target="_blank" rel="noopener" aria-label="Summarize with Grok">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      Grok
-    </a>
-    <a class="ai-link" href="https://gemini.google.com/app?q=summarize+https://lustrestudio.uk/wedding-photography-pricing-calculator" target="_blank" rel="noopener" aria-label="Summarize with Gemini">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      Gemini
-    </a>
-  </div>
-</div>
 
 <!-- HERO -->
 <div class="hero">
