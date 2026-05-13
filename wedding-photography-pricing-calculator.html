@@ -246,6 +246,7 @@
       --accent-soft: #f5ebe8;
       --green: #1a6e3a;
       --green-soft: #edf7f1;
+      --container-width: 1100px;
     }
 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -259,17 +260,28 @@
       min-height: 100vh;
     }
 
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
     /* ── NAV ── */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 4rem;
       border-bottom: 0.5px solid var(--border);
       position: sticky;
       top: 0;
       background: var(--bg);
       z-index: 100;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
     .logo img { height: 40px; width: auto; display: block; }
@@ -376,7 +388,11 @@
     .freshness-bar {
       background: var(--surface);
       border-bottom: 0.5px solid var(--border);
-      padding: 0.65rem 4rem;
+    }
+
+    .freshness-bar .container {
+      padding-top: 0.65rem;
+      padding-bottom: 0.65rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -426,7 +442,7 @@
     /* ── HERO ── */
     .hero {
       text-align: center;
-      padding: 5rem 2rem 4rem;
+      padding: 5rem 0 4rem;
       border-bottom: 0.5px solid var(--border);
       position: relative;
       overflow: hidden;
@@ -490,9 +506,7 @@
 
     /* ── MAIN LAYOUT ── */
     .main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 5rem 2rem 8rem;
+      padding: 5rem 0 8rem;
       display: grid;
       grid-template-columns: 1fr 420px;
       gap: 5rem;
@@ -731,10 +745,12 @@
 
     /* ── SEO TEXT ── */
     .seo-section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 5rem 2rem 2rem;
+      padding: 5rem 0 2rem;
       border-top: 0.5px solid var(--border);
+    }
+
+    .seo-section .container {
+      max-width: 800px; /* Keeping SEO content slightly tighter for readability */
     }
 
     .seo-section h2 {
@@ -890,7 +906,11 @@
     /* ── FOOTER ── */
     footer {
       border-top: 0.5px solid var(--border);
-      padding: 2.5rem 4rem;
+    }
+
+    footer .container {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
     }
 
     .footer-top {
@@ -933,8 +953,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav { padding: 1.5rem; }
-      .freshness-bar { padding: 0.65rem 1.5rem; }
+      nav .container { padding: 1.5rem; }
+      .freshness-bar .container { padding: 0.65rem 1.5rem; }
       .main { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem 5rem; }
       .result-panel { position: static; }
       .result-card { opacity: 1; transform: none; }
@@ -964,21 +984,23 @@
 
 <!-- NAV -->
 <nav>
-  <div style="display:flex; align-items:center;">
-    <a href="/" class="logo">
-      <img src="Lustre-Studio-Logo.png" alt="Lustre Studio Logo">
-    </a>
-    <span class="nav-tag">Pricing Calculator</span>
-  </div>
-  
-  <div class="nav-links">
-    <a href="seemywork" class="nav-link">Work</a>
-    <a href="website" class="nav-link">Websites</a>
-    <a href="blog" class="nav-link">Blog</a>
-    <a href="tools" class="nav-link">Tools</a>
-  </div>
+  <div class="container">
+    <div style="display:flex; align-items:center;">
+      <a href="/" class="logo">
+        <img src="Lustre-Studio-Logo.png" alt="Lustre Studio Logo">
+      </a>
+      <span class="nav-tag">Pricing Calculator</span>
+    </div>
+    
+    <div class="nav-links">
+      <a href="seemywork" class="nav-link">Work</a>
+      <a href="website" class="nav-link">Websites</a>
+      <a href="blog" class="nav-link">Blog</a>
+      <a href="tools" class="nav-link">Tools</a>
+    </div>
 
-  <button class="menu-trigger" id="menu-open">MENU</button>
+    <button class="menu-trigger" id="menu-open">MENU</button>
+  </div>
 </nav>
 
 <!-- MOBILE OVERLAY NAVIGATION -->
@@ -996,22 +1018,24 @@
 
 <!-- HERO -->
 <div class="hero">
-  <span class="hero-kicker">A pricing mentor for photographers — 2026 edition</span>
-  <h1>What should you charge<br><em>per wedding?</em></h1>
-  <p>Answer five questions. Get structured pricing advice based on your experience level, market tier, and wedding type — backed by real 2026 industry data.</p>
-  <div class="hero-trust">
-    <span class="trust-item">Free tool</span>
-    <span class="trust-sep">·</span>
-    <span class="trust-item">US &amp; UK markets</span>
-    <span class="trust-sep">·</span>
-    <span class="trust-item">5,000+ photographers</span>
-    <span class="trust-sep">·</span>
-    <span class="trust-item">No signup</span>
+  <div class="container">
+    <span class="hero-kicker">A pricing mentor for photographers — 2026 edition</span>
+    <h1>What should you charge<br><em>per wedding?</em></h1>
+    <p>Answer five questions. Get structured pricing advice based on your experience level, market tier, and wedding type — backed by real 2026 industry data.</p>
+    <div class="hero-trust">
+      <span class="trust-item">Free tool</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">US &amp; UK markets</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">5,000+ photographers</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">No signup</span>
+    </div>
   </div>
 </div>
 
 <!-- MAIN -->
-<div class="main">
+<div class="main container">
 
   <!-- FORM -->
   <div class="form-panel">
@@ -1148,12 +1172,13 @@
 
 <!-- SEO CONTENT SECTION -->
 <section class="seo-section" itemscope itemtype="https://schema.org/Article">
-  <meta itemprop="datePublished" content="2026-05-13">
-  <meta itemprop="dateModified" content="2026-05-13">
-  <meta itemprop="author" content="Lustrestudio">
+  <div class="container">
+    <meta itemprop="datePublished" content="2026-05-13">
+    <meta itemprop="dateModified" content="2026-05-13">
+    <meta itemprop="author" content="Lustrestudio">
 
-  <article>
-    <h2>How Much Should You Charge for Wedding Photography in 2026?</h2>
+    <article>
+      <h2>How Much Should You Charge for Wedding Photography in 2026?</h2>
 
     <p>Pricing your wedding photography correctly is one of the most important business decisions you will make as a photographer. Charge too little and you attract clients who undervalue your craft, burn out faster, and struggle to grow. Charge too much too early and you price yourself out of the bookings you need to build your portfolio. This calculator is designed to help you find the right starting point based on real 2026 market data across US and UK wedding markets.</p>
 
@@ -1321,22 +1346,24 @@
         <a href="blog.html" class="btn-outline">Read the Blog</a>
       </div>
     </div>
-
+    </div>
   </article>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div class="footer-updated">
-      <span class="dot"></span>
-      Last Updated: 13 May 2026 · Data verified for US &amp; UK markets
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-updated">
+        <span class="dot"></span>
+        Last Updated: 13 May 2026 · Data verified for US &amp; UK markets
+      </div>
+      <span class="sig">Systems for Scaling.</span>
     </div>
-    <span class="sig">Systems for Scaling.</span>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-    <span class="copy">© 2026 Lustrestudio. All rights reserved.</span>
-    <span class="copy">Free tool · No login · Updated annually</span>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <span class="copy">© 2026 Lustrestudio. All rights reserved.</span>
+      <span class="copy">Free tool · No login · Updated annually</span>
+    </div>
   </div>
 </footer>
 
