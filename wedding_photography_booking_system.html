@@ -775,15 +775,6 @@
 
     <div id="sum-lines" style="margin-bottom:1.5rem;margin-top:1.25rem"></div>
 
-    <div class="div" style="margin-top:0"></div>
-    <div class="slabel" style="margin-top:1rem;margin-bottom:.75rem">Buyer Intent Signal</div>
-    <div class="lscore">
-      <span class="lsl">Lead Quality</span>
-      <div class="lsbar">
-        <div class="lsfill" id="lsfill" style="width:0%"></div>
-      </div>
-      <span class="lsv" id="lsv">—</span>
-    </div>
 
     <div class="slabel" style="margin-bottom:.75rem">Your Details</div>
     <div class="form-grid">
@@ -992,6 +983,9 @@
     summary += 'Enhancements: ' + (S.addons.length ? S.addons.map(a => addonLabels[a]).join(', ') : 'None') + '\n';
     summary += 'Total Estimate: ' + fmt(total);
 
+    var score = leadScore();
+    var quality = leadLabel(score);
+
     var formData = {
       name: fn + ' ' + ln,
       email: em,
@@ -1001,6 +995,7 @@
       venue: ven,
       source: src,
       message: msg,
+      lead_quality: quality + ' (' + score + '/100)',
       package_summary: summary,
       _subject: 'New Package Inquiry: ' + fn + ' ' + ln
     };
