@@ -2,7 +2,6 @@
 <link
   href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
   rel="stylesheet">
-<h2 class="sr-only">Wedding Photography Package Builder — Interactive booking and pricing tool</h2>
 <style>
   *,
   *::before,
@@ -23,6 +22,23 @@
     height: 3px;
     background: #0a0a0a;
     width: 100%
+  }
+
+  header {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0dd;
+    background: #fafafa
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.2rem;
+    color: #0a0a0a;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 1.2
   }
 
   .step {
@@ -142,14 +158,18 @@
 
   .oc {
     background: #fafafa;
-    padding: 1.25rem;
+    padding: 2rem 1.5rem;
     cursor: pointer;
-    transition: background .18s;
-    user-select: none
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
   }
 
   .oc:hover {
-    background: #f0f0ed
+    background: #fcfcfc;
+    transform: translateY(-2px)
   }
 
   .oc.sel {
@@ -297,27 +317,33 @@
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 12px;
     background: #0a0a0a;
     color: #fafafa;
     border: none;
-    padding: .8rem 1.875rem;
+    padding: 1.1rem 2.5rem;
     font-family: 'Jost', system-ui, sans-serif;
     font-size: 11px;
     font-weight: 400;
-    letter-spacing: .14em;
+    letter-spacing: .2em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: opacity .2s
+    transition: all .3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05)
   }
 
   .btn:hover {
-    opacity: .82
+    background: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1)
   }
 
   .btn:disabled {
     opacity: .35;
-    cursor: not-allowed
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none
   }
 
   .btn-g {
@@ -390,10 +416,18 @@
     line-height: 1.5
   }
 
-  .frow {
+  .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem
+  }
+
+  @media(min-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem
+    }
   }
 
   .sl {
@@ -421,22 +455,24 @@
 
   .sl.tot {
     border-bottom: none;
-    border-top: 1px solid #e0e0dd;
-    padding-top: .75rem;
-    margin-top: .25rem
+    border-top: 2px solid #0a0a0a;
+    padding-top: 1.5rem;
+    margin-top: 1rem
   }
 
   .sl.tot .sk {
-    font-size: 10px;
-    letter-spacing: .18em;
+    font-size: 11px;
+    letter-spacing: .2em;
     text-transform: uppercase;
-    color: #bbb
+    color: #0a0a0a;
+    font-weight: 500
   }
 
   .sl.tot .sv {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.6rem;
-    font-weight: 300
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1
   }
 
   .lscore {
@@ -509,6 +545,11 @@
 <div class="wb">
   <div class="wb-rule"></div>
 
+  <header>
+    <div class="logo">The Inquiry Edit</div>
+    <div style="color:#9a9a97; font-size:9px; letter-spacing:0.3em; margin-top:0.5rem; text-transform: uppercase;">Premium Photography Booking</div>
+  </header>
+
   <div class="prog" id="prog">
     <div class="ps d" id="ps0">
       <div class="pd d" id="pd0"></div>
@@ -539,24 +580,34 @@
     <div class="h2">How long should<br>we be there?</div>
     <div class="sub">Select your preferred coverage window.</div>
     <div class="cgrid">
+      <div class="oc" data-group="cov" data-val="2h" data-base="1200" onclick="pick(this)">
+        <div class="oc-t">2 Hours</div>
+        <div class="oc-s">Elopement / Civil Ceremony</div>
+        <div class="oc-p">From $1,200</div>
+      </div>
+      <div class="oc" data-group="cov" data-val="4h" data-base="2000" onclick="pick(this)">
+        <div class="oc-t">4 Hours</div>
+        <div class="oc-s">Half Day / Micro-Wedding</div>
+        <div class="oc-p">From $2,000</div>
+      </div>
       <div class="oc" data-group="cov" data-val="6h" data-base="2800" onclick="pick(this)">
         <div class="oc-t">6 Hours</div>
-        <div class="oc-s">Getting ready → first dance</div>
+        <div class="oc-s">Essential Story</div>
         <div class="oc-p">From $2,800</div>
       </div>
       <div class="oc" data-group="cov" data-val="8h" data-base="3800" onclick="pick(this)">
         <div class="oc-t">8 Hours</div>
-        <div class="oc-s">Full ceremony + reception</div>
+        <div class="oc-s">Standard Celebration</div>
         <div class="oc-p">From $3,800</div>
       </div>
       <div class="oc" data-group="cov" data-val="10h" data-base="4800" onclick="pick(this)">
         <div class="oc-t">10 Hours</div>
-        <div class="oc-s">All-day extended coverage</div>
+        <div class="oc-s">Extended Coverage</div>
         <div class="oc-p">From $4,800</div>
       </div>
       <div class="oc" data-group="cov" data-val="full" data-base="6500" onclick="pick(this)">
         <div class="oc-t">Full Day</div>
-        <div class="oc-s">Dawn through last dance</div>
+        <div class="oc-s">Dawn through Last Dance</div>
         <div class="oc-p">From $6,500</div>
       </div>
     </div>
@@ -607,8 +658,8 @@
     <div class="agrid">
       <div class="ac" data-val="second" data-price="500" onclick="tog(this)">
         <div>
-          <div class="ac-name">Second Shooter</div>
-          <div class="ac-d">Two perspectives · full coverage</div>
+          <div class="ac-name">Second Professional Photographer</div>
+          <div class="ac-d">Two perspectives · comprehensive coverage</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$500</span>
           <div class="chk">✓</div>
@@ -617,7 +668,7 @@
       <div class="ac" data-val="engage" data-price="450" onclick="tog(this)">
         <div>
           <div class="ac-name">Engagement Session</div>
-          <div class="ac-d">Pre-wedding portrait session</div>
+          <div class="ac-d">Pre-wedding artistic portrait session</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$450</span>
           <div class="chk">✓</div>
@@ -625,8 +676,8 @@
       </div>
       <div class="ac" data-val="drone" data-price="350" onclick="tog(this)">
         <div>
-          <div class="ac-name">Drone Footage</div>
-          <div class="ac-d">Aerial cinematic imagery</div>
+          <div class="ac-name">Aerial Drone Services</div>
+          <div class="ac-d">Cinematic aerial photography & video</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$350</span>
           <div class="chk">✓</div>
@@ -634,8 +685,8 @@
       </div>
       <div class="ac" data-val="album" data-price="800" onclick="tog(this)">
         <div>
-          <div class="ac-name">Heirloom Album</div>
-          <div class="ac-d">Italian leather · lay-flat binding</div>
+          <div class="ac-name">Custom Heirloom Album & Prints</div>
+          <div class="ac-d">Italian leather · museum-grade printing</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$800</span>
           <div class="chk">✓</div>
@@ -643,8 +694,8 @@
       </div>
       <div class="ac" data-val="bts" data-price="600" onclick="tog(this)">
         <div>
-          <div class="ac-name">BTS Content Creator</div>
-          <div class="ac-d">Social-ready reels + behind-the-scenes</div>
+          <div class="ac-name">Social Media Content Creation</div>
+          <div class="ac-d">Vertical reels + behind-the-scenes content</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$600</span>
           <div class="chk">✓</div>
@@ -652,8 +703,8 @@
       </div>
       <div class="ac" data-val="super8" data-price="900" onclick="tog(this)">
         <div>
-          <div class="ac-name">Super 8 Film</div>
-          <div class="ac-d">Vintage 8mm cinematic film reel</div>
+          <div class="ac-name">Vintage Super 8 Cinematic Film</div>
+          <div class="ac-d">Authentic 8mm film reel documentation</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$900</span>
           <div class="chk">✓</div>
@@ -661,8 +712,8 @@
       </div>
       <div class="ac" data-val="express" data-price="300" onclick="tog(this)">
         <div>
-          <div class="ac-name">Expedited Delivery</div>
-          <div class="ac-d">Gallery delivered within 2 weeks</div>
+          <div class="ac-name">Expedited Gallery Delivery</div>
+          <div class="ac-d">Final gallery delivered within 14 days</div>
         </div>
         <div class="ac-r"><span class="ac-p">+$300</span>
           <div class="chk">✓</div>
@@ -693,18 +744,43 @@
     </div>
 
     <div class="slabel" style="margin-bottom:.75rem">Your Details</div>
-    <div class="frow">
-      <div class="fg"><label class="fl">First Name</label><input class="fi" id="fi-fn" placeholder="Sophia" type="text">
+    <div class="form-grid">
+      <div class="fg">
+        <label class="fl">First Name <span>*</span></label>
+        <input class="fi" id="fi-fn" placeholder="Sophia" type="text">
       </div>
-      <div class="fg"><label class="fl">Last Name</label><input class="fi" id="fi-ln" placeholder="Laurent" type="text">
+      <div class="fg">
+        <label class="fl">Last Name <span>*</span></label>
+        <input class="fi" id="fi-ln" placeholder="Laurent" type="text">
       </div>
-      <div class="fg"><label class="fl">Email</label><input class="fi" id="fi-em" placeholder="hello@email.com"
-          type="email"></div>
-      <div class="fg"><label class="fl">Wedding Date</label><input class="fi" id="fi-dt" placeholder="Oct 12, 2026"
-          type="text"></div>
+      <div class="fg">
+        <label class="fl">Fiancé's Name <span>*</span></label>
+        <input class="fi" id="fi-fiance" placeholder="Partner's Name" type="text">
+      </div>
+      <div class="fg">
+        <label class="fl">Email Address <span>*</span></label>
+        <input class="fi" id="fi-em" placeholder="hello@email.com" type="email">
+      </div>
+      <div class="fg">
+        <label class="fl">Phone Number</label>
+        <input class="fi" id="fi-phone" placeholder="555-0123" type="tel">
+      </div>
+      <div class="fg">
+        <label class="fl">Wedding Date <span>*</span></label>
+        <input class="fi" id="fi-dt" placeholder="Oct 12, 2026" type="text">
+      </div>
+      <div class="fg">
+        <label class="fl">Wedding Venue <span>*</span></label>
+        <input class="fi" id="fi-venue" placeholder="City, State" type="text">
+      </div>
+      <div class="fg">
+        <label class="fl">How did you hear about us? <span>*</span></label>
+        <input class="fi" id="fi-source" placeholder="Instagram, Friend, etc." type="text">
+      </div>
     </div>
+
     <div class="fg" style="margin-bottom:1.25rem"><label class="fl">Tell us about your vision</label><textarea
-        class="fi" id="fi-msg" rows="3" placeholder="Venue, style, anything important to you..."></textarea></div>
+        class="fi" id="fi-msg" rows="3" placeholder="Describe your dream day..."></textarea></div>
 
     <div class="brow">
       <button class="btn-g" onclick="goTo(3)">&larr; Back</button>
@@ -720,15 +796,20 @@
     <div class="div" style="margin:1rem auto"></div>
     <div class="sub" id="suc-sub">Thank you. We'll be in touch within 48 hours with a custom proposal.</div>
     <div class="slabel" style="margin-top:2rem;margin-bottom:.5rem">Your Package Summary</div>
-    <div id="suc-sum" style="max-width:380px;margin:0 auto"></div>
+    <div id="suc-sum" style="max-width:480px;margin:2rem auto"></div>
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0dd;">
+      <p style="font-size: 0.85rem; color: #9a9a97; margin-bottom: 1.5rem;">Want this interactive tool on your own website?</p>
+      <a href="https://lustrestudio.uk/tools" class="btn" style="background: #0a0a0a; color: #fafafa; text-decoration: none;">Get This Template — £200</a>
+    </div>
+    <button class="btn-g" onclick="location.reload()" style="margin-top:2rem">Build Another Package &rarr;</button>
   </div>
 </div>
 
 <script>
   const S = { cov: null, covBase: 0, type: null, typeMult: 1, addons: [], addonTotal: 0 };
-  const covLabels = { '6h': '6 Hours', '8h': '8 Hours', '10h': '10 Hours', 'full': 'Full Day' };
+  const covLabels = { '2h': '2 Hours', '4h': '4 Hours', '6h': '6 Hours', '8h': '8 Hours', '10h': '10 Hours', 'full': 'Full Day' };
   const typeLabels = { 'elope': 'Elopement', 'trad': 'Traditional Wedding', 'dest': 'Destination Wedding', 'luxury': 'Luxury Multi-Day' };
-  const addonLabels = { 'second': 'Second Shooter', 'engage': 'Engagement Session', 'drone': 'Drone Footage', 'album': 'Heirloom Album', 'bts': 'BTS Content Creator', 'super8': 'Super 8 Film', 'express': 'Expedited Delivery' };
+  const addonLabels = { 'second': 'Second Professional Photographer', 'engage': 'Engagement Session', 'drone': 'Aerial Drone Services', 'album': 'Custom Heirloom Album & Prints', 'bts': 'Social Media Content Creation', 'super8': 'Vintage Super 8 Cinematic Film', 'express': 'Expedited Gallery Delivery' };
   const addonPrices = { 'second': 500, 'engage': 450, 'drone': 350, 'album': 800, 'bts': 600, 'super8': 900, 'express': 300 };
 
   function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
@@ -844,20 +925,76 @@
 
   function submit() {
     var fn = document.getElementById('fi-fn').value.trim();
+    var ln = document.getElementById('fi-ln').value.trim();
     var em = document.getElementById('fi-em').value.trim();
-    if (!fn || !em) { alert('Please enter your name and email.'); return; }
-    document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
-    document.getElementById('prog').style.display = 'none';
-    var suc = document.getElementById('suc');
-    var sub = document.getElementById('suc-sub');
-    sub.textContent = 'Thank you, ' + fn + '. We\'ll be in touch within 48 hours with a custom proposal tailored to your ' + fmt(calcTotal()) + ' package.';
-    var sumLines = '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
-    sumLines += '<div class="sl"><span class="sk">Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
-    S.addons.forEach(function (a) {
-      sumLines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
+    var dt = document.getElementById('fi-dt').value.trim();
+    var ven = document.getElementById('fi-venue').value.trim();
+    var src = document.getElementById('fi-source').value.trim();
+    var fiance = document.getElementById('fi-fiance').value.trim();
+    var msg = document.getElementById('fi-msg').value.trim();
+
+    if (!fn || !ln || !em || !dt || !ven || !src || !fiance) { 
+      alert('Please fill out all required fields marked with *'); 
+      return; 
+    }
+
+    var btn = document.querySelector('.step.on .btn');
+    var originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    // Prepare summary for email
+    var total = calcTotal();
+    var summary = 'Coverage: ' + (covLabels[S.cov] || '—') + ' (' + fmt(S.covBase * S.typeMult) + ')\n';
+    summary += 'Type: ' + (typeLabels[S.type] || '—') + '\n';
+    summary += 'Enhancements: ' + (S.addons.length ? S.addons.map(a => addonLabels[a]).join(', ') : 'None') + '\n';
+    summary += 'Total Estimate: ' + fmt(total);
+
+    var formData = {
+      name: fn + ' ' + ln,
+      email: em,
+      fiance: fiance,
+      phone: document.getElementById('fi-phone').value.trim(),
+      wedding_date: dt,
+      venue: ven,
+      source: src,
+      message: msg,
+      package_summary: summary,
+      _subject: 'New Package Inquiry: ' + fn + ' ' + ln
+    };
+
+    fetch('https://formspree.io/f/xrekvkkp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      if (response.ok) {
+        document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
+        document.getElementById('prog').style.display = 'none';
+        var suc = document.getElementById('suc');
+        var sub = document.getElementById('suc-sub');
+        sub.textContent = 'Thank you, ' + fn + '. We\'ve received your inquiry and your ' + fmt(total) + ' package summary. We\'ll be in touch within 48 hours.';
+        
+        var sumLines = '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
+        sumLines += '<div class="sl"><span class="sk">Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
+        S.addons.forEach(function (a) {
+          sumLines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
+        });
+        sumLines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(total) + '</span></div>';
+        document.getElementById('suc-sum').innerHTML = sumLines;
+        suc.classList.add('on');
+        window.scrollTo(0,0);
+      } else {
+        alert('There was an error sending your inquiry. Please try again.');
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    })
+    .catch(error => {
+      alert('There was an error sending your inquiry. Please try again.');
+      btn.disabled = false;
+      btn.textContent = originalText;
     });
-    sumLines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(calcTotal()) + '</span></div>';
-    document.getElementById('suc-sum').innerHTML = sumLines;
-    suc.classList.add('on');
   }
 </script>
