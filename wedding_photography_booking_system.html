@@ -1,7 +1,18 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
-  rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Inquiry Edit | Premium Wedding Photography Booking</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet">
 <style>
   *,
   *::before,
@@ -11,11 +22,30 @@
     padding: 0
   }
 
+  body {
+    background: #fcfcf9;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+  }
+
   .wb {
     font-family: 'Jost', system-ui, sans-serif;
     color: #0a0a0a;
     background: #fafafa;
-    min-height: 480px
+    min-height: 100vh;
+    max-width: 850px;
+    margin: 0 auto;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    box-shadow: 0 0 50px rgba(0,0,0,0.02);
+  }
+
+  @media(max-width: 850px) {
+    .wb {
+      border: none;
+      box-shadow: none;
+      margin: 0;
+    }
   }
 
   .wb-rule {
@@ -25,7 +55,7 @@
   }
 
   header {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
     border-bottom: 1px solid #e0e0dd;
     background: #fafafa
@@ -552,7 +582,8 @@
     .btn-g { text-align: center; justify-content: center; }
   }
 </style>
-
+</head>
+<body>
 <div class="wb">
   <div class="wb-rule"></div>
 
@@ -1009,3 +1040,5 @@
     });
   }
 </script>
+</body>
+</html>
