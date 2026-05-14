@@ -1,1060 +1,1108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Inquiry Edit | Premium Wedding Photography Booking</title>
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
-      rel="stylesheet">
-<style>
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
-  }
-
-  body {
-    background: #fcfcf9;
-    color: #0a0a0a;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .wb {
-    font-family: 'Jost', system-ui, sans-serif;
-    color: #0a0a0a;
-    background: #fafafa;
-    min-height: 100vh;
-    max-width: 850px;
-    margin: 0 auto;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-    box-shadow: 0 0 50px rgba(0,0,0,0.02);
-  }
-
-  @media(max-width: 850px) {
-    .wb {
-      border: none;
-      box-shadow: none;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Inquiry Edit | Premium Wedding Photography Booking</title>
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
-    }
-  }
-
-  .wb-rule {
-    height: 3px;
-    background: #0a0a0a;
-    width: 100%
-  }
-
-  header {
-    padding: 4rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid #e0e0dd;
-    background: #fafafa
-  }
-
-  .logo {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.2rem;
-    color: #0a0a0a;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    font-weight: 300;
-    line-height: 1.2
-  }
-
-  .step {
-    display: none;
-    padding: 2rem 2rem 1.5rem;
-    animation: fu .35s ease
-  }
-
-  .step.on {
-    display: block
-  }
-
-  @keyframes fu {
-    from {
-      opacity: 0;
-      transform: translateY(10px)
+      padding: 0
     }
 
-    to {
-      opacity: 1;
-      transform: translateY(0)
+    body {
+      background: #fcfcf9;
+      color: #0a0a0a;
+      -webkit-font-smoothing: antialiased;
     }
-  }
 
-  .prog {
-    display: flex;
-    align-items: center;
-    padding: 1.25rem 2rem 0;
-    gap: 0;
-    margin-bottom: 2rem
-  }
-
-  .ps {
-    flex: 1;
-    height: 1px;
-    background: #e0e0dd;
-    position: relative;
-    transition: background .4s
-  }
-
-  .ps.d,
-  .ps.a {
-    background: #0a0a0a
-  }
-
-  .pd {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #e0e0dd;
-    position: absolute;
-    right: -3px;
-    top: -2.5px;
-    transition: background .4s
-  }
-
-  .pd.d,
-  .pd.a {
-    background: #0a0a0a
-  }
-
-  .slabel {
-    font-size: 9px;
-    letter-spacing: .22em;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #bbb;
-    margin-bottom: .4rem
-  }
-
-  .h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.8rem;
-    font-weight: 300;
-    line-height: 1.08;
-    letter-spacing: -.02em;
-    color: #0a0a0a;
-    margin-bottom: .75rem
-  }
-
-  .h1 i {
-    font-style: italic
-  }
-
-  .h2 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    letter-spacing: -.01em;
-    margin-bottom: .35rem
-  }
-
-  .sub {
-    font-size: 12px;
-    font-weight: 300;
-    color: #9a9a97;
-    letter-spacing: .04em;
-    margin-bottom: 1.75rem;
-    line-height: 1.6
-  }
-
-  .div {
-    width: 36px;
-    height: 1px;
-    background: #0a0a0a;
-    margin: 1.25rem 0
-  }
-
-  .cgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: #e0e0dd;
-    border: 1px solid #e0e0dd;
-    margin-bottom: 1.5rem
-  }
-
-  .oc {
-    background: #fafafa;
-    padding: 2rem 1.5rem;
-    cursor: pointer;
-    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between
-  }
-
-  .oc:hover {
-    background: #fcfcfc;
-    transform: translateY(-2px)
-  }
-
-  .oc.sel {
-    background: #0a0a0a;
-    color: #fafafa
-  }
-
-  .oc-t {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: .2rem
-  }
-
-  .oc-s {
-    font-size: 10px;
-    font-weight: 300;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #bbb;
-    margin-bottom: .6rem
-  }
-
-  .oc.sel .oc-s {
-    color: #666
-  }
-
-  .oc-p {
-    font-size: 12px;
-    font-weight: 300;
-    color: #bbb;
-    letter-spacing: .02em
-  }
-
-  .oc.sel .oc-p {
-    color: #777
-  }
-
-  .agrid {
-    display: grid;
-    gap: 1px;
-    background: #e0e0dd;
-    border: 1px solid #e0e0dd;
-    margin-bottom: 1.25rem
-  }
-
-  .ac {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fafafa;
-    padding: .875rem 1.25rem;
-    cursor: pointer;
-    transition: background .18s;
-    user-select: none
-  }
-
-  .ac:hover {
-    background: #f0f0ed
-  }
-
-  .ac.sel {
-    background: #0a0a0a;
-    color: #fafafa
-  }
-
-  .ac-name {
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: .01em;
-    margin-bottom: 2px
-  }
-
-  .ac-d {
-    font-size: 10px;
-    font-weight: 300;
-    color: #bbb;
-    letter-spacing: .03em
-  }
-
-  .ac.sel .ac-d {
-    color: #666
-  }
-
-  .ac-r {
-    display: flex;
-    align-items: center;
-    gap: 1rem
-  }
-
-  .ac-p {
-    font-size: 12px;
-    font-weight: 300;
-    color: #bbb;
-    letter-spacing: .02em
-  }
-
-  .ac.sel .ac-p {
-    color: #777
-  }
-
-  .chk {
-    width: 16px;
-    height: 16px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    transition: all .18s;
-    flex-shrink: 0
-  }
-
-  .ac.sel .chk {
-    border-color: #fafafa;
-    background: #fafafa;
-    color: #0a0a0a
-  }
-
-  .pbar {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 1.125rem 0;
-    border-top: 1px solid #e8e8e5;
-    margin-top: .25rem
-  }
-
-  .pl {
-    font-size: 9px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #bbb
-  }
-
-  .pa {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.1rem;
-    font-weight: 300;
-    letter-spacing: -.02em;
-    transition: all .3s
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: #0a0a0a;
-    color: #fafafa;
-    border: none;
-    padding: 1.1rem 2.5rem;
-    font-family: 'Jost', system-ui, sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all .3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05)
-  }
-
-  .btn:hover {
-    background: #1a1a1a;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1)
-  }
-
-  .btn:disabled {
-    opacity: .35;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none
-  }
-
-  .btn-g {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: transparent;
-    color: #bbb;
-    border: none;
-    padding: .8rem 0;
-    font-family: 'Jost', system-ui, sans-serif;
-    font-size: 10px;
-    font-weight: 300;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color .2s
-  }
-
-  .btn-g:hover {
-    color: #0a0a0a
-  }
-
-  .brow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.25rem
-  }
-
-  .fg {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 1rem
-  }
-
-  .fl {
-    font-size: 9px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #bbb
-  }
-
-  .fi {
-    border: none;
-    border-bottom: 1px solid #e0e0dd;
-    background: transparent;
-    padding: .45rem 0;
-    font-family: 'Jost', system-ui, sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: #0a0a0a;
-    outline: none;
-    transition: border-color .2s;
-    width: 100%
-  }
-
-  .fi:focus {
-    border-bottom-color: #0a0a0a
-  }
-
-  .fi::placeholder {
-    color: #ccc
-  }
-
-  textarea.fi {
-    resize: none;
-    line-height: 1.5
-  }
-
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem
-  }
-
-  @media(min-width: 768px) {
-    .form-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem
+    .wb {
+      font-family: 'Jost', system-ui, sans-serif;
+      color: #0a0a0a;
+      background: #fafafa;
+      min-height: 100vh;
+      max-width: 850px;
+      margin: 0 auto;
+      border-left: 1px solid #eee;
+      border-right: 1px solid #eee;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.02);
     }
-  }
 
-  .sl {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: .45rem 0;
-    border-bottom: 1px solid #f0f0ed;
-    font-size: 12px;
-    font-weight: 300
-  }
+    @media(max-width: 850px) {
+      .wb {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+      }
+    }
 
-  .sl:last-child {
-    border-bottom: none
-  }
+    .wb-rule {
+      height: 3px;
+      background: #0a0a0a;
+      width: 100%
+    }
 
-  .sl .sk {
-    color: #9a9a97;
-    letter-spacing: .02em
-  }
-
-  .sl .sv {
-    font-weight: 400
-  }
-
-  .sl.tot {
-    border-bottom: none;
-    border-top: 2px solid #0a0a0a;
-    padding-top: 1.5rem;
-    margin-top: 1rem
-  }
-
-  .sl.tot .sk {
-    font-size: 11px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: #0a0a0a;
-    font-weight: 500
-  }
-
-  .sl.tot .sv {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.2rem;
-    font-weight: 300;
-    line-height: 1
-  }
-
-  .lscore {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    padding: .75rem 1rem;
-    background: #f5f5f3;
-    margin-bottom: 1.5rem;
-    border: 1px solid #e8e8e5
-  }
-
-  .lsbar {
-    flex: 1;
-    height: 1px;
-    background: #e0e0dd
-  }
-
-  .lsfill {
-    height: 100%;
-    background: #0a0a0a;
-    transition: width .5s ease
-  }
-
-  .lsl {
-    font-size: 9px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #bbb;
-    white-space: nowrap
-  }
-
-  .lsv {
-    font-size: 11px;
-    font-weight: 500;
-    color: #0a0a0a;
-    white-space: nowrap;
-    min-width: 28px;
-    text-align: right
-  }
-
-  .suc {
-    text-align: center;
-    padding: 3rem 2rem;
-    display: none
-  }
-
-  .suc.on {
-    display: block;
-    animation: fu .4s ease
-  }
-
-  .suc-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    opacity: .3
-  }
-
-  .note {
-    font-size: 10px;
-    color: #bbb;
-    letter-spacing: .04em;
-    font-weight: 300;
-    line-height: 1.7;
-    margin-top: 1rem
-  }
-
-  @media(max-width: 600px) {
-    .h1 { font-size: 2.2rem; }
-    .h2 { font-size: 1.6rem; }
-    .cgrid { grid-template-columns: 1fr; }
-    .step { padding: 2rem 1.25rem 1.5rem; }
-    .prog { padding: 1rem 1.25rem 0; }
-    .btn { width: 100%; padding: 1.1rem 1.5rem; }
-    .brow { flex-direction: column-reverse; gap: 1rem; align-items: stretch; }
-    .btn-g { text-align: center; justify-content: center; }
-    #err-msg {
-      background: #fff0f0;
-      color: #c00;
-      padding: 1rem;
-      font-size: 11px;
-      letter-spacing: 0.05em;
-      border: 1px solid #ffebeb;
-      margin-bottom: 1.5rem;
+    header {
+      padding: 4rem 2rem;
       text-align: center;
-      display: none;
-      animation: fu 0.3s ease;
+      border-bottom: 1px solid #e0e0dd;
+      background: #fafafa
     }
-  }
-</style>
+
+    .logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem;
+      color: #0a0a0a;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 300;
+      line-height: 1.2
+    }
+
+    .step {
+      display: none;
+      padding: 2rem 2rem 1.5rem;
+      animation: fu .35s ease
+    }
+
+    .step.on {
+      display: block
+    }
+
+    @keyframes fu {
+      from {
+        opacity: 0;
+        transform: translateY(10px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .prog {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem 2rem 0;
+      gap: 0;
+      margin-bottom: 2rem
+    }
+
+    .ps {
+      flex: 1;
+      height: 1px;
+      background: #e0e0dd;
+      position: relative;
+      transition: background .4s
+    }
+
+    .ps.d,
+    .ps.a {
+      background: #0a0a0a
+    }
+
+    .pd {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #e0e0dd;
+      position: absolute;
+      right: -3px;
+      top: -2.5px;
+      transition: background .4s
+    }
+
+    .pd.d,
+    .pd.a {
+      background: #0a0a0a
+    }
+
+    .slabel {
+      font-size: 9px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #bbb;
+      margin-bottom: .4rem
+    }
+
+    .h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      color: #0a0a0a;
+      margin-bottom: .75rem
+    }
+
+    .h1 i {
+      font-style: italic
+    }
+
+    .h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: -.01em;
+      margin-bottom: .35rem
+    }
+
+    .sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: #9a9a97;
+      letter-spacing: .04em;
+      margin-bottom: 1.75rem;
+      line-height: 1.6
+    }
+
+    .div {
+      width: 36px;
+      height: 1px;
+      background: #0a0a0a;
+      margin: 1.25rem 0
+    }
+
+    .cgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #e0e0dd;
+      border: 1px solid #e0e0dd;
+      margin-bottom: 1.5rem
+    }
+
+    .oc {
+      background: #fafafa;
+      padding: 2rem 1.5rem;
+      cursor: pointer;
+      transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+    }
+
+    .oc:hover {
+      background: #fcfcfc;
+      transform: translateY(-2px)
+    }
+
+    .oc.sel {
+      background: #0a0a0a;
+      color: #fafafa
+    }
+
+    .oc-t {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: .2rem
+    }
+
+    .oc-s {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: .6rem
+    }
+
+    .oc.sel .oc-s {
+      color: #666
+    }
+
+    .oc-p {
+      font-size: 12px;
+      font-weight: 300;
+      color: #bbb;
+      letter-spacing: .02em
+    }
+
+    .oc.sel .oc-p {
+      color: #777
+    }
+
+    .agrid {
+      display: grid;
+      gap: 1px;
+      background: #e0e0dd;
+      border: 1px solid #e0e0dd;
+      margin-bottom: 1.25rem
+    }
+
+    .ac {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fafafa;
+      padding: .875rem 1.25rem;
+      cursor: pointer;
+      transition: background .18s;
+      user-select: none
+    }
+
+    .ac:hover {
+      background: #f0f0ed
+    }
+
+    .ac.sel {
+      background: #0a0a0a;
+      color: #fafafa
+    }
+
+    .ac-name {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: .01em;
+      margin-bottom: 2px
+    }
+
+    .ac-d {
+      font-size: 10px;
+      font-weight: 300;
+      color: #bbb;
+      letter-spacing: .03em
+    }
+
+    .ac.sel .ac-d {
+      color: #666
+    }
+
+    .ac-r {
+      display: flex;
+      align-items: center;
+      gap: 1rem
+    }
+
+    .ac-p {
+      font-size: 12px;
+      font-weight: 300;
+      color: #bbb;
+      letter-spacing: .02em
+    }
+
+    .ac.sel .ac-p {
+      color: #777
+    }
+
+    .chk {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      transition: all .18s;
+      flex-shrink: 0
+    }
+
+    .ac.sel .chk {
+      border-color: #fafafa;
+      background: #fafafa;
+      color: #0a0a0a
+    }
+
+    .pbar {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 1.125rem 0;
+      border-top: 1px solid #e8e8e5;
+      margin-top: .25rem
+    }
+
+    .pl {
+      font-size: 9px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #bbb
+    }
+
+    .pa {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 300;
+      letter-spacing: -.02em;
+      transition: all .3s
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #0a0a0a;
+      color: #fafafa;
+      border: none;
+      padding: 1.1rem 2.5rem;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)
+    }
+
+    .btn:hover {
+      background: #1a1a1a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1)
+    }
+
+    .btn:disabled {
+      opacity: .35;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none
+    }
+
+    .btn-g {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: #bbb;
+      border: none;
+      padding: .8rem 0;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .2s
+    }
+
+    .btn-g:hover {
+      color: #0a0a0a
+    }
+
+    .brow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.25rem
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 1rem
+    }
+
+    .fl {
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #bbb
+    }
+
+    .fi {
+      border: none;
+      border-bottom: 1px solid #e0e0dd;
+      background: transparent;
+      padding: .45rem 0;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: #0a0a0a;
+      outline: none;
+      transition: border-color .2s;
+      width: 100%
+    }
+
+    .fi:focus {
+      border-bottom-color: #0a0a0a
+    }
+
+    .fi::placeholder {
+      color: #ccc
+    }
+
+    textarea.fi {
+      resize: none;
+      line-height: 1.5
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem
+    }
+
+    @media(min-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem
+      }
+    }
+
+    .sl {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: .45rem 0;
+      border-bottom: 1px solid #f0f0ed;
+      font-size: 12px;
+      font-weight: 300
+    }
+
+    .sl:last-child {
+      border-bottom: none
+    }
+
+    .sl .sk {
+      color: #9a9a97;
+      letter-spacing: .02em
+    }
+
+    .sl .sv {
+      font-weight: 400
+    }
+
+    .sl.tot {
+      border-bottom: none;
+      border-top: 2px solid #0a0a0a;
+      padding-top: 1.5rem;
+      margin-top: 1rem
+    }
+
+    .sl.tot .sk {
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      font-weight: 500
+    }
+
+    .sl.tot .sv {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      line-height: 1
+    }
+
+    .lscore {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .75rem 1rem;
+      background: #f5f5f3;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e8e8e5
+    }
+
+    .lsbar {
+      flex: 1;
+      height: 1px;
+      background: #e0e0dd
+    }
+
+    .lsfill {
+      height: 100%;
+      background: #0a0a0a;
+      transition: width .5s ease
+    }
+
+    .lsl {
+      font-size: 9px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #bbb;
+      white-space: nowrap
+    }
+
+    .lsv {
+      font-size: 11px;
+      font-weight: 500;
+      color: #0a0a0a;
+      white-space: nowrap;
+      min-width: 28px;
+      text-align: right
+    }
+
+    .suc {
+      text-align: center;
+      padding: 3rem 2rem;
+      display: none
+    }
+
+    .suc.on {
+      display: block;
+      animation: fu .4s ease
+    }
+
+    .suc-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      opacity: .3
+    }
+
+    .note {
+      font-size: 10px;
+      color: #bbb;
+      letter-spacing: .04em;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-top: 1rem
+    }
+
+    @media(max-width: 600px) {
+      .h1 {
+        font-size: 2.2rem;
+      }
+
+      .h2 {
+        font-size: 1.6rem;
+      }
+
+      .cgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .prog {
+        padding: 1rem 1.25rem 0;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 1.1rem 1.5rem;
+      }
+
+      .brow {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: stretch;
+      }
+
+      .btn-g {
+        text-align: center;
+        justify-content: center;
+      }
+
+      #err-msg {
+        background: #fff0f0;
+        color: #c00;
+        padding: 1rem;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        border: 1px solid #ffebeb;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        display: none;
+        animation: fu 0.3s ease;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="wb">
-  <div class="wb-rule"></div>
+  <div class="wb">
+    <div class="wb-rule"></div>
 
-  <header>
-    <div class="logo">The Inquiry Edit</div>
-    <div style="color:#9a9a97; font-size:9px; letter-spacing:0.3em; margin-top:0.5rem; text-transform: uppercase;">Premium Photography Booking</div>
-  </header>
+    <header>
+      <div class="logo">The Inquiry Edit</div>
+      <div style="color:#9a9a97; font-size:9px; letter-spacing:0.3em; margin-top:0.5rem; text-transform: uppercase;">
+        Premium Photography Booking</div>
+    </header>
 
-  <div class="prog" id="prog">
-    <div class="ps d" id="ps0">
-      <div class="pd d" id="pd0"></div>
+    <div class="prog" id="prog">
+      <div class="ps d" id="ps0">
+        <div class="pd d" id="pd0"></div>
+      </div>
+      <div class="ps" id="ps1">
+        <div class="pd" id="pd1"></div>
+      </div>
+      <div class="ps" id="ps2">
+        <div class="pd" id="pd2"></div>
+      </div>
+      <div class="ps" id="ps3">
+        <div class="pd" id="pd3"></div>
+      </div>
+      <div class="ps" id="ps4"></div>
     </div>
-    <div class="ps" id="ps1">
-      <div class="pd" id="pd1"></div>
+
+    <div class="step on" id="s0">
+      <div class="slabel">Wedding Photography</div>
+      <div class="h1">Build Your<br><i>Photography</i><br>Experience</div>
+      <div class="div"></div>
+      <div class="sub">Answer a few questions to design your perfect package.<br>Receive an instant investment estimate
+        —
+        no awkward emails.</div>
+      <button class="btn" onclick="goTo(1)">Begin &rarr;</button>
     </div>
-    <div class="ps" id="ps2">
-      <div class="pd" id="pd2"></div>
+
+    <div class="step" id="s1">
+      <div class="slabel">Step 01 — Coverage</div>
+      <div class="h2">How long should<br>we be there?</div>
+      <div class="sub">Select your preferred coverage window.</div>
+      <div class="cgrid">
+        <div class="oc" data-group="cov" data-val="2h" data-base="1200" onclick="pick(this)">
+          <div class="oc-t">2 Hours</div>
+          <div class="oc-s">Elopement / Civil Ceremony</div>
+          <div class="oc-p">From £1,200</div>
+        </div>
+        <div class="oc" data-group="cov" data-val="4h" data-base="2000" onclick="pick(this)">
+          <div class="oc-t">4 Hours</div>
+          <div class="oc-s">Half Day / Micro-Wedding</div>
+          <div class="oc-p">From £2,000</div>
+        </div>
+        <div class="oc" data-group="cov" data-val="6h" data-base="2800" onclick="pick(this)">
+          <div class="oc-t">6 Hours</div>
+          <div class="oc-s">Essential Story</div>
+          <div class="oc-p">From £2,800</div>
+        </div>
+        <div class="oc" data-group="cov" data-val="8h" data-base="3800" onclick="pick(this)">
+          <div class="oc-t">8 Hours</div>
+          <div class="oc-s">Standard Celebration</div>
+          <div class="oc-p">From £3,800</div>
+        </div>
+        <div class="oc" data-group="cov" data-val="10h" data-base="4800" onclick="pick(this)">
+          <div class="oc-t">10 Hours</div>
+          <div class="oc-s">Extended Coverage</div>
+          <div class="oc-p">From £4,800</div>
+        </div>
+        <div class="oc" data-group="cov" data-val="full" data-base="6500" onclick="pick(this)">
+          <div class="oc-t">Full Day</div>
+          <div class="oc-s">Dawn through Last Dance</div>
+          <div class="oc-p">From £6,500</div>
+        </div>
+      </div>
+      <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price1">—</span></div>
+      <div class="brow">
+        <button class="btn-g" onclick="goTo(0)">&larr; Back</button>
+        <button class="btn" id="btn1" disabled onclick="goTo(2)">Continue &rarr;</button>
+      </div>
     </div>
-    <div class="ps" id="ps3">
-      <div class="pd" id="pd3"></div>
+
+    <div class="step" id="s2">
+      <div class="slabel">Step 02 — Wedding Type</div>
+      <div class="h2">Tell us about<br>your wedding</div>
+      <div class="sub">This helps us understand the scale and scope of your day.</div>
+      <div class="cgrid">
+        <div class="oc" data-group="type" data-val="elope" data-mult="0.85" onclick="pick(this)">
+          <div class="oc-t">Elopement</div>
+          <div class="oc-s">Intimate · 2–20 guests</div>
+          <div class="oc-p">—15% off base</div>
+        </div>
+        <div class="oc" data-group="type" data-val="trad" data-mult="1.0" onclick="pick(this)">
+          <div class="oc-t">Traditional</div>
+          <div class="oc-s">Classic · 50–200 guests</div>
+          <div class="oc-p">Standard pricing</div>
+        </div>
+        <div class="oc" data-group="type" data-val="dest" data-mult="1.25" onclick="pick(this)">
+          <div class="oc-t">Destination</div>
+          <div class="oc-s">Travel · international</div>
+          <div class="oc-p">+25% travel rate</div>
+        </div>
+        <div class="oc" data-group="type" data-val="luxury" data-mult="1.75" onclick="pick(this)">
+          <div class="oc-t">Luxury Event</div>
+          <div class="oc-s">Multi-day · high fashion</div>
+          <div class="oc-p">Custom rate</div>
+        </div>
+      </div>
+      <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price2">—</span></div>
+      <div class="brow">
+        <button class="btn-g" onclick="goTo(1)">&larr; Back</button>
+        <button class="btn" id="btn2" disabled onclick="goTo(3)">Continue &rarr;</button>
+      </div>
     </div>
-    <div class="ps" id="ps4"></div>
+
+    <div class="step" id="s3">
+      <div class="slabel">Step 03 — Enhancements</div>
+      <div class="h2">Elevate your<br>experience</div>
+      <div class="sub">Select any additions. Nothing is required.</div>
+      <div class="agrid">
+        <div class="ac" data-val="second" data-price="500" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Second Professional Photographer</div>
+            <div class="ac-d">Two perspectives · comprehensive coverage</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£500</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+        <div class="ac" data-val="engage" data-price="450" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Engagement Session</div>
+            <div class="ac-d">Pre-wedding artistic portrait session</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£450</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+        <div class="ac" data-val="drone" data-price="350" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Aerial Drone Services</div>
+            <div class="ac-d">Cinematic aerial photography & video</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£350</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+        <div class="ac" data-val="album" data-price="800" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Custom Heirloom Album & Prints</div>
+            <div class="ac-d">Italian leather · museum-grade printing</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£800</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+        <div class="ac" data-val="bts" data-price="600" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Social Media Content Creation</div>
+            <div class="ac-d">Vertical reels + behind-the-scenes content</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£600</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+        <div class="ac" data-val="super8" data-price="900" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Vintage Super 8 Cinematic Film</div>
+            <div class="ac-d">Authentic 8mm film reel documentation</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£900</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+        <div class="ac" data-val="express" data-price="300" onclick="tog(this)">
+          <div>
+            <div class="ac-name">Expedited Gallery Delivery</div>
+            <div class="ac-d">Final gallery delivered within 14 days</div>
+          </div>
+          <div class="ac-r"><span class="ac-p">+£300</span>
+            <div class="chk">✓</div>
+          </div>
+        </div>
+      </div>
+      <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price3">—</span></div>
+      <div class="brow">
+        <button class="btn-g" onclick="goTo(2)">&larr; Back</button>
+        <button class="btn" onclick="buildSummary();goTo(4)">Review Package &rarr;</button>
+      </div>
+    </div>
+
+    <div class="step" id="s4">
+      <div class="slabel">Step 04 — Inquiry</div>
+      <div class="h2">Your Package<br>Summary</div>
+
+      <div id="sum-lines" style="margin-bottom:1.5rem;margin-top:1.25rem"></div>
+
+
+      <div class="slabel" style="margin-bottom:.75rem">Your Details</div>
+      <div class="form-grid">
+        <div class="fg">
+          <label class="fl">First Name <span>*</span></label>
+          <input class="fi" id="fi-fn" placeholder="Sophia" type="text">
+        </div>
+        <div class="fg">
+          <label class="fl">Last Name <span>*</span></label>
+          <input class="fi" id="fi-ln" placeholder="Laurent" type="text">
+        </div>
+        <div class="fg">
+          <label class="fl">Fiancé's Name <span>*</span></label>
+          <input class="fi" id="fi-fiance" placeholder="Partner's Name" type="text">
+        </div>
+        <div class="fg">
+          <label class="fl">Email Address <span>*</span></label>
+          <input class="fi" id="fi-em" placeholder="hello@email.com" type="email">
+        </div>
+        <div class="fg">
+          <label class="fl">Phone Number</label>
+          <input class="fi" id="fi-phone" placeholder="555-0123" type="tel">
+        </div>
+        <div class="fg">
+          <label class="fl">Wedding Date <span>*</span></label>
+          <input class="fi" id="fi-dt" placeholder="Oct 12, 2026" type="text">
+        </div>
+        <div class="fg">
+          <label class="fl">Wedding Venue <span>*</span></label>
+          <input class="fi" id="fi-venue" placeholder="City, State" type="text">
+        </div>
+        <div class="fg">
+          <label class="fl">How did you hear about us? <span>*</span></label>
+          <input class="fi" id="fi-source" placeholder="Instagram, Friend, etc." type="text">
+        </div>
+      </div>
+
+      <div class="fg" style="margin-bottom:1.25rem"><label class="fl">Tell us about your vision</label><textarea
+          class="fi" id="fi-msg" rows="3" placeholder="Describe your dream day..."></textarea></div>
+
+      <div id="err-msg"></div>
+      <div class="brow">
+        <button class="btn-g" onclick="goTo(3)">&larr; Back</button>
+        <button class="btn" onclick="submit()">Submit Inquiry &rarr;</button>
+      </div>
+
+      <!-- Hidden form for Formspree -->
+      <form id="fs-form" action="https://formspree.io/f/mojnddby" method="POST" style="display:none">
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <input type="text" name="fiance">
+        <input type="text" name="phone">
+        <input type="text" name="wedding_date">
+        <input type="text" name="venue">
+        <input type="text" name="source">
+        <textarea name="message"></textarea>
+        <input type="text" name="lead_quality">
+        <textarea name="package_summary"></textarea>
+        <input type="hidden" name="_subject">
+      </form>
+      <p class="note">Your estimated package total will be included in the inquiry so we can respond with an accurate
+        proposal.</p>
+    </div>
+
+    <div class="suc" id="suc">
+      <div class="suc-icon">◆</div>
+      <div class="h2">Inquiry Received</div>
+      <div class="div" style="margin:1rem auto"></div>
+      <div class="sub" id="suc-sub">Thank you. We'll be in touch within 48 hours with a custom proposal.</div>
+      <div class="slabel" style="margin-top:2rem;margin-bottom:.5rem">Your Package Summary</div>
+      <div id="suc-sum" style="max-width:480px;margin:2rem auto"></div>
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0dd;">
+        <p style="font-size: 0.85rem; color: #9a9a97; margin-bottom: 1.5rem;">Want this interactive tool on your own
+          website?</p>
+        <a href="https://lustrestudio.uk/tools" class="btn"
+          style="background: #0a0a0a; color: #fafafa; text-decoration: none;">Get This Template — £300</a>
+      </div>
+      <button class="btn-g" onclick="location.reload()" style="margin-top:2rem">Build Another Package &rarr;</button>
+    </div>
   </div>
 
-  <div class="step on" id="s0">
-    <div class="slabel">Wedding Photography</div>
-    <div class="h1">Build Your<br><i>Photography</i><br>Experience</div>
-    <div class="div"></div>
-    <div class="sub">Answer a few questions to design your perfect package.<br>Receive an instant investment estimate —
-      no awkward emails.</div>
-    <button class="btn" onclick="goTo(1)">Begin &rarr;</button>
-  </div>
+  <script>
+    const S = { cov: null, covBase: 0, type: null, typeMult: 1, addons: [], addonTotal: 0 };
+    const covLabels = { '2h': '2 Hours', '4h': '4 Hours', '6h': '6 Hours', '8h': '8 Hours', '10h': '10 Hours', 'full': 'Full Day' };
+    const typeLabels = { 'elope': 'Elopement', 'trad': 'Traditional Wedding', 'dest': 'Destination Wedding', 'luxury': 'Luxury Multi-Day' };
+    const addonLabels = { 'second': 'Second Professional Photographer', 'engage': 'Engagement Session', 'drone': 'Aerial Drone Services', 'album': 'Custom Heirloom Album & Prints', 'bts': 'Social Media Content Creation', 'super8': 'Vintage Super 8 Cinematic Film', 'express': 'Expedited Gallery Delivery' };
+    const addonPrices = { 'second': 500, 'engage': 450, 'drone': 350, 'album': 800, 'bts': 600, 'super8': 900, 'express': 300 };
 
-  <div class="step" id="s1">
-    <div class="slabel">Step 01 — Coverage</div>
-    <div class="h2">How long should<br>we be there?</div>
-    <div class="sub">Select your preferred coverage window.</div>
-    <div class="cgrid">
-      <div class="oc" data-group="cov" data-val="2h" data-base="1200" onclick="pick(this)">
-        <div class="oc-t">2 Hours</div>
-        <div class="oc-s">Elopement / Civil Ceremony</div>
-        <div class="oc-p">From $1,200</div>
-      </div>
-      <div class="oc" data-group="cov" data-val="4h" data-base="2000" onclick="pick(this)">
-        <div class="oc-t">4 Hours</div>
-        <div class="oc-s">Half Day / Micro-Wedding</div>
-        <div class="oc-p">From $2,000</div>
-      </div>
-      <div class="oc" data-group="cov" data-val="6h" data-base="2800" onclick="pick(this)">
-        <div class="oc-t">6 Hours</div>
-        <div class="oc-s">Essential Story</div>
-        <div class="oc-p">From $2,800</div>
-      </div>
-      <div class="oc" data-group="cov" data-val="8h" data-base="3800" onclick="pick(this)">
-        <div class="oc-t">8 Hours</div>
-        <div class="oc-s">Standard Celebration</div>
-        <div class="oc-p">From $3,800</div>
-      </div>
-      <div class="oc" data-group="cov" data-val="10h" data-base="4800" onclick="pick(this)">
-        <div class="oc-t">10 Hours</div>
-        <div class="oc-s">Extended Coverage</div>
-        <div class="oc-p">From $4,800</div>
-      </div>
-      <div class="oc" data-group="cov" data-val="full" data-base="6500" onclick="pick(this)">
-        <div class="oc-t">Full Day</div>
-        <div class="oc-s">Dawn through Last Dance</div>
-        <div class="oc-p">From $6,500</div>
-      </div>
-    </div>
-    <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price1">—</span></div>
-    <div class="brow">
-      <button class="btn-g" onclick="goTo(0)">&larr; Back</button>
-      <button class="btn" id="btn1" disabled onclick="goTo(2)">Continue &rarr;</button>
-    </div>
-  </div>
+    function fmt(n) { return '£' + Math.round(n).toLocaleString(); }
 
-  <div class="step" id="s2">
-    <div class="slabel">Step 02 — Wedding Type</div>
-    <div class="h2">Tell us about<br>your wedding</div>
-    <div class="sub">This helps us understand the scale and scope of your day.</div>
-    <div class="cgrid">
-      <div class="oc" data-group="type" data-val="elope" data-mult="0.85" onclick="pick(this)">
-        <div class="oc-t">Elopement</div>
-        <div class="oc-s">Intimate · 2–20 guests</div>
-        <div class="oc-p">—15% off base</div>
-      </div>
-      <div class="oc" data-group="type" data-val="trad" data-mult="1.0" onclick="pick(this)">
-        <div class="oc-t">Traditional</div>
-        <div class="oc-s">Classic · 50–200 guests</div>
-        <div class="oc-p">Standard pricing</div>
-      </div>
-      <div class="oc" data-group="type" data-val="dest" data-mult="1.25" onclick="pick(this)">
-        <div class="oc-t">Destination</div>
-        <div class="oc-s">Travel · international</div>
-        <div class="oc-p">+25% travel rate</div>
-      </div>
-      <div class="oc" data-group="type" data-val="luxury" data-mult="1.75" onclick="pick(this)">
-        <div class="oc-t">Luxury Event</div>
-        <div class="oc-s">Multi-day · high fashion</div>
-        <div class="oc-p">Custom rate</div>
-      </div>
-    </div>
-    <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price2">—</span></div>
-    <div class="brow">
-      <button class="btn-g" onclick="goTo(1)">&larr; Back</button>
-      <button class="btn" id="btn2" disabled onclick="goTo(3)">Continue &rarr;</button>
-    </div>
-  </div>
+    function calcTotal() {
+      if (!S.cov) return null;
+      return Math.round(S.covBase * S.typeMult + S.addonTotal);
+    }
 
-  <div class="step" id="s3">
-    <div class="slabel">Step 03 — Enhancements</div>
-    <div class="h2">Elevate your<br>experience</div>
-    <div class="sub">Select any additions. Nothing is required.</div>
-    <div class="agrid">
-      <div class="ac" data-val="second" data-price="500" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Second Professional Photographer</div>
-          <div class="ac-d">Two perspectives · comprehensive coverage</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$500</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-      <div class="ac" data-val="engage" data-price="450" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Engagement Session</div>
-          <div class="ac-d">Pre-wedding artistic portrait session</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$450</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-      <div class="ac" data-val="drone" data-price="350" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Aerial Drone Services</div>
-          <div class="ac-d">Cinematic aerial photography & video</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$350</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-      <div class="ac" data-val="album" data-price="800" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Custom Heirloom Album & Prints</div>
-          <div class="ac-d">Italian leather · museum-grade printing</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$800</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-      <div class="ac" data-val="bts" data-price="600" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Social Media Content Creation</div>
-          <div class="ac-d">Vertical reels + behind-the-scenes content</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$600</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-      <div class="ac" data-val="super8" data-price="900" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Vintage Super 8 Cinematic Film</div>
-          <div class="ac-d">Authentic 8mm film reel documentation</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$900</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-      <div class="ac" data-val="express" data-price="300" onclick="tog(this)">
-        <div>
-          <div class="ac-name">Expedited Gallery Delivery</div>
-          <div class="ac-d">Final gallery delivered within 14 days</div>
-        </div>
-        <div class="ac-r"><span class="ac-p">+$300</span>
-          <div class="chk">✓</div>
-        </div>
-      </div>
-    </div>
-    <div class="pbar"><span class="pl">Estimated Investment</span><span class="pa" id="price3">—</span></div>
-    <div class="brow">
-      <button class="btn-g" onclick="goTo(2)">&larr; Back</button>
-      <button class="btn" onclick="buildSummary();goTo(4)">Review Package &rarr;</button>
-    </div>
-  </div>
+    function updatePrice(id) {
+      var t = calcTotal();
+      var el = document.getElementById(id);
+      if (el) el.textContent = t ? fmt(t) : '—';
+    }
 
-  <div class="step" id="s4">
-    <div class="slabel">Step 04 — Inquiry</div>
-    <div class="h2">Your Package<br>Summary</div>
+    function pick(el) {
+      var g = el.dataset.group;
+      document.querySelectorAll('[data-group="' + g + '"]').forEach(function (e) { e.classList.remove('sel') });
+      el.classList.add('sel');
+      if (g === 'cov') {
+        S.cov = el.dataset.val;
+        S.covBase = parseInt(el.dataset.base);
+        var b = document.getElementById('btn1');
+        if (b) b.disabled = false;
+        updatePrice('price1');
+      } else if (g === 'type') {
+        S.type = el.dataset.val;
+        S.typeMult = parseFloat(el.dataset.mult);
+        var b2 = document.getElementById('btn2');
+        if (b2) b2.disabled = false;
+        updatePrice('price2');
+        updatePrice('price3');
+      }
+    }
 
-    <div id="sum-lines" style="margin-bottom:1.5rem;margin-top:1.25rem"></div>
-
-
-    <div class="slabel" style="margin-bottom:.75rem">Your Details</div>
-    <div class="form-grid">
-      <div class="fg">
-        <label class="fl">First Name <span>*</span></label>
-        <input class="fi" id="fi-fn" placeholder="Sophia" type="text">
-      </div>
-      <div class="fg">
-        <label class="fl">Last Name <span>*</span></label>
-        <input class="fi" id="fi-ln" placeholder="Laurent" type="text">
-      </div>
-      <div class="fg">
-        <label class="fl">Fiancé's Name <span>*</span></label>
-        <input class="fi" id="fi-fiance" placeholder="Partner's Name" type="text">
-      </div>
-      <div class="fg">
-        <label class="fl">Email Address <span>*</span></label>
-        <input class="fi" id="fi-em" placeholder="hello@email.com" type="email">
-      </div>
-      <div class="fg">
-        <label class="fl">Phone Number</label>
-        <input class="fi" id="fi-phone" placeholder="555-0123" type="tel">
-      </div>
-      <div class="fg">
-        <label class="fl">Wedding Date <span>*</span></label>
-        <input class="fi" id="fi-dt" placeholder="Oct 12, 2026" type="text">
-      </div>
-      <div class="fg">
-        <label class="fl">Wedding Venue <span>*</span></label>
-        <input class="fi" id="fi-venue" placeholder="City, State" type="text">
-      </div>
-      <div class="fg">
-        <label class="fl">How did you hear about us? <span>*</span></label>
-        <input class="fi" id="fi-source" placeholder="Instagram, Friend, etc." type="text">
-      </div>
-    </div>
-
-    <div class="fg" style="margin-bottom:1.25rem"><label class="fl">Tell us about your vision</label><textarea
-        class="fi" id="fi-msg" rows="3" placeholder="Describe your dream day..."></textarea></div>
-
-    <div id="err-msg"></div>
-    <div class="brow">
-      <button class="btn-g" onclick="goTo(3)">&larr; Back</button>
-      <button class="btn" onclick="submit()">Submit Inquiry &rarr;</button>
-    </div>
-
-    <!-- Hidden form for Formspree -->
-    <form id="fs-form" action="https://formspree.io/f/mojnddby" method="POST" style="display:none">
-      <input type="text" name="name">
-      <input type="email" name="email">
-      <input type="text" name="fiance">
-      <input type="text" name="phone">
-      <input type="text" name="wedding_date">
-      <input type="text" name="venue">
-      <input type="text" name="source">
-      <textarea name="message"></textarea>
-      <input type="text" name="lead_quality">
-      <textarea name="package_summary"></textarea>
-      <input type="hidden" name="_subject">
-    </form>
-    <p class="note">Your estimated package total will be included in the inquiry so we can respond with an accurate
-      proposal.</p>
-  </div>
-
-  <div class="suc" id="suc">
-    <div class="suc-icon">◆</div>
-    <div class="h2">Inquiry Received</div>
-    <div class="div" style="margin:1rem auto"></div>
-    <div class="sub" id="suc-sub">Thank you. We'll be in touch within 48 hours with a custom proposal.</div>
-    <div class="slabel" style="margin-top:2rem;margin-bottom:.5rem">Your Package Summary</div>
-    <div id="suc-sum" style="max-width:480px;margin:2rem auto"></div>
-    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0dd;">
-      <p style="font-size: 0.85rem; color: #9a9a97; margin-bottom: 1.5rem;">Want this interactive tool on your own website?</p>
-      <a href="https://lustrestudio.uk/tools" class="btn" style="background: #0a0a0a; color: #fafafa; text-decoration: none;">Get This Template — £200</a>
-    </div>
-    <button class="btn-g" onclick="location.reload()" style="margin-top:2rem">Build Another Package &rarr;</button>
-  </div>
-</div>
-
-<script>
-  const S = { cov: null, covBase: 0, type: null, typeMult: 1, addons: [], addonTotal: 0 };
-  const covLabels = { '2h': '2 Hours', '4h': '4 Hours', '6h': '6 Hours', '8h': '8 Hours', '10h': '10 Hours', 'full': 'Full Day' };
-  const typeLabels = { 'elope': 'Elopement', 'trad': 'Traditional Wedding', 'dest': 'Destination Wedding', 'luxury': 'Luxury Multi-Day' };
-  const addonLabels = { 'second': 'Second Professional Photographer', 'engage': 'Engagement Session', 'drone': 'Aerial Drone Services', 'album': 'Custom Heirloom Album & Prints', 'bts': 'Social Media Content Creation', 'super8': 'Vintage Super 8 Cinematic Film', 'express': 'Expedited Gallery Delivery' };
-  const addonPrices = { 'second': 500, 'engage': 450, 'drone': 350, 'album': 800, 'bts': 600, 'super8': 900, 'express': 300 };
-
-  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
-
-  function calcTotal() {
-    if (!S.cov) return null;
-    return Math.round(S.covBase * S.typeMult + S.addonTotal);
-  }
-
-  function updatePrice(id) {
-    var t = calcTotal();
-    var el = document.getElementById(id);
-    if (el) el.textContent = t ? fmt(t) : '—';
-  }
-
-  function pick(el) {
-    var g = el.dataset.group;
-    document.querySelectorAll('[data-group="' + g + '"]').forEach(function (e) { e.classList.remove('sel') });
-    el.classList.add('sel');
-    if (g === 'cov') {
-      S.cov = el.dataset.val;
-      S.covBase = parseInt(el.dataset.base);
-      var b = document.getElementById('btn1');
-      if (b) b.disabled = false;
-      updatePrice('price1');
-    } else if (g === 'type') {
-      S.type = el.dataset.val;
-      S.typeMult = parseFloat(el.dataset.mult);
-      var b2 = document.getElementById('btn2');
-      if (b2) b2.disabled = false;
-      updatePrice('price2');
+    function tog(el) {
+      var v = el.dataset.val;
+      var p = parseInt(el.dataset.price);
+      if (el.classList.contains('sel')) {
+        el.classList.remove('sel');
+        S.addons = S.addons.filter(function (x) { return x !== v });
+        S.addonTotal -= p;
+      } else {
+        el.classList.add('sel');
+        S.addons.push(v);
+        S.addonTotal += p;
+      }
       updatePrice('price3');
     }
-  }
 
-  function tog(el) {
-    var v = el.dataset.val;
-    var p = parseInt(el.dataset.price);
-    if (el.classList.contains('sel')) {
-      el.classList.remove('sel');
-      S.addons = S.addons.filter(function (x) { return x !== v });
-      S.addonTotal -= p;
-    } else {
-      el.classList.add('sel');
-      S.addons.push(v);
-      S.addonTotal += p;
-    }
-    updatePrice('price3');
-  }
-
-  function leadScore() {
-    var s = 0;
-    // base from coverage
-    var covScore = { '6h': 15, '8h': 25, '10h': 35, 'full': 45 };
-    s += (covScore[S.cov] || 0);
-    // type bonus
-    var typeScore = { 'elope': 5, 'trad': 15, 'dest': 20, 'luxury': 30 };
-    s += (typeScore[S.type] || 0);
-    // addon score
-    s += Math.min(25, S.addons.length * 7);
-    // total value bonus
-    var t = calcTotal() || 0;
-    if (t > 5000) s += 5;
-    if (t > 8000) s += 10;
-    if (t > 12000) s += 10;
-    return Math.min(100, s);
-  }
-
-  function leadLabel(s) {
-    if (s >= 80) return 'Premium';
-    if (s >= 60) return 'Strong';
-    if (s >= 40) return 'Qualified';
-    return 'Exploring';
-  }
-
-  function buildSummary() {
-    var lines = '';
-    lines += '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
-    lines += '<div class="sl"><span class="sk">Wedding Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
-    if (S.addons.length) {
-      S.addons.forEach(function (a) {
-        lines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
-      });
-    }
-    lines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(calcTotal()) + '</span></div>';
-    document.getElementById('sum-lines').innerHTML = lines;
-  }
-
-  function goTo(n) {
-    document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
-    var el = document.getElementById('s' + n);
-    if (el) el.classList.add('on');
-    updateProgress(n);
-    window.scrollTo(0, 0);
-  }
-
-  function updateProgress(n) {
-    for (var i = 0; i < 5; i++) {
-      var seg = document.getElementById('ps' + i);
-      var dot = document.getElementById('pd' + i);
-      if (seg) {
-        seg.className = 'ps' + (i < n ? ' d' : i === n ? ' a' : '');
-      }
-      if (dot) {
-        dot.className = 'pd' + (i < n ? ' d' : i === n ? ' a' : '');
-      }
-    }
-  }
-
-  function submit() {
-    var fn = document.getElementById('fi-fn').value.trim();
-    var ln = document.getElementById('fi-ln').value.trim();
-    var em = document.getElementById('fi-em').value.trim();
-    var dt = document.getElementById('fi-dt').value.trim();
-    var ven = document.getElementById('fi-venue').value.trim();
-    var src = document.getElementById('fi-source').value.trim();
-    var fiance = document.getElementById('fi-fiance').value.trim();
-    var msg = document.getElementById('fi-msg').value.trim();
-
-    if (!fn || !ln || !em || !dt || !ven || !src || !fiance) { 
-      alert('Please fill out all required fields marked with *'); 
-      return; 
+    function leadScore() {
+      var s = 0;
+      // base from coverage
+      var covScore = { '6h': 15, '8h': 25, '10h': 35, 'full': 45 };
+      s += (covScore[S.cov] || 0);
+      // type bonus
+      var typeScore = { 'elope': 5, 'trad': 15, 'dest': 20, 'luxury': 30 };
+      s += (typeScore[S.type] || 0);
+      // addon score
+      s += Math.min(25, S.addons.length * 7);
+      // total value bonus
+      var t = calcTotal() || 0;
+      if (t > 5000) s += 5;
+      if (t > 8000) s += 10;
+      if (t > 12000) s += 10;
+      return Math.min(100, s);
     }
 
-    var btn = document.querySelector('.step.on .btn');
-    var originalText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
+    function leadLabel(s) {
+      if (s >= 80) return 'Premium';
+      if (s >= 60) return 'Strong';
+      if (s >= 40) return 'Qualified';
+      return 'Exploring';
+    }
 
-    // Prepare summary for email
-    var total = calcTotal();
-    var summary = 'Coverage: ' + (covLabels[S.cov] || '—') + ' (' + fmt(S.covBase * S.typeMult) + ')\n';
-    summary += 'Type: ' + (typeLabels[S.type] || '—') + '\n';
-    summary += 'Enhancements: ' + (S.addons.length ? S.addons.map(a => addonLabels[a]).join(', ') : 'None') + '\n';
-    summary += 'Total Estimate: ' + fmt(total);
-
-    var score = leadScore();
-    var quality = leadLabel(score);
-
-    // Populate hidden form
-    var f = document.getElementById('fs-form');
-    f.elements['name'].value = fn + ' ' + ln;
-    f.elements['email'].value = em;
-    f.elements['fiance'].value = fiance;
-    f.elements['phone'].value = document.getElementById('fi-phone').value.trim();
-    f.elements['wedding_date'].value = dt;
-    f.elements['venue'].value = ven;
-    f.elements['source'].value = src;
-    f.elements['message'].value = msg;
-    f.elements['lead_quality'].value = quality + ' (' + score + '/100)';
-    f.elements['package_summary'].value = summary;
-    f.elements['_subject'].value = 'New Package Inquiry: ' + fn + ' ' + ln;
-
-    var err = document.getElementById('err-msg');
-    if (err) err.style.display = 'none';
-
-    fetch(f.action, {
-      method: 'POST',
-      body: new FormData(f),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
-        document.getElementById('prog').style.display = 'none';
-        var suc = document.getElementById('suc');
-        var sub = document.getElementById('suc-sub');
-        sub.textContent = 'Thank you, ' + fn + '. We\'ve received your inquiry and your ' + fmt(total) + ' package summary. We\'ll be in touch within 48 hours.';
-        
-        var sumLines = '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
-        sumLines += '<div class="sl"><span class="sk">Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
+    function buildSummary() {
+      var lines = '';
+      lines += '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
+      lines += '<div class="sl"><span class="sk">Wedding Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
+      if (S.addons.length) {
         S.addons.forEach(function (a) {
-          sumLines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
+          lines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
         });
-        sumLines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(total) + '</span></div>';
-        document.getElementById('suc-sum').innerHTML = sumLines;
-        suc.classList.add('on');
-        window.scrollTo(0,0);
-      } else {
-        return response.json().then(data => {
-          var msg = 'There was an error sending your inquiry. Please try again.';
-          if (Object.hasOwn(data, 'errors')) {
-            msg = data["errors"].map(error => error["message"]).join(", ");
+      }
+      lines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(calcTotal()) + '</span></div>';
+      document.getElementById('sum-lines').innerHTML = lines;
+    }
+
+    function goTo(n) {
+      document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
+      var el = document.getElementById('s' + n);
+      if (el) el.classList.add('on');
+      updateProgress(n);
+      window.scrollTo(0, 0);
+    }
+
+    function updateProgress(n) {
+      for (var i = 0; i < 5; i++) {
+        var seg = document.getElementById('ps' + i);
+        var dot = document.getElementById('pd' + i);
+        if (seg) {
+          seg.className = 'ps' + (i < n ? ' d' : i === n ? ' a' : '');
+        }
+        if (dot) {
+          dot.className = 'pd' + (i < n ? ' d' : i === n ? ' a' : '');
+        }
+      }
+    }
+
+    function submit() {
+      var fn = document.getElementById('fi-fn').value.trim();
+      var ln = document.getElementById('fi-ln').value.trim();
+      var em = document.getElementById('fi-em').value.trim();
+      var dt = document.getElementById('fi-dt').value.trim();
+      var ven = document.getElementById('fi-venue').value.trim();
+      var src = document.getElementById('fi-source').value.trim();
+      var fiance = document.getElementById('fi-fiance').value.trim();
+      var msg = document.getElementById('fi-msg').value.trim();
+
+      if (!fn || !ln || !em || !dt || !ven || !src || !fiance) {
+        alert('Please fill out all required fields marked with *');
+        return;
+      }
+
+      var btn = document.querySelector('.step.on .btn');
+      var originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      // Prepare summary for email
+      var total = calcTotal();
+      var summary = 'Coverage: ' + (covLabels[S.cov] || '—') + ' (' + fmt(S.covBase * S.typeMult) + ')\n';
+      summary += 'Type: ' + (typeLabels[S.type] || '—') + '\n';
+      summary += 'Enhancements: ' + (S.addons.length ? S.addons.map(a => addonLabels[a]).join(', ') : 'None') + '\n';
+      summary += 'Total Estimate: ' + fmt(total);
+
+      var score = leadScore();
+      var quality = leadLabel(score);
+
+      // Populate hidden form
+      var f = document.getElementById('fs-form');
+      f.elements['name'].value = fn + ' ' + ln;
+      f.elements['email'].value = em;
+      f.elements['fiance'].value = fiance;
+      f.elements['phone'].value = document.getElementById('fi-phone').value.trim();
+      f.elements['wedding_date'].value = dt;
+      f.elements['venue'].value = ven;
+      f.elements['source'].value = src;
+      f.elements['message'].value = msg;
+      f.elements['lead_quality'].value = quality + ' (' + score + '/100)';
+      f.elements['package_summary'].value = summary;
+      f.elements['_subject'].value = 'New Package Inquiry: ' + fn + ' ' + ln;
+
+      var err = document.getElementById('err-msg');
+      if (err) err.style.display = 'none';
+
+      fetch(f.action, {
+        method: 'POST',
+        body: new FormData(f),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(response => {
+          if (response.ok) {
+            document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('on') });
+            document.getElementById('prog').style.display = 'none';
+            var suc = document.getElementById('suc');
+            var sub = document.getElementById('suc-sub');
+            sub.textContent = 'Thank you, ' + fn + '. We\'ve received your inquiry and your ' + fmt(total) + ' package summary. We\'ll be in touch within 48 hours.';
+
+            var sumLines = '<div class="sl"><span class="sk">Coverage</span><span class="sv">' + (covLabels[S.cov] || '—') + '</span></div>';
+            sumLines += '<div class="sl"><span class="sk">Type</span><span class="sv">' + (typeLabels[S.type] || '—') + '</span></div>';
+            S.addons.forEach(function (a) {
+              sumLines += '<div class="sl"><span class="sk">' + addonLabels[a] + '</span><span class="sv">+' + fmt(addonPrices[a]) + '</span></div>';
+            });
+            sumLines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(total) + '</span></div>';
+            document.getElementById('suc-sum').innerHTML = sumLines;
+            suc.classList.add('on');
+            window.scrollTo(0, 0);
+          } else {
+            return response.json().then(data => {
+              var msg = 'There was an error sending your inquiry. Please try again.';
+              if (Object.hasOwn(data, 'errors')) {
+                msg = data["errors"].map(error => error["message"]).join(", ");
+              }
+              if (err) {
+                err.textContent = msg;
+                err.style.display = 'block';
+              } else {
+                alert(msg);
+              }
+              btn.disabled = false;
+              btn.textContent = originalText;
+            });
           }
+        })
+        .catch(error => {
+          console.error('Submission error:', error);
+          var msg = 'There was a connection error. Please check your internet and try again.';
           if (err) {
             err.textContent = msg;
             err.style.display = 'block';
@@ -1064,21 +1112,8 @@
           btn.disabled = false;
           btn.textContent = originalText;
         });
-      }
-    })
-    .catch(error => {
-      console.error('Submission error:', error);
-      var msg = 'There was a connection error. Please check your internet and try again.';
-      if (err) {
-        err.textContent = msg;
-        err.style.display = 'block';
-      } else {
-        alert(msg);
-      }
-      btn.disabled = false;
-      btn.textContent = originalText;
-    });
-  }
-</script>
+    }
+  </script>
 </body>
+
 </html>

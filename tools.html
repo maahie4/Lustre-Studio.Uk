@@ -14,7 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#FAF8F5">
     <title>Photography Business Tools | Lustre Studio</title>
-    <meta name="description" content="Free interactive tools for wedding photographers. Calculate your pricing, assess your market, and optimize your business growth.">
+    <meta name="description"
+        content="Free interactive tools for wedding photographers. Calculate your pricing, assess your market, and optimize your business growth.">
     <meta name="robots" content="index, follow">
     <meta name="language" content="en-GB">
     <meta name="author" content="Lustre Studio">
@@ -27,11 +28,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --bg-canvas: #FAF8F5;
             --surface: #F0EAE0;
@@ -42,7 +50,12 @@
             --white: #FFFFFF;
             --black: #000000;
         }
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
         body {
             font-family: 'Jost', sans-serif;
             color: var(--body-text);
@@ -50,15 +63,23 @@
             line-height: 1.8;
             font-weight: 300;
         }
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             font-family: 'Cormorant Garamond', serif;
             color: var(--heading-cta);
             line-height: 1.1;
             margin-bottom: 1.5rem;
             letter-spacing: -0.01em;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         nav {
             padding: 2.5rem 0;
             display: flex;
@@ -67,8 +88,17 @@
             border-bottom: 0.5px solid var(--border);
             margin-bottom: 4rem;
         }
-        .logo img { height: 48px; width: auto; }
-        .nav-links { display: flex; gap: 2.5rem; }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
         .nav-link {
             text-decoration: none;
             color: var(--body-text);
@@ -78,14 +108,20 @@
             font-weight: 400;
             transition: opacity 0.3s;
         }
-        .nav-link:hover { opacity: 0.6; }
+
+        .nav-link:hover {
+            opacity: 0.6;
+        }
 
         .menu-trigger {
             display: none;
         }
 
         @media (max-width: 1024px) {
-            .nav-links { display: none; }
+            .nav-links {
+                display: none;
+            }
+
             .menu-trigger {
                 display: block !important;
                 background: none;
@@ -154,7 +190,12 @@
             padding: 6rem 0 4rem;
             position: relative;
         }
-        .tools-hero h1 { font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 300; }
+
+        .tools-hero h1 {
+            font-size: clamp(3rem, 7vw, 4.5rem);
+            font-weight: 300;
+        }
+
         .tools-hero p {
             max-width: 600px;
             margin: 0 auto;
@@ -196,8 +237,17 @@
             display: block;
         }
 
-        .tool-card h2 { font-size: 2rem; margin-bottom: 1rem; }
-        .tool-card p { font-size: 1rem; color: var(--body-text); margin-bottom: 2.5rem; flex-grow: 1; }
+        .tool-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card p {
+            font-size: 1rem;
+            color: var(--body-text);
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
 
         .btn-link {
             font-family: 'Jost', sans-serif;
@@ -211,8 +261,14 @@
             gap: 0.75rem;
         }
 
-        .btn-link i { font-size: 0.8rem; transition: transform 0.3s; }
-        .tool-card:hover .btn-link i { transform: translateX(5px); }
+        .btn-link i {
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .tool-card:hover .btn-link i {
+            transform: translateX(5px);
+        }
 
         footer {
             padding: 6rem 0;
@@ -221,9 +277,17 @@
         }
 
         @media (max-width: 768px) {
-            .tools-grid { grid-template-columns: 1fr; }
-            nav { padding: 1.5rem 0; }
-            .nav-links { display: none; }
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 1.5rem 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -254,9 +318,12 @@
         </div>
 
         <header class="tools-hero">
-            <span style="text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; color: var(--body-text); display: block; margin-bottom: 1.5rem;">Free Resources</span>
+            <span
+                style="text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; color: var(--body-text); display: block; margin-bottom: 1.5rem;">Free
+                Resources</span>
             <h1>Systems for <br><em>Growth</em></h1>
-            <p>Interactive tools designed to help wedding photographers price confidently, scale sustainably, and book better clients.</p>
+            <p>Interactive tools designed to help wedding photographers price confidently, scale sustainably, and book
+                better clients.</p>
         </header>
 
         <main class="tools-grid">
@@ -264,7 +331,8 @@
             <a href="wedding-photography-pricing-calculator" class="tool-card">
                 <span class="tool-category">Business Planning</span>
                 <h2>Wedding Pricing Calculator</h2>
-                <p>Calculate your recommended starting rates based on experience, market tier, and wedding type. Get structured advice on where to aim next.</p>
+                <p>Calculate your recommended starting rates based on experience, market tier, and wedding type. Get
+                    structured advice on where to aim next.</p>
                 <div class="btn-link">Launch Tool <i class="fas fa-arrow-right"></i></div>
             </a>
 
@@ -273,18 +341,25 @@
                 <span class="tool-category">Premium Template</span>
                 <div style="display: flex; justify-content: space-between; align-items: baseline;">
                     <h2>The Inquiry Edit</h2>
-                    <span style="font-size: 0.9rem; color: var(--heading-cta); font-weight: 500;">£200</span>
+                    <span style="font-size: 0.9rem; color: var(--heading-cta); font-weight: 500;">£300</span>
                 </div>
-                <p>Stop sending static PDF pricing guides. Give your clients a bespoke, interactive experience to build their custom package and inquire in under 60 seconds. High-conversion design for luxury photographers.</p>
+                <p>Stop sending static PDF pricing guides. Give your clients a bespoke, interactive experience to build
+                    their custom package and inquire in under 60 seconds. High-conversion design for luxury
+                    photographers.</p>
                 <div style="display: flex; gap: 1.5rem; align-items: center; margin-top: auto;">
-                    <a href="wedding_photography_booking_system" class="btn-link" style="background: var(--bg-canvas); padding: 0.8rem 1.2rem; border-radius: 2px; text-decoration: none;">Launch Demo <i class="fas fa-play" style="font-size: 0.6rem;"></i></a>
-                    <a href="#proposal" class="btn-link" style="color: var(--white); background: var(--heading-cta); padding: 0.8rem 1.5rem; border-radius: 2px; text-decoration: none;">Buy Template <i class="fas fa-shopping-cart" style="font-size: 0.6rem;"></i></a>
+                    <a href="wedding_photography_booking_system" class="btn-link"
+                        style="background: var(--bg-canvas); padding: 0.8rem 1.2rem; border-radius: 2px; text-decoration: none;">Launch
+                        Demo <i class="fas fa-play" style="font-size: 0.6rem;"></i></a>
+                    <a href="#proposal" class="btn-link"
+                        style="color: var(--white); background: var(--heading-cta); padding: 0.8rem 1.5rem; border-radius: 2px; text-decoration: none;">Buy
+                        Template <i class="fas fa-shopping-cart" style="font-size: 0.6rem;"></i></a>
                 </div>
             </div>
         </main>
 
         <footer>
-            <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;">© 2026 Lustrestudio. All rights reserved.</p>
+            <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;">© 2026 Lustrestudio. All
+                rights reserved.</p>
         </footer>
     </div>
     <script>
