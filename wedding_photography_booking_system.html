@@ -929,10 +929,6 @@
     }
     lines += '<div class="sl tot"><span class="sk">Estimated Total</span><span class="sv">' + fmt(calcTotal()) + '</span></div>';
     document.getElementById('sum-lines').innerHTML = lines;
-
-    var sc = leadScore();
-    document.getElementById('lsfill').style.width = sc + '%';
-    document.getElementById('lsv').textContent = leadLabel(sc);
   }
 
   function goTo(n) {
