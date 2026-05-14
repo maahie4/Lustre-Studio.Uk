@@ -996,10 +996,15 @@
       _subject: 'New Package Inquiry: ' + fn + ' ' + ln
     };
 
+    var fd = new FormData();
+    for (var key in formData) {
+      fd.append(key, formData[key]);
+    }
+
     fetch('https://formspree.io/f/xrekvkkp', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(formData)
+      body: fd,
+      headers: { 'Accept': 'application/json' }
     })
     .then(response => {
       if (response.ok) {
@@ -1019,13 +1024,20 @@
         suc.classList.add('on');
         window.scrollTo(0,0);
       } else {
-        alert('There was an error sending your inquiry. Please try again.');
-        btn.disabled = false;
-        btn.textContent = originalText;
+        return response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            alert(data["errors"].map(error => error["message"]).join(", "));
+          } else {
+            alert('There was an error sending your inquiry. Please try again.');
+          }
+          btn.disabled = false;
+          btn.textContent = originalText;
+        });
       }
     })
     .catch(error => {
-      alert('There was an error sending your inquiry. Please try again.');
+      console.error('Submission error:', error);
+      alert('There was a connection error. Please check your internet and try again.');
       btn.disabled = false;
       btn.textContent = originalText;
     });
