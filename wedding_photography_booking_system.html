@@ -580,6 +580,18 @@
     .btn { width: 100%; padding: 1.1rem 1.5rem; }
     .brow { flex-direction: column-reverse; gap: 1rem; align-items: stretch; }
     .btn-g { text-align: center; justify-content: center; }
+    #err-msg {
+      background: #fff0f0;
+      color: #c00;
+      padding: 1rem;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      border: 1px solid #ffebeb;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      display: none;
+      animation: fu 0.3s ease;
+    }
   }
 </style>
 </head>
@@ -815,6 +827,7 @@
     <div class="fg" style="margin-bottom:1.25rem"><label class="fl">Tell us about your vision</label><textarea
         class="fi" id="fi-msg" rows="3" placeholder="Describe your dream day..."></textarea></div>
 
+    <div id="err-msg"></div>
     <div class="brow">
       <button class="btn-g" onclick="goTo(3)">&larr; Back</button>
       <button class="btn" onclick="submit()">Submit Inquiry &rarr;</button>
@@ -1001,7 +1014,10 @@
       fd.append(key, formData[key]);
     }
 
-    fetch('https://formspree.io/f/xrekvkkp', {
+    var err = document.getElementById('err-msg');
+    if (err) err.style.display = 'none';
+
+    fetch('https://formspree.io/f/mojnddby', {
       method: 'POST',
       body: fd,
       headers: { 'Accept': 'application/json' }
@@ -1025,10 +1041,15 @@
         window.scrollTo(0,0);
       } else {
         return response.json().then(data => {
+          var msg = 'There was an error sending your inquiry. Please try again.';
           if (Object.hasOwn(data, 'errors')) {
-            alert(data["errors"].map(error => error["message"]).join(", "));
+            msg = data["errors"].map(error => error["message"]).join(", ");
+          }
+          if (err) {
+            err.textContent = msg;
+            err.style.display = 'block';
           } else {
-            alert('There was an error sending your inquiry. Please try again.');
+            alert(msg);
           }
           btn.disabled = false;
           btn.textContent = originalText;
@@ -1037,7 +1058,13 @@
     })
     .catch(error => {
       console.error('Submission error:', error);
-      alert('There was a connection error. Please check your internet and try again.');
+      var msg = 'There was a connection error. Please check your internet and try again.';
+      if (err) {
+        err.textContent = msg;
+        err.style.display = 'block';
+      } else {
+        alert(msg);
+      }
       btn.disabled = false;
       btn.textContent = originalText;
     });
