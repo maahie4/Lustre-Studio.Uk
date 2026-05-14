@@ -832,6 +832,21 @@
       <button class="btn-g" onclick="goTo(3)">&larr; Back</button>
       <button class="btn" onclick="submit()">Submit Inquiry &rarr;</button>
     </div>
+
+    <!-- Hidden form for Formspree -->
+    <form id="fs-form" action="https://formspree.io/f/mojnddby" method="POST" style="display:none">
+      <input type="text" name="name">
+      <input type="email" name="email">
+      <input type="text" name="fiance">
+      <input type="text" name="phone">
+      <input type="text" name="wedding_date">
+      <input type="text" name="venue">
+      <input type="text" name="source">
+      <textarea name="message"></textarea>
+      <input type="text" name="lead_quality">
+      <textarea name="package_summary"></textarea>
+      <input type="hidden" name="_subject">
+    </form>
     <p class="note">Your estimated package total will be included in the inquiry so we can respond with an accurate
       proposal.</p>
   </div>
@@ -995,31 +1010,26 @@
     var score = leadScore();
     var quality = leadLabel(score);
 
-    var formData = {
-      name: fn + ' ' + ln,
-      email: em,
-      fiance: fiance,
-      phone: document.getElementById('fi-phone').value.trim(),
-      wedding_date: dt,
-      venue: ven,
-      source: src,
-      message: msg,
-      lead_quality: quality + ' (' + score + '/100)',
-      package_summary: summary,
-      _subject: 'New Package Inquiry: ' + fn + ' ' + ln
-    };
-
-    var fd = new FormData();
-    for (var key in formData) {
-      fd.append(key, formData[key]);
-    }
+    // Populate hidden form
+    var f = document.getElementById('fs-form');
+    f.elements['name'].value = fn + ' ' + ln;
+    f.elements['email'].value = em;
+    f.elements['fiance'].value = fiance;
+    f.elements['phone'].value = document.getElementById('fi-phone').value.trim();
+    f.elements['wedding_date'].value = dt;
+    f.elements['venue'].value = ven;
+    f.elements['source'].value = src;
+    f.elements['message'].value = msg;
+    f.elements['lead_quality'].value = quality + ' (' + score + '/100)';
+    f.elements['package_summary'].value = summary;
+    f.elements['_subject'].value = 'New Package Inquiry: ' + fn + ' ' + ln;
 
     var err = document.getElementById('err-msg');
     if (err) err.style.display = 'none';
 
-    fetch('https://formspree.io/f/mojnddby', {
+    fetch(f.action, {
       method: 'POST',
-      body: fd,
+      body: new FormData(f),
       headers: { 'Accept': 'application/json' }
     })
     .then(response => {
