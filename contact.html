@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquire | 100% Custom Web Design & SEO</title>
+    <meta name="description"
+        content="Ready to scale your brand? Inquire with Lustre Studio for premium 100% custom web design, e-commerce storefronts, and high-ranking SEO strategies.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background: #000; color: #fff;">
+
+    <nav>
+        <div class="nav-links left">
+            <a href="work.html">Work</a>
+            <a href="services.html">Services</a>
+        </div>
+
+        <a href="index.html" class="logo">lustrstudio</a>
+
+        <div class="nav-links right">
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn btn-nav-desktop">Inquire</a>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-close" id="mobileClose"><i class="ri-close-line"></i></div>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="index.html" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrstudio</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" style="color: #fff;">Inquire</a>
+    </div>
+
+    <header style="padding-top: 180px; padding-bottom: 80px;">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: clamp(3rem, 7vw, 6rem); margin-bottom: 2rem; font-weight: 600;" data-reveal>Start your project.</h1>
+            <p style="max-width: 600px; margin: 0 auto; font-weight: 300; opacity: 0.7;" data-reveal>We design for all industries. Whether you need custom e-commerce, lifestyle showcases, premium service flows, or cannabis brand experiences, we build to convert and rank.</p>
+        </div>
+    </header>
+
+    <section style="padding-top: 0;">
+        <div class="container">
+            <form class="contact-form" data-reveal>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="E.g. Alexander McQueen" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="hello@yourbrand.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business">Business / Brand Name</label>
+                        <input type="text" id="business" name="business" placeholder="E.g. Studio Luxe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service"
+                        style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 1rem 0; font-size: 1.1rem; background: transparent; outline: none; font-family: inherit;">
+                        <option value="web-design">100% Custom Web Design</option>
+                        <option value="e-commerce">Custom E-Commerce Storefront</option>
+                        <option value="seo">SEO & Rank Dominance</option>
+                        <option value="cannabis-lifestyle">Cannabis or Lifestyle Branding & Web</option>
+                        <option value="other">General Growth Retainer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Vision</label>
+                    <textarea id="message" name="message" rows="5"
+                        placeholder="Tell us about your industry, aesthetic goals, and target timeline..." required></textarea>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <button type="submit" class="btn" style="width: 100%;">Send Inquiry</button>
+                    <p style="margin-top: 2rem; font-size: 0.8rem; color: #888;">We typically respond within 24-48
+                        business hours.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section style="background: #fafafa; padding-bottom: 10rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div data-reveal>
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Direct Reach</h3>
+                    <p style="margin-bottom: 1rem;">General: hello@lustrestudio.uk</p>
+                    <p>Press: press@lustrestudio.uk</p>
+                </div>
+                <div data-reveal>
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Social Presence</h3>
+                    <p style="margin-bottom: 1rem;">Instagram: @lustrestudiouk</p>
+                    <p>Pinterest: @lustrestudiouk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo">lustrstudio</a>
+            <p>Websites that turn attention into bookings.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="work.html">Work</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 lustrstudio &mdash;
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileClose.addEventListener('click', closeMenu);
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

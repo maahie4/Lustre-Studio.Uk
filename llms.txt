@@ -1,0 +1,16 @@
+# lustrestudio
+
+> 100% custom, conversion-focused websites & SEO services engineered to rank higher.
+
+Lustre Studio designs premium digital flagship experiences for e-commerce, lifestyle, services, cannabis, and creative brands.
+
+## Core Pages
+
+- [Home](https://lustrestudio.uk/index.html): The main entry point featuring the company's design philosophy (bespoke digital spaces, est. 2025), a custom Three.js icosahedron graphic interface, process details, capabilities stack, transformation before/after video showcase, client testimonials, pricing plans, and project inquiry CTA.
+- [Work Archive](https://lustrestudio.uk/work.html): Detailed portfolio showcasing interactive design transformations (before/after video comparisons) across creative industries including Photo Booth Services, Photography Studios, Handcrafted Furniture Shops, and Bakeries.
+- [Services](https://lustrestudio.uk/services.html): List of core studio offerings:
+  - **100% Custom Web Design**: Custom UI/UX, mobile-first responsive design, premium aesthetics, and integrations.
+  - **SEO & Rank Dominance**: Advanced search engine optimization, keyword strategy, and technical audits.
+  - **Studio Retainer**: Monthly ongoing updates, speed optimizations, design refreshes, and support.
+- [SEO & GBP Domination](https://lustrestudio.uk/seo.html): Detailed guide explaining Lustre Studio's approach to technical on-page SEO, Google Business Profile (GBP) maps package optimization, local SEO, and content authority strategy.
+- [Contact](https://lustrestudio.uk/contact.html): Client project inquiry form to start new custom design or SEO optimization projects for Q3 2026.

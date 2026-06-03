@@ -1,111 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Homepage — highest priority -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lustrestudio.uk/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Work / Portfolio page -->
   <url>
-    <loc>https://lustrestudio.uk/seemywork</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://lustrestudio.uk/index.html</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Websites page -->
-  <url>
-    <loc>https://lustrestudio.uk/website</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SEO Services page -->
-  <url>
-    <loc>https://lustrestudio.uk/seo</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Listing -->
-  <url>
-    <loc>https://lustrestudio.uk/blog</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Post: Instagram Reels 2026 -->
-  <url>
-    <loc>https://lustrestudio.uk/instagram-reels-wedding-photographers-2026</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Post: Why London Wedding Photographers Are Moving Away From Squarespace -->
-  <url>
-    <loc>https://lustrestudio.uk/why-london-wedding-photographers-moving-away-squarespace-2026</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Post: New Wedding Photographer Website Guide -->
-  <url>
-    <loc>https://lustrestudio.uk/new-wedding-photographer-first-website-builder</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Post: Wedding Photographer Cost 2026 -->
-  <url>
-    <loc>https://lustrestudio.uk/wedding-photographer-cost-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Tools Hub -->
-  <url>
-    <loc>https://lustrestudio.uk/tools</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Tool: Wedding Photography Pricing Calculator -->
-  <url>
-    <loc>https://lustrestudio.uk/wedding-photography-pricing-calculator</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blog Post: Wedding Cost NJ 2026 -->
   <url>
-    <loc>https://lustrestudio.uk/wedding-cost-nj-2026</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://lustrestudio.uk/work.html</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Blog Post: NYC Wedding Pricing 2026 -->
   <url>
-    <loc>https://lustrestudio.uk/nyc-wedding-photographer-pricing-2026</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://lustrestudio.uk/services.html</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://lustrestudio.uk/seo.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lustrestudio.uk/contact.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
