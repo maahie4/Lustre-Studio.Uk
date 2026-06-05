@@ -500,12 +500,11 @@ function calculateMortgage() {
   const taxRate = parseFloat($('propertyTax').value) || 0;
   // Auto-calculate insurance at 0.5% of home price / 12 if field is empty
   const insuranceField = $('homeInsurance');
+  const autoIns = Math.round((homePrice * 0.005) / 12);
   if (!insuranceField.dataset.userEdited) {
-    const autoIns = Math.round((homePrice * 0.005) / 12);
-    insuranceField.placeholder = '$' + autoIns + '/mo (auto)';
-    insuranceField.value = '';
+    insuranceField.placeholder = autoIns > 0 ? autoIns + '' : 'Auto-calculated';
   }
-  const insurance = parseFloat(insuranceField.value) || Math.round((homePrice * 0.005) / 12);
+  const insurance = insuranceField.dataset.userEdited ? (parseFloat(insuranceField.value) || 0) : autoIns;
   const loanAmount = Math.max(homePrice - downPayment, 0);
 
   if (homePrice <= 0 || loanAmount <= 0) {
