@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Buying Budget Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --ink: #1a1a1a;
+    --gray-600: #555555;
+    --gray-400: #888888;
+    --gray-200: #d4d4d4;
+    --gray-100: #eeeeee;
+    --gray-50: #f7f7f7;
+    --white: #ffffff;
+    --accent-light: #f0f0f0;
+    --border: #e0e0e0;
+    --success: #1a6b3c;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --radius: 4px;
+    --radius-lg: 8px;
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  body { font-family: var(--font-body); background: var(--white); color: var(--ink); min-height: 100vh; font-size: 15px; line-height: 1.5; }
+
+  /* HEADER */
+  .site-header { border-bottom: 1px solid var(--border); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; background: var(--white); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--black); letter-spacing: -0.5px; }
+  .logo span { color: var(--gray-400); font-weight: 400; }
+  .header-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--border); padding: 56px 40px 44px; max-width: 1100px; margin: 0 auto; }
+  .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 14px; }
+  .hero h1 { font-family: var(--font-display); font-size: clamp(34px, 5vw, 54px); font-weight: 700; color: var(--black); line-height: 1.1; letter-spacing: -1.5px; max-width: 680px; margin-bottom: 14px; }
+  .hero p { font-size: 16px; color: var(--gray-600); font-weight: 300; max-width: 480px; }
+
+  /* MAIN LAYOUT */
+  .calc-wrapper { max-width: 1100px; margin: 0 auto; padding: 0 40px 80px; display: grid; grid-template-columns: 400px 1fr; gap: 0; align-items: start; }
+
+  /* LEFT PANEL */
+  .inputs-panel { border-right: 1px solid var(--border); padding: 44px 44px 44px 0; position: sticky; top: 65px; }
+  .panel-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 28px; }
+
+  .field-group { margin-bottom: 24px; }
+  .field-label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 7px; }
+  .field-label .optional { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--gray-400); font-size: 11px; }
+
+  .input-wrap { position: relative; display: flex; align-items: center; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); transition: border-color 0.15s; }
+  .input-wrap:focus-within { border-color: var(--black); }
+  .input-prefix, .input-suffix { padding: 0 12px; font-size: 14px; color: var(--gray-400); font-weight: 500; user-select: none; flex-shrink: 0; }
+  .input-prefix { border-right: 1px solid var(--border); }
+  .input-suffix { border-left: 1px solid var(--border); }
+  .input-wrap input { flex: 1; border: none; outline: none; padding: 11px 14px; font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--black); background: transparent; width: 100%; min-width: 0; }
+  .input-wrap input::placeholder { color: var(--gray-200); }
+
+  .term-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .term-btn { padding: 11px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--gray-600); cursor: pointer; transition: all 0.15s; text-align: center; }
+  .term-btn:hover { border-color: var(--black); color: var(--black); }
+  .term-btn.active { background: var(--black); border-color: var(--black); color: var(--white); }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+  /* RIGHT PANEL */
+  .results-panel { padding: 44px 0 44px 44px; }
+
+  /* HERO RESULT */
+  .result-hero { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; margin-bottom: 16px; background: var(--white); box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
+  .result-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--black); }
+  .result-hero-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 6px; }
+  .result-hero-amount { font-family: var(--font-display); font-size: 50px; font-weight: 700; color: var(--black); letter-spacing: -2px; line-height: 1; margin-bottom: 5px; }
+  .result-hero-sub { font-size: 13px; color: var(--gray-400); font-weight: 400; }
+  .result-loan-amount { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 13px; color: var(--gray-600); }
+  .result-loan-amount strong { color: var(--black); font-weight: 600; }
+
+  /* CARDS */
+  .card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; margin-bottom: 14px; background: var(--white); }
+  .card-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 16px; }
+
+  .breakdown-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-row .label { color: var(--gray-600); }
+  .breakdown-row .value { font-weight: 600; color: var(--black); }
+  .breakdown-row.total { padding-top: 12px; margin-top: 4px; border-top: 1px solid var(--border); border-bottom: none; }
+  .breakdown-row.total .label { font-weight: 600; color: var(--black); font-size: 15px; }
+  .breakdown-row.total .value { font-size: 18px; font-family: var(--font-display); }
+
+  .bar-viz { display: flex; height: 5px; border-radius: 3px; overflow: hidden; margin-bottom: 18px; gap: 2px; }
+  .bar-viz-seg { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+  .bar-seg-pi { background: var(--black); }
+  .bar-seg-tax { background: var(--gray-400); }
+  .bar-seg-ins { background: var(--gray-200); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+
+  .stat-block-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 4px; }
+  .stat-block-value { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--black); letter-spacing: -0.5px; }
+  .stat-block-sub { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+  .insight-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .insight-row:last-child { margin-bottom: 0; }
+  .insight-label { font-size: 13px; color: var(--gray-600); }
+  .insight-value { font-size: 15px; font-weight: 600; color: var(--black); }
+
+  /* COMPARISON */
+  .compare-card { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 14px; }
+  .compare-row { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 14px 18px; border-bottom: 1px solid var(--border); align-items: center; gap: 8px; }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-row.header { background: var(--gray-50); }
+  .compare-row.header .c-head { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); }
+  .compare-row .c-label { font-size: 14px; color: var(--gray-600); }
+  .compare-row .c-val { font-size: 15px; font-weight: 600; color: var(--black); text-align: center; }
+  .compare-row .c-diff { font-size: 13px; font-weight: 600; color: var(--success); text-align: right; }
+  .compare-row.active-row { background: var(--accent-light); }
+
+  /* CHART */
+  .chart-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; margin-bottom: 14px; }
+  .chart-wrap { width: 150px; height: 150px; margin: 14px auto 10px; }
+  .chart-legend { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--gray-600); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  /* LEAD SECTION */
+  .lead-section { border: 1.5px solid var(--black); border-radius: var(--radius-lg); padding: 28px; display: block; margin-top: 8px; }
+  .lead-section.visible { display: block; animation: fadeUp 0.3s ease forwards; }
+  .lead-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 8px; }
+  .lead-heading { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--black); letter-spacing: -0.5px; margin-bottom: 6px; line-height: 1.2; }
+  .lead-sub { font-size: 13px; color: var(--gray-400); margin-bottom: 20px; line-height: 1.5; }
+
+  .lead-summary { background: var(--gray-50); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .lead-sum-item { text-align: center; }
+  .lead-sum-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); }
+  .lead-sum-val { font-size: 14px; font-weight: 700; color: var(--black); margin-top: 2px; }
+
+  /* PILL SELECTORS */
+  .pill-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .pill { padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; background: var(--white); font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--gray-600); cursor: pointer; transition: all 0.15s; }
+  .pill:hover { border-color: var(--black); color: var(--black); }
+  .pill.active { background: var(--black); border-color: var(--black); color: var(--white); font-weight: 500; }
+
+  .lead-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .lead-field { display: flex; flex-direction: column; gap: 5px; }
+  .lead-field.full { grid-column: 1 / -1; }
+  .lead-field-label { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-600); }
+  .lead-field input { border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 13px; font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.15s; background: var(--white); color: var(--black); }
+  .lead-field input:focus { border-color: var(--black); }
+
+  .lead-submit { width: 100%; padding: 13px; background: var(--black); color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; margin-top: 10px; transition: opacity 0.15s; }
+  .lead-submit:hover { opacity: 0.85; }
+
+  .success-msg { text-align: center; padding: 16px; display: none; }
+  .success-msg.visible { display: block; }
+  .success-icon { width: 46px; height: 46px; background: var(--black); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 20px; }
+  .success-msg h3 { font-family: var(--font-display); font-size: 20px; margin-bottom: 7px; color: var(--black); }
+  .success-msg p { font-size: 14px; color: var(--gray-600); }
+
+  /* MOBILE STICKY */
+  .sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--black); color: var(--white); padding: 13px 20px; z-index: 200; align-items: center; justify-content: space-between; border-top: 1px solid #333; }
+  .sticky-bar .sb-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; }
+  .sticky-bar .sb-amount { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+  .sticky-bar .sb-sub { font-size: 11px; opacity: 0.5; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .result-hero, .card, .compare-card, .chart-card { animation: fadeUp 0.25s ease forwards; }
+  @keyframes numFlash { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+  .number-update { animation: numFlash 0.2s ease; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .calc-wrapper { grid-template-columns: 1fr; }
+    .inputs-panel { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 0; position: static; }
+    .results-panel { padding: 28px 0; }
+    .site-header, .hero, .calc-wrapper { padding-left: 20px; padding-right: 20px; }
+    .hero { padding: 36px 20px 28px; }
+    .sticky-bar { display: flex; }
+    body { padding-bottom: 60px; }
+  }
+  @media (max-width: 480px) {
+    .two-col { grid-template-columns: 1fr; }
+    .lead-form-grid { grid-template-columns: 1fr; }
+    .lead-summary { grid-template-columns: 1fr; gap: 6px; }
+    .result-hero-amount { font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">BudgetHome<span>Calculator</span></div>
+  <span class="header-tag">Buyer Qualifier</span>
+</header>
+
+<section class="hero">
+  <p class="hero-eyebrow">Home Buying Budget Calculator</p>
+  <h1>See exactly what you<br>can afford to buy.</h1>
+  <p>Instant payment estimate with tax, insurance, and cash-to-close. No sign-up required.</p>
+</section>
+
+<div class="calc-wrapper">
+
+  <!-- LEFT: INPUTS -->
+  <div class="inputs-panel">
+    <p class="panel-label">Your Loan Details</p>
+
+    <div class="field-group">
+      <label class="field-label" for="homePrice">Home Price</label>
+      <div class="input-wrap">
+        <span class="input-prefix">$</span>
+        <input type="number" id="homePrice" placeholder="500,000" min="0">
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="downPayment">Down Payment</label>
+      <div class="input-wrap">
+        <span class="input-prefix">$</span>
+        <input type="number" id="downPayment" placeholder="100,000" min="0">
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="interestRate">Interest Rate</label>
+      <div class="input-wrap">
+        <input type="number" id="interestRate" placeholder="6.5" step="0.1" min="0" max="30">
+        <span class="input-suffix">%</span>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Loan Term</label>
+      <div class="term-grid">
+        <button class="term-btn" data-value="15" onclick="setTerm(15)">15 Years</button>
+        <button class="term-btn active" data-value="30" onclick="setTerm(30)">30 Years</button>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="field-group">
+      <label class="field-label" for="propertyTax">Property Tax <span class="optional">Optional</span></label>
+      <div class="input-wrap">
+        <input type="number" id="propertyTax" placeholder="1.2" step="0.1" min="0">
+        <span class="input-suffix">%</span>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="homeInsurance">Home Insurance <span class="optional">Optional · /month</span></label>
+      <div class="input-wrap">
+        <span class="input-prefix">$</span>
+        <input type="number" id="homeInsurance" placeholder="Auto-calculated" min="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: RESULTS -->
+  <div class="results-panel">
+
+    <!-- HERO RESULT -->
+    <div id="resultHero" class="result-hero">
+      <p class="result-hero-label">Estimated Monthly Payment</p>
+      <div class="result-hero-amount" id="totalMonthly">—</div>
+      <p class="result-hero-sub">Principal, interest, tax &amp; insurance</p>
+      <div class="result-loan-amount">Loan Amount: <strong id="loanAmtDisplay">—</strong></div>
+    </div>
+
+    <!-- BREAKDOWN -->
+    <div class="card" id="breakdownCard">
+      <p class="card-title">Payment Breakdown</p>
+      <div class="bar-viz">
+        <div class="bar-viz-seg bar-seg-pi" id="barPI" style="width:79%"></div>
+        <div class="bar-viz-seg bar-seg-tax" id="barTax" style="width:14%"></div>
+        <div class="bar-viz-seg bar-seg-ins" id="barIns" style="width:7%"></div>
+      </div>
+      <div class="breakdown-row">
+        <span class="label">Principal &amp; Interest</span>
+        <span class="value" id="piDisplay">—</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="label">Property Tax</span>
+        <span class="value" id="taxDisplay">—</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="label">Home Insurance</span>
+        <span class="value" id="insDisplay">—</span>
+      </div>
+      <div class="breakdown-row total">
+        <span class="label">Total / Month</span>
+        <span class="value" id="totalDisplay">—</span>
+      </div>
+    </div>
+
+    <!-- CASH TO CLOSE (standalone, no affordability) -->
+    <div class="card">
+      <p class="card-title">Cash Needed to Close</p>
+      <div class="insight-row">
+        <span class="insight-label">Down Payment</span>
+        <span class="insight-value" id="cashDown">—</span>
+      </div>
+      <div class="insight-row">
+        <span class="insight-label">Estimated Closing Costs (~2.5%)</span>
+        <span class="insight-value" id="closingCosts">—</span>
+      </div>
+      <div class="insight-row" style="margin-top:12px; padding-top:12px; border-top:1px solid var(--border);">
+        <span class="insight-label" style="font-weight:600; color:var(--black); font-size:15px;">Total Cash Needed</span>
+        <span class="insight-value" style="font-size:18px;" id="totalCash">—</span>
+      </div>
+    </div>
+
+    <!-- 15 vs 30 COMPARISON -->
+    <div class="compare-card">
+      <div class="compare-row header">
+        <span class="c-head">Term</span>
+        <span class="c-head" style="text-align:center">Monthly</span>
+        <span class="c-head" style="text-align:right">vs 30yr</span>
+      </div>
+      <div class="compare-row" id="row15">
+        <span class="c-label">15-Year Loan</span>
+        <span class="c-val" id="pay15">—</span>
+        <span class="c-diff" id="diff15">—</span>
+      </div>
+      <div class="compare-row active-row" id="row30">
+        <span class="c-label">30-Year Loan</span>
+        <span class="c-val" id="pay30">—</span>
+        <span class="c-diff">Baseline</span>
+      </div>
+    </div>
+
+    <!-- PIE CHART -->
+    <div class="chart-card">
+      <p class="card-title" style="margin-bottom:0">Payment Composition</p>
+      <div class="chart-wrap">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#0a0a0a"></span>Principal &amp; Interest</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#888888"></span>Property Tax</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#d4d4d4"></span>Insurance</span>
+      </div>
+    </div>
+
+    <!-- LEAD CAPTURE -->
+    <div id="leadSection" class="lead-section">
+      <p class="lead-eyebrow">Let's find your home</p>
+      <h2 class="lead-heading">Want homes in this budget?</h2>
+      <p class="lead-sub">Tell me where you're looking and when you plan to buy. I'll match you with listings that fit your exact payment range.</p>
+
+      <div class="lead-summary">
+        <div class="lead-sum-item">
+          <div class="lead-sum-label">Home Price</div>
+          <div class="lead-sum-val" id="leadPrice">—</div>
+        </div>
+        <div class="lead-sum-item">
+          <div class="lead-sum-label">Down Payment</div>
+          <div class="lead-sum-val" id="leadDown">—</div>
+        </div>
+        <div class="lead-sum-item">
+          <div class="lead-sum-label">Monthly Payment</div>
+          <div class="lead-sum-val" id="leadMonthly">—</div>
+        </div>
+      </div>
+
+      <form id="leadForm" onsubmit="submitLead(event)">
+
+        <!-- LOCATION -->
+        <div style="margin-bottom:18px;">
+          <div class="lead-field-label" style="margin-bottom:8px;">Where are you looking?</div>
+          <div class="pill-group" id="locationPills">
+            <button type="button" class="pill" data-val="Dallas" onclick="selectPill('location', this)">Dallas</button>
+            <button type="button" class="pill" data-val="Austin" onclick="selectPill('location', this)">Austin</button>
+            <button type="button" class="pill" data-val="Houston" onclick="selectPill('location', this)">Houston</button>
+            <button type="button" class="pill" data-val="San Antonio" onclick="selectPill('location', this)">San Antonio</button>
+            <button type="button" class="pill" data-val="Other" onclick="selectPill('location', this)">Other</button>
+          </div>
+          <input type="text" id="locationOther" placeholder="Enter city or area…" style="display:none; margin-top:8px; width:100%; border:1px solid var(--border); border-radius:var(--radius); padding:10px 13px; font-family:var(--font-body); font-size:14px; outline:none; transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--border)'">
+          <input type="hidden" id="leadLocation">
+        </div>
+
+        <!-- TIMELINE -->
+        <div style="margin-bottom:20px;">
+          <div class="lead-field-label" style="margin-bottom:8px;">When do you plan to buy?</div>
+          <div class="pill-group" id="timelinePills">
+            <button type="button" class="pill" data-val="0-3 months" onclick="selectPill('timeline', this)">Ready now (0–3 mo)</button>
+            <button type="button" class="pill" data-val="3-6 months" onclick="selectPill('timeline', this)">3–6 months</button>
+            <button type="button" class="pill" data-val="6-12 months" onclick="selectPill('timeline', this)">6–12 months</button>
+            <button type="button" class="pill" data-val="Just researching" onclick="selectPill('timeline', this)">Just researching</button>
+          </div>
+          <input type="hidden" id="leadTimeline">
+        </div>
+
+        <!-- CONTACT -->
+        <div class="lead-form-grid">
+          <div class="lead-field">
+            <label class="lead-field-label">Your Name</label>
+            <input type="text" id="leadName" placeholder="Sarah Johnson" required>
+          </div>
+          <div class="lead-field">
+            <label class="lead-field-label">Phone</label>
+            <input type="tel" id="leadPhone" placeholder="(555) 000-0000">
+          </div>
+          <div class="lead-field full">
+            <label class="lead-field-label">Email Address</label>
+            <input type="email" id="leadEmail" placeholder="you@email.com" required>
+          </div>
+        </div>
+
+        <button type="submit" class="lead-submit">Send Me Matching Homes →</button>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <div class="success-icon">✓</div>
+        <h3>You're all set!</h3>
+        <p id="successText">We'll send matching homes to your inbox shortly.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MOBILE STICKY -->
+<div class="sticky-bar" id="stickyBar">
+  <div>
+    <div class="sb-label">Est. Payment</div>
+    <div class="sb-amount" id="stickyAmount">—</div>
+  </div>
+  <div class="sb-sub">/month</div>
+</div>
+
+<script>
+let selectedTerm = 30;
+let pieChart = null;
+let calcData = {};
+let selectedLocation = '';
+let selectedTimeline = '';
+
+const $ = id => document.getElementById(id);
+
+function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+function fmtK(n) {
+  if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+  if (n >= 10000) return '$' + Math.round(n/1000) + 'K';
+  return fmt(n);
+}
+
+function setTerm(years) {
+  selectedTerm = years;
+  document.querySelectorAll('.term-btn').forEach(b => b.classList.toggle('active', parseInt(b.dataset.value) === years));
+  calculateMortgage();
+}
+
+function calcPI(loanAmount, rate, years) {
+  if (loanAmount <= 0 || rate <= 0) return loanAmount / (years * 12);
+  const mr = (rate / 100) / 12;
+  const n = years * 12;
+  return loanAmount * (mr * Math.pow(1 + mr, n)) / (Math.pow(1 + mr, n) - 1);
+}
+
+function animateNumber(el) {
+  el.classList.remove('number-update');
+  void el.offsetWidth;
+  el.classList.add('number-update');
+}
+
+function selectPill(type, btn) {
+  const group = type === 'location' ? $('locationPills') : $('timelinePills');
+  group.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+
+  if (type === 'location') {
+    selectedLocation = btn.dataset.val;
+    $('leadLocation').value = selectedLocation;
+    const otherInput = $('locationOther');
+    if (btn.dataset.val === 'Other') {
+      otherInput.style.display = 'block';
+      otherInput.focus();
+      otherInput.oninput = () => { selectedLocation = otherInput.value; $('leadLocation').value = otherInput.value; };
+    } else {
+      otherInput.style.display = 'none';
+    }
+  } else {
+    selectedTimeline = btn.dataset.val;
+    $('leadTimeline').value = selectedTimeline;
+  }
+}
+
+function calculateMortgage() {
+  const homePrice = parseFloat($('homePrice').value) || 0;
+  const downPayment = parseFloat($('downPayment').value) || 0;
+  const rate = parseFloat($('interestRate').value) || 0;
+  const taxRate = parseFloat($('propertyTax').value) || 0;
+  // Auto-calculate insurance at 0.5% of home price / 12 if field is empty
+  const insuranceField = $('homeInsurance');
+  if (!insuranceField.dataset.userEdited) {
+    const autoIns = Math.round((homePrice * 0.005) / 12);
+    insuranceField.placeholder = '$' + autoIns + '/mo (auto)';
+    insuranceField.value = '';
+  }
+  const insurance = parseFloat(insuranceField.value) || Math.round((homePrice * 0.005) / 12);
+  const loanAmount = Math.max(homePrice - downPayment, 0);
+
+  if (homePrice <= 0 || loanAmount <= 0) {
+    $('totalMonthly').textContent = '—';
+    return;
+  }
+
+  const pi = calcPI(loanAmount, rate, selectedTerm);
+  const monthlyTax = (homePrice * taxRate / 100) / 12;
+  const monthlyIns = insurance;
+  const total = pi + monthlyTax + monthlyIns;
+  const pi15 = calcPI(loanAmount, rate, 15);
+  const total15 = pi15 + monthlyTax + monthlyIns;
+  const pi30 = calcPI(loanAmount, rate, 30);
+  const total30 = pi30 + monthlyTax + monthlyIns;
+  const closingCosts = homePrice * 0.025;
+  const totalCash = downPayment + closingCosts;
+
+  calcData = { homePrice, downPayment, loanAmount, pi, monthlyTax, monthlyIns, total, closingCosts, totalCash, total15, total30, rate, taxRate, insurance };
+
+  // Animate
+  [$('totalMonthly'), $('piDisplay'), $('taxDisplay'), $('insDisplay'), $('totalDisplay')].forEach(animateNumber);
+
+  // Hero
+  $('totalMonthly').textContent = fmt(total) + '/mo';
+  $('loanAmtDisplay').textContent = fmt(loanAmount);
+
+  // Breakdown
+  $('piDisplay').textContent = fmt(pi);
+  $('taxDisplay').textContent = fmt(monthlyTax);
+  $('insDisplay').textContent = fmt(monthlyIns);
+  $('totalDisplay').textContent = fmt(total);
+
+  // Bar
+  const barTotal = Math.max(total, 1);
+  $('barPI').style.width = (pi / barTotal * 100).toFixed(1) + '%';
+  $('barTax').style.width = (monthlyTax / barTotal * 100).toFixed(1) + '%';
+  $('barIns').style.width = (monthlyIns / barTotal * 100).toFixed(1) + '%';
+
+  // Cash to close
+  $('cashDown').textContent = fmtK(downPayment);
+  $('closingCosts').textContent = fmt(closingCosts);
+  $('totalCash').textContent = fmt(totalCash);
+
+  // Comparison
+  $('pay15').textContent = fmt(total15);
+  $('pay30').textContent = fmt(total30);
+  $('diff15').textContent = '−' + fmt(total15 - total30);
+  $('row15').classList.toggle('active-row', selectedTerm === 15);
+  $('row30').classList.toggle('active-row', selectedTerm === 30);
+
+  // Pie
+  updatePieChart(pi, monthlyTax, monthlyIns);
+
+  // Mobile sticky
+  $('stickyAmount').textContent = fmt(total);
+
+  // Lead form — always visible, update values
+  $('leadPrice').textContent = fmtK(homePrice);
+  $('leadDown').textContent = fmtK(downPayment);
+  $('leadMonthly').textContent = fmt(total) + '/mo';
+
+  updateURL(homePrice, downPayment, rate, selectedTerm);
+}
+
+function updatePieChart(pi, tax, ins) {
+  const data = [Math.round(pi), Math.round(tax), Math.round(ins)];
+  if (pieChart) { pieChart.data.datasets[0].data = data; pieChart.update('none'); return; }
+  const ctx = $('pieChart').getContext('2d');
+  pieChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['P&I', 'Tax', 'Insurance'],
+      datasets: [{ data, backgroundColor: ['#0a0a0a', '#888888', '#d4d4d4'], borderWidth: 0, hoverOffset: 4 }]
+    },
+    options: {
+      cutout: '68%',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.label + ': $' + ctx.parsed.toLocaleString() } }
+      },
+      animation: { duration: 400 }
+    }
+  });
+}
+
+function submitLead(e) {
+  e.preventDefault();
+  const name = $('leadName').value;
+  const email = $('leadEmail').value;
+  const phone = $('leadPhone').value;
+  const location = $('leadLocation').value || selectedLocation || 'Not specified';
+  const timeline = $('leadTimeline').value || selectedTimeline || 'Not specified';
+
+  // Formspree — replace YOUR_FORM_ID with your actual Formspree endpoint ID
+  fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: `New Buyer Lead — ${name} | ${location} | ${timeline}`,
+      name,
+      email,
+      phone: phone || 'Not provided',
+      location,
+      timeline,
+      home_price: fmt(calcData.homePrice),
+      down_payment: fmt(calcData.downPayment),
+      loan_amount: fmt(calcData.loanAmount),
+      interest_rate: calcData.rate + '%',
+      monthly_payment: fmt(calcData.total),
+      cash_to_close: fmt(calcData.totalCash)
+    })
+  }).catch(() => {}); // Fails silently if ID not set
+
+  $('leadForm').style.display = 'none';
+  $('successMsg').classList.add('visible');
+  $('successText').textContent = `Thanks ${name}! We'll send matching homes in ${location} to ${email} shortly.`;
+}
+
+function updateURL(price, down, rate, term) {
+  try {
+    const url = new URL(window.location);
+    url.searchParams.set('price', price);
+    url.searchParams.set('down', down);
+    url.searchParams.set('rate', rate);
+    url.searchParams.set('term', term);
+    window.history.replaceState({}, '', url);
+  } catch(e) {}
+}
+
+function loadFromURL() {
+  try {
+    const p = new URLSearchParams(window.location.search);
+    if (p.get('price')) $('homePrice').value = p.get('price');
+    if (p.get('down')) $('downPayment').value = p.get('down');
+    if (p.get('rate')) $('interestRate').value = p.get('rate');
+    if (p.get('term')) setTerm(parseInt(p.get('term')));
+  } catch(e) {}
+}
+
+let debounceTimer;
+function onInput() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(calculateMortgage, 400);
+}
+document.querySelectorAll('.inputs-panel input').forEach(f => f.addEventListener('input', onInput));
+
+// Mark insurance as user-edited if they type in it manually
+$('homeInsurance').addEventListener('input', function() {
+  if (this.value) {
+    this.dataset.userEdited = 'true';
+  } else {
+    delete this.dataset.userEdited;
+  }
+});
+loadFromURL();
+calculateMortgage();
+</script>
+</body>
+</html>
