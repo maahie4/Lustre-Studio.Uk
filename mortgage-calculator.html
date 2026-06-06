@@ -60,7 +60,8 @@
   .input-prefix, .input-suffix { padding: 0 12px; font-size: 14px; color: var(--gray-400); font-weight: 500; user-select: none; flex-shrink: 0; }
   .input-prefix { border-right: 1px solid var(--border); }
   .input-suffix { border-left: 1px solid var(--border); }
-  .input-wrap input { flex: 1; border: none; outline: none; padding: 11px 14px; font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--black); background: transparent; width: 100%; min-width: 0; }
+  .input-wrap input { flex: 1; border: none; outline: none; padding: 11px 14px; font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--black); background: transparent; width: 100%; min-width: 0; -moz-appearance: textfield; }
+  .input-wrap input::-webkit-outer-spin-button, .input-wrap input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   .input-wrap input::placeholder { color: var(--gray-200); }
 
   .term-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -216,7 +217,7 @@
       <label class="field-label" for="homePrice">Home Price</label>
       <div class="input-wrap">
         <span class="input-prefix">$</span>
-        <input type="number" id="homePrice" placeholder="500,000" min="0">
+        <input type="text" inputmode="decimal" id="homePrice" placeholder="500,000">
       </div>
     </div>
 
@@ -224,14 +225,14 @@
       <label class="field-label" for="downPayment">Down Payment</label>
       <div class="input-wrap">
         <span class="input-prefix">$</span>
-        <input type="number" id="downPayment" placeholder="100,000" min="0">
+        <input type="text" inputmode="decimal" id="downPayment" placeholder="100,000">
       </div>
     </div>
 
     <div class="field-group">
       <label class="field-label" for="interestRate">Interest Rate</label>
       <div class="input-wrap">
-        <input type="number" id="interestRate" placeholder="6.5" step="0.1" min="0" max="30">
+        <input type="text" inputmode="decimal" id="interestRate" placeholder="6.5">
         <span class="input-suffix">%</span>
       </div>
     </div>
@@ -249,7 +250,7 @@
     <div class="field-group">
       <label class="field-label" for="propertyTax">Property Tax <span class="optional">Optional</span></label>
       <div class="input-wrap">
-        <input type="number" id="propertyTax" placeholder="1.2" step="0.1" min="0">
+        <input type="text" inputmode="decimal" id="propertyTax" placeholder="1.2">
         <span class="input-suffix">%</span>
       </div>
     </div>
@@ -258,7 +259,7 @@
       <label class="field-label" for="homeInsurance">Home Insurance <span class="optional">Optional · /month</span></label>
       <div class="input-wrap">
         <span class="input-prefix">$</span>
-        <input type="number" id="homeInsurance" placeholder="Auto-calculated" min="0">
+        <input type="text" inputmode="decimal" id="homeInsurance" placeholder="Auto-calculated">
       </div>
     </div>
   </div>
@@ -650,7 +651,18 @@ function onInput() {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(calculateMortgage, 400);
 }
-document.querySelectorAll('.inputs-panel input').forEach(f => f.addEventListener('input', onInput));
+document.querySelectorAll('.inputs-panel input').forEach(f => {
+  f.addEventListener('input', onInput);
+  // Prevent scroll wheel from changing values
+  f.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+  // Allow only numeric characters (digits, decimal point, minus)
+  f.addEventListener('keydown', function(e) {
+    const allowed = ['Backspace','Delete','ArrowLeft','ArrowRight','Tab','Home','End','Enter'];
+    if (allowed.includes(e.key)) return;
+    if ((e.ctrlKey || e.metaKey) && ['a','c','v','x','z'].includes(e.key.toLowerCase())) return;
+    if (!/^[0-9.]$/.test(e.key)) e.preventDefault();
+  });
+});
 
 // Mark insurance as user-edited if they type in it manually
 $('homeInsurance').addEventListener('input', function() {
