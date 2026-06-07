@@ -133,6 +133,8 @@ This document serves as a complete markdown mirror of the official **Lustre Stud
 
 * **Other Projects Archive**
   * **Bakery Shop** *(E-Commerce / Local Brand Experience)*
+  * **Arturs Lacis Photography** *(Editorial Wedding Photographer / Portfolio)* - A custom-built, high-end portfolio website that positions a photographer as an artist, not just a service provider.
+  * **Dr. Asiya Ayaz Dental Clinic** *(Premium Medical Portfolio & Booking Platform)* - A sophisticated, conversion-focused website for a leading orthodontist in Islamabad, featuring interactive cards, a client testimonial slider, and a responsive multi-location footer.
 
 * **Client Testimonial**
   * > "Within the first week of launching our custom platform, we had more organic sales and higher search positions than ever. It finally matches the luxury experience we deliver."  
