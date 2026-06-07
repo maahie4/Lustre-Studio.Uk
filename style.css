@@ -433,13 +433,14 @@ footer p {
     font-size: 1.1rem;
     font-family: inherit;
     background: transparent;
+    color: #fff;
     outline: none;
     transition: border-color 0.3s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #000;
+    border-color: #fff;
 }
 
 /* Animations */
