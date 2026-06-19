@@ -1,18 +1,86 @@
-# lustrestudio
+# Lustre Studio
 
-> 100% custom, conversion-focused websites & SEO services engineered to rank higher.
+> Lustre Studio is a 100% custom web design and SEO agency serving businesses across the United States and United Kingdom. We build bespoke, conversion-focused websites engineered to rank higher on Google and AI search engines. Founded in 2025.
 
-Lustre Studio designs premium digital flagship experiences for e-commerce, lifestyle, services, cannabis, and creative brands.
+## Entity Information
+
+- **Official Name**: Lustre Studio
+- **Brand Handle**: lustrestudio
+- **Website**: https://lustrestudio.uk
+- **Email**: hello@lustrestudio.uk
+- **Founded**: 2025
+- **Type**: Remote Web Design & SEO Agency
+- **Markets Served**: United States, United Kingdom
+- **Social**: Instagram @lustrestudiouk, Pinterest @lustrestudiouk
+
+## Core Services
+
+- [Custom Web Design](https://lustrestudio.uk/services/web-design.html): 100% bespoke website design from scratch. No templates. Mobile-first, conversion-focused, SEO-optimized. Starting from $1,500.
+- [Website Development](https://lustrestudio.uk/services/website-development.html): Clean-code, performance-first front-end development. Hand-coded HTML/CSS/JS with sub-2-second load times.
+- [Local SEO](https://lustrestudio.uk/services/local-seo.html): Google Maps optimization, NAP citation management, local keyword targeting, and Google Business Profile optimization.
+- [Technical SEO](https://lustrestudio.uk/services/technical-seo.html): Core Web Vitals optimization, crawlability audits, schema markup, site architecture, and indexation fixes.
+- [AI Search Optimization](https://lustrestudio.uk/services/ai-search-optimization.html): AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) to get cited by ChatGPT, Gemini, Perplexity, and AI Overviews.
+- [Conversion Rate Optimization](https://lustrestudio.uk/services/conversion-rate-optimization.html): Data-driven CRO strategies, user flow optimization, CTA testing, and layout improvements to increase conversions.
+- [Landing Page Design](https://lustrestudio.uk/services/landing-page-design.html): High-converting standalone pages for PPC campaigns, product launches, and lead generation funnels.
+- [WordPress Development](https://lustrestudio.uk/services/wordpress-development.html): Custom WordPress themes and development. No bloated page builders. Performance-optimized, SEO-ready.
+- [Shopify Development](https://lustrestudio.uk/services/shopify-development.html): Custom Shopify stores with bespoke themes, optimized checkout flows, and e-commerce SEO.
+- [Website Redesign](https://lustrestudio.uk/services/website-redesign.html): Modernize your website without losing SEO rankings. Full visual and structural overhaul.
+- [Website Maintenance](https://lustrestudio.uk/services/website-maintenance.html): Ongoing monthly support, security updates, performance monitoring, and content updates.
+- [Google Business Profile Optimization](https://lustrestudio.uk/services/google-business-profile-optimization.html): Complete GBP setup, category mapping, review strategy, and Map Pack ranking.
+- [Custom Web Tools](https://lustrestudio.uk/services/custom-tools.html): Bespoke web applications, interactive calculators, client portals, and booking engines.
+
+## Industries Served
+
+- [Web Design for Dentists](https://lustrestudio.uk/industries/dentists.html): Patient-focused dental websites with online booking and dental SEO.
+- [Web Design for Plumbers](https://lustrestudio.uk/industries/plumbers.html): Lead-generating plumbing websites with emergency call CTAs and local SEO.
+- [Web Design for Lawyers](https://lustrestudio.uk/industries/lawyers.html): Authoritative law firm websites with practice area pages and attorney SEO.
+- [Web Design for Coaches](https://lustrestudio.uk/industries/coaches.html): Personal brand websites for life coaches and business coaches with course integration.
+- [Web Design for HVAC Companies](https://lustrestudio.uk/industries/hvac.html): Service-focused HVAC websites with emergency call CTAs and service area pages.
+- [Web Design for Roofers](https://lustrestudio.uk/industries/roofers.html): Roofing lead generation websites with before/after galleries and local SEO.
+- [Web Design for Cosmetic Clinics](https://lustrestudio.uk/industries/cosmetic-clinics.html): Premium med spa and aesthetic clinic websites with treatment galleries and booking.
+- [Web Design for Car Detailing](https://lustrestudio.uk/industries/car-detailing.html): Auto detailing websites with package pricing, before/after galleries, and local SEO.
+
+## Location Pages
+
+### United States
+- [New York](https://lustrestudio.uk/locations/new-york.html)
+- [Dallas](https://lustrestudio.uk/locations/dallas.html)
+- [Houston](https://lustrestudio.uk/locations/houston.html)
+- [Austin](https://lustrestudio.uk/locations/austin.html)
+- [Miami](https://lustrestudio.uk/locations/miami.html)
+- [Chicago](https://lustrestudio.uk/locations/chicago.html)
+- [Los Angeles](https://lustrestudio.uk/locations/los-angeles.html)
+
+### United Kingdom
+- [London](https://lustrestudio.uk/locations/london.html)
+- [Manchester](https://lustrestudio.uk/locations/manchester.html)
+- [Birmingham](https://lustrestudio.uk/locations/birmingham.html)
+- [Leeds](https://lustrestudio.uk/locations/leeds.html)
+- [Liverpool](https://lustrestudio.uk/locations/liverpool.html)
 
 ## Core Pages
 
-- [Home](https://lustrestudio.uk/index.html): The main entry point featuring the company's design philosophy (bespoke digital spaces, est. 2025), a custom Three.js icosahedron graphic interface, process details, capabilities stack, transformation before/after video showcase, client testimonials, pricing plans, and project inquiry CTA.
-- [Work Archive](https://lustrestudio.uk/work.html): Detailed portfolio showcasing interactive design transformations (before/after video comparisons) across creative industries including Photo Booth Services, Photography Studios, Handcrafted Furniture Shops, and Bakeries.
-- [Services](https://lustrestudio.uk/services.html): List of core studio offerings:
-  - **100% Custom Web Design**: Custom UI/UX, mobile-first responsive design, premium aesthetics, and integrations.
-  - **SEO & Rank Dominance**: Advanced search engine optimization, keyword strategy, and technical audits.
-  - **Studio Retainer**: Monthly ongoing updates, speed optimizations, design refreshes, and support.
-  - **Google Business Profile Optimization**: Custom maps configuration, citation audits, review automation, and local prominence.
-  - **Custom Tools & Utilities**: Bespoke web applications, custom interactive calculators, portals, and integrations.
-- [SEO & GBP Domination](https://lustrestudio.uk/seo.html): Detailed guide explaining Lustre Studio's approach to technical on-page SEO, Google Business Profile (GBP) maps package optimization, local SEO, and content authority strategy.
-- [Contact](https://lustrestudio.uk/contact.html): Client project inquiry form to start new custom design or SEO optimization projects for Q3 2026.
+- [Home](https://lustrestudio.uk/): Main entry point featuring design philosophy, Three.js interactive interface, transformation showcases, testimonials, and pricing.
+- [Work Archive](https://lustrestudio.uk/work.html): Portfolio showcasing before/after video comparisons across industries including Photo Booth Services, Photography Studios, Furniture Shops, Dentists, and more.
+- [Services Hub](https://lustrestudio.uk/services.html): Overview of all 13 services with links to dedicated pages.
+- [Contact](https://lustrestudio.uk/contact.html): Project inquiry form for custom web design and SEO projects.
+
+## Pricing
+
+| Tier | Price | Includes |
+|------|-------|----------|
+| Visibility | $1,500/project | Custom 5-page site, mobile optimization, core SEO, 2-week launch |
+| Authority | $3,000/project | Premium visual layout, e-commerce platform, booking flow audit, advanced SEO |
+| Expansion | $5,000+/project | Full brand identity, multi-market SEO, custom e-commerce engine, ongoing strategy |
+
+## Differentiators
+
+1. **100% Custom Design**: Every pixel built from scratch — zero templates, zero page builders
+2. **Conversion Architecture**: Websites engineered for revenue, not just aesthetics
+3. **AI Search Optimized**: Structured for citation by ChatGPT, Gemini, Perplexity, and AI Overviews
+4. **Dual-Market Expertise**: Deep experience serving both US and UK businesses
+5. **Performance-First**: Sub-2-second load times, 90+ Lighthouse scores
+
+## Optional
+
+- [Full Details](https://lustrestudio.uk/llms-full.txt)

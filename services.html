@@ -24,12 +24,14 @@
     <title>Services | 100% Custom Web Design & SEO</title>
     <meta name="description"
         content="Premium 100% custom web design services for e-commerce, services, cannabis, and lifestyle brands. Engineered to rank higher with custom SEO.">
+    <link rel="canonical" href="https://lustrestudio.uk/services.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="schema.js" defer></script>
     <style>
         .service-card {
             padding: 4rem;
@@ -86,7 +88,7 @@
             <a href="services.html">Services</a>
         </div>
 
-        <a href="index.html" class="logo">lustrstudio</a>
+        <a href="/" class="logo">lustrestudio</a>
 
         <div class="nav-links right">
             <a href="contact.html">Contact</a>
@@ -104,12 +106,21 @@
         <div class="mobile-close" id="mobileClose"><i class="ri-close-line"></i></div>
         <a href="work.html">Work</a>
         <a href="services.html">Services</a>
-        <a href="index.html" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrstudio</a>
+        <a href="/" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrestudio</a>
         <a href="contact.html">Contact</a>
         <a href="contact.html" style="color: #fff;">Inquire</a>
     </div>
 
-    <header style="padding-top: 180px; padding-bottom: 80px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li aria-current="page">Services</li>
+            </ol>
+        </div>
+    </nav>
+
+    <header style="padding-top: 120px; padding-bottom: 80px;">
         <div class="container">
             <h1 style="font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 2rem; font-weight: 600;" data-reveal>Custom Design.<br>Built to Rank.</h1>
             <p style="max-width: 600px; font-weight: 300; opacity: 0.7;" data-reveal>We do not use generic templates. We build 100% custom, conversion-focused digital spaces engineered for e-commerce, services, cannabis, and lifestyle brands. Made for all.</p>
@@ -129,7 +140,7 @@
                     <li><i class="ri-checkbox-circle-line"></i> Immersive Animations & Luxury Aesthetic</li>
                     <li><i class="ri-checkbox-circle-line"></i> Seamless E-Commerce & Service Integration</li>
                 </ul>
-                <a href="contact.html" class="btn">View Details</a>
+                <a href="services/web-design.html" class="btn">View Details</a>
             </div>
 
             <div class="service-card" data-reveal>
@@ -142,7 +153,7 @@
                     <li><i class="ri-checkbox-circle-line"></i> High-Speed Performance Engineering</li>
                     <li><i class="ri-checkbox-circle-line"></i> E-Commerce & Local SEO Integration</li>
                 </ul>
-                <a href="contact.html" class="btn">Start Ranking</a>
+                <a href="services/local-seo.html" class="btn">Start Ranking</a>
             </div>
 
             <div class="service-card" data-reveal>
@@ -155,7 +166,7 @@
                     <li><i class="ri-checkbox-circle-line"></i> Priority Design & Technical Support</li>
                     <li><i class="ri-checkbox-circle-line"></i> Secure Hosting & Performance Checks</li>
                 </ul>
-                <a href="contact.html" class="btn">Learn More</a>
+                <a href="services/website-maintenance.html" class="btn">Learn More</a>
             </div>
 
             <div class="service-card" data-reveal>
@@ -168,7 +179,7 @@
                     <li><i class="ri-checkbox-circle-line"></i> Automated Review Collection Funnels</li>
                     <li><i class="ri-checkbox-circle-line"></i> High-Intent Local Search Dominance</li>
                 </ul>
-                <a href="contact.html" class="btn">Optimize Profile</a>
+                <a href="services/google-business-profile-optimization.html" class="btn">Optimize Profile</a>
             </div>
 
             <div class="service-card" data-reveal>
@@ -181,7 +192,7 @@
                     <li><i class="ri-checkbox-circle-line"></i> Bespoke Client Portals & Automations</li>
                     <li><i class="ri-checkbox-circle-line"></i> Lightweight, Fast-loading Web Software</li>
                 </ul>
-                <a href="contact.html" class="btn">Build a Tool</a>
+                <a href="services/custom-tools.html" class="btn">Build a Tool</a>
             </div>
 
         </div>
@@ -206,19 +217,74 @@
         </div>
     </section>
 
-    <footer>
+    <section class="ai-summary-block">
         <div class="container">
-            <a href="index.html" class="logo">lustrstudio</a>
-            <p>Websites that turn attention into bookings.</p>
-            <p style="margin-top: -3rem; margin-bottom: 4rem; font-size: 0.95rem; letter-spacing: 0.05em;"><a href="mailto:hello@lustrestudio.uk" style="text-decoration: underline; color: var(--text);">hello@lustrestudio.uk</a></p>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="work.html">Work</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
+            <h2>Summary</h2>
+            <p>Lustre Studio offers 13 professional web design and SEO services for businesses in the US and UK. Our core services include 100% custom web design (from $1,500), website development, local SEO, technical SEO, AI search optimization, conversion rate optimization, landing page design, WordPress development, Shopify development, website redesign, website maintenance, Google Business Profile optimization, and custom web tool development. Every service is built around our philosophy: no templates, conversion-focused, and engineered to rank higher.</p>
+        </div>
+    </section>
+
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo">lustrestudio</a>
+                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">100% custom websites that rank higher and turn attention into revenue. Serving businesses across the US & UK.</p>
+                    <p style="margin-top: 1rem;"><a href="mailto:hello@lustrestudio.uk" style="text-decoration: underline; color: var(--text);">hello@lustrestudio.uk</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services/web-design.html">Web Design</a>
+                    <a href="services/website-development.html">Website Development</a>
+                    <a href="services/local-seo.html">Local SEO</a>
+                    <a href="services/technical-seo.html">Technical SEO</a>
+                    <a href="services/ai-search-optimization.html">AI Search Optimization</a>
+                    <a href="services/conversion-rate-optimization.html">CRO</a>
+                    <a href="services/landing-page-design.html">Landing Page Design</a>
+                    <a href="services/wordpress-development.html">WordPress</a>
+                    <a href="services/shopify-development.html">Shopify</a>
+                    <a href="services/website-redesign.html">Website Redesign</a>
+                    <a href="services/website-maintenance.html">Maintenance</a>
+                    <a href="services/google-business-profile-optimization.html">GBP Optimization</a>
+                    <a href="services/custom-tools.html">Custom Tools</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="industries/dentists.html">Dentists</a>
+                    <a href="industries/plumbers.html">Plumbers</a>
+                    <a href="industries/lawyers.html">Lawyers</a>
+                    <a href="industries/coaches.html">Coaches</a>
+                    <a href="industries/hvac.html">HVAC</a>
+                    <a href="industries/roofers.html">Roofers</a>
+                    <a href="industries/cosmetic-clinics.html">Cosmetic Clinics</a>
+                    <a href="industries/car-detailing.html">Car Detailing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Locations</h4>
+                    <a href="locations/new-york.html">New York</a>
+                    <a href="locations/dallas.html">Dallas</a>
+                    <a href="locations/houston.html">Houston</a>
+                    <a href="locations/austin.html">Austin</a>
+                    <a href="locations/miami.html">Miami</a>
+                    <a href="locations/chicago.html">Chicago</a>
+                    <a href="locations/los-angeles.html">Los Angeles</a>
+                    <a href="locations/london.html">London</a>
+                    <a href="locations/manchester.html">Manchester</a>
+                    <a href="locations/birmingham.html">Birmingham</a>
+                    <a href="locations/leeds.html">Leeds</a>
+                    <a href="locations/liverpool.html">Liverpool</a>
+                </div>
             </div>
-            <div class="copyright">
-                &copy; 2026 lustrstudio &mdash; launch q3
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="work.html">Work</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Lustre Studio &mdash; Custom Web Design & SEO Agency
+                </div>
             </div>
         </div>
     </footer>
@@ -257,6 +323,16 @@
             });
         }, observerOptions);
         document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+        // Inject schemas
+        if (typeof injectWebPageSchema === 'function') {
+            injectWebPageSchema(
+                'Services — Custom Web Design & SEO | Lustre Studio',
+                'Explore all 13 web design and SEO services offered by Lustre Studio. Custom web design, local SEO, technical SEO, AI search optimization, CRO, and more.',
+                'https://lustrestudio.uk/services.html',
+                [{ name: 'Home', url: 'https://lustrestudio.uk/' }, { name: 'Services', url: 'https://lustrestudio.uk/services.html' }]
+            );
+        }
     </script>
 </body>
 

@@ -25,12 +25,14 @@
     <title>Inquire | 100% Custom Web Design & SEO</title>
     <meta name="description"
         content="Ready to scale your brand? Inquire with Lustre Studio for premium 100% custom web design, e-commerce storefronts, and high-ranking SEO strategies.">
+    <link rel="canonical" href="https://lustrestudio.uk/contact.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="schema.js" defer></script>
 </head>
 
 <body style="background: #000; color: #fff;">
@@ -41,7 +43,7 @@
             <a href="services.html">Services</a>
         </div>
 
-        <a href="index.html" class="logo">lustrstudio</a>
+        <a href="/" class="logo">lustrestudio</a>
 
         <div class="nav-links right">
             <a href="contact.html">Contact</a>
@@ -59,12 +61,21 @@
         <div class="mobile-close" id="mobileClose"><i class="ri-close-line"></i></div>
         <a href="work.html">Work</a>
         <a href="services.html">Services</a>
-        <a href="index.html" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrstudio</a>
+        <a href="/" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrestudio</a>
         <a href="contact.html">Contact</a>
         <a href="contact.html" style="color: #fff;">Inquire</a>
     </div>
 
-    <header style="padding-top: 180px; padding-bottom: 80px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li aria-current="page">Contact</li>
+            </ol>
+        </div>
+    </nav>
+
+    <header style="padding-top: 120px; padding-bottom: 80px;">
         <div class="container" style="text-align: center;">
             <h1 style="font-size: clamp(3rem, 7vw, 6rem); margin-bottom: 2rem; font-weight: 600;" data-reveal>Start your project.</h1>
             <p style="max-width: 600px; margin: 0 auto; font-weight: 300; opacity: 0.7;" data-reveal>We design for all industries. Whether you need custom e-commerce, lifestyle showcases, premium service flows, or cannabis brand experiences, we build to convert and rank.</p>
@@ -134,19 +145,67 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="mega-footer">
         <div class="container">
-            <a href="index.html" class="logo">lustrstudio</a>
-            <p>Websites that turn attention into bookings.</p>
-            <p style="margin-top: -3rem; margin-bottom: 4rem; font-size: 0.95rem; letter-spacing: 0.05em;"><a href="mailto:hello@lustrestudio.uk" style="text-decoration: underline; color: var(--text);">hello@lustrestudio.uk</a></p>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="work.html">Work</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo">lustrestudio</a>
+                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">100% custom websites that rank higher and turn attention into revenue. Serving businesses across the US & UK.</p>
+                    <p style="margin-top: 1rem;"><a href="mailto:hello@lustrestudio.uk" style="text-decoration: underline; color: var(--text);">hello@lustrestudio.uk</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services/web-design.html">Web Design</a>
+                    <a href="services/website-development.html">Website Development</a>
+                    <a href="services/local-seo.html">Local SEO</a>
+                    <a href="services/technical-seo.html">Technical SEO</a>
+                    <a href="services/ai-search-optimization.html">AI Search Optimization</a>
+                    <a href="services/conversion-rate-optimization.html">CRO</a>
+                    <a href="services/landing-page-design.html">Landing Page Design</a>
+                    <a href="services/wordpress-development.html">WordPress</a>
+                    <a href="services/shopify-development.html">Shopify</a>
+                    <a href="services/website-redesign.html">Website Redesign</a>
+                    <a href="services/website-maintenance.html">Maintenance</a>
+                    <a href="services/google-business-profile-optimization.html">GBP Optimization</a>
+                    <a href="services/custom-tools.html">Custom Tools</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="industries/dentists.html">Dentists</a>
+                    <a href="industries/plumbers.html">Plumbers</a>
+                    <a href="industries/lawyers.html">Lawyers</a>
+                    <a href="industries/coaches.html">Coaches</a>
+                    <a href="industries/hvac.html">HVAC</a>
+                    <a href="industries/roofers.html">Roofers</a>
+                    <a href="industries/cosmetic-clinics.html">Cosmetic Clinics</a>
+                    <a href="industries/car-detailing.html">Car Detailing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Locations</h4>
+                    <a href="locations/new-york.html">New York</a>
+                    <a href="locations/dallas.html">Dallas</a>
+                    <a href="locations/houston.html">Houston</a>
+                    <a href="locations/austin.html">Austin</a>
+                    <a href="locations/miami.html">Miami</a>
+                    <a href="locations/chicago.html">Chicago</a>
+                    <a href="locations/los-angeles.html">Los Angeles</a>
+                    <a href="locations/london.html">London</a>
+                    <a href="locations/manchester.html">Manchester</a>
+                    <a href="locations/birmingham.html">Birmingham</a>
+                    <a href="locations/leeds.html">Leeds</a>
+                    <a href="locations/liverpool.html">Liverpool</a>
+                </div>
             </div>
-            <div class="copyright">
-                &copy; 2026 lustrstudio &mdash;
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="work.html">Work</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Lustre Studio &mdash; Custom Web Design & SEO Agency
+                </div>
             </div>
         </div>
     </footer>
@@ -185,6 +244,16 @@
             });
         }, observerOptions);
         document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+        // Inject schemas
+        if (typeof injectWebPageSchema === 'function') {
+            injectWebPageSchema(
+                'Contact — Start Your Custom Web Design Project | Lustre Studio',
+                'Ready to elevate your brand? Submit a project inquiry for custom web design, SEO, or digital services. Lustre Studio responds within 24-48 business hours.',
+                'https://lustrestudio.uk/contact.html',
+                [{ name: 'Home', url: 'https://lustrestudio.uk/' }, { name: 'Contact', url: 'https://lustrestudio.uk/contact.html' }]
+            );
+        }
     </script>
 </body>
 
