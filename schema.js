@@ -59,19 +59,19 @@ function injectOrganizationSchema() {
             '@type': 'OfferCatalog',
             'name': 'Web Design & SEO Services',
             'itemListElement': [
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Custom Web Design', 'url': SCHEMA_CONFIG.url + '/services/web-design.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Website Development', 'url': SCHEMA_CONFIG.url + '/services/website-development.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Local SEO', 'url': SCHEMA_CONFIG.url + '/services/local-seo.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Technical SEO', 'url': SCHEMA_CONFIG.url + '/services/technical-seo.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'AI Search Optimization', 'url': SCHEMA_CONFIG.url + '/services/ai-search-optimization.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Conversion Rate Optimization', 'url': SCHEMA_CONFIG.url + '/services/conversion-rate-optimization.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Landing Page Design', 'url': SCHEMA_CONFIG.url + '/services/landing-page-design.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'WordPress Development', 'url': SCHEMA_CONFIG.url + '/services/wordpress-development.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Shopify Development', 'url': SCHEMA_CONFIG.url + '/services/shopify-development.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Website Redesign', 'url': SCHEMA_CONFIG.url + '/services/website-redesign.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Website Maintenance', 'url': SCHEMA_CONFIG.url + '/services/website-maintenance.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Google Business Profile Optimization', 'url': SCHEMA_CONFIG.url + '/services/google-business-profile-optimization.html' }},
-                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Custom Web Tools', 'url': SCHEMA_CONFIG.url + '/services/custom-tools.html' }}
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Custom Web Design', 'url': SCHEMA_CONFIG.url + '/services/web-design' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Website Development', 'url': SCHEMA_CONFIG.url + '/services/website-development' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Local SEO', 'url': SCHEMA_CONFIG.url + '/services/local-seo' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Technical SEO', 'url': SCHEMA_CONFIG.url + '/services/technical-seo' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'AI Search Optimization', 'url': SCHEMA_CONFIG.url + '/services/ai-search-optimization' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Conversion Rate Optimization', 'url': SCHEMA_CONFIG.url + '/services/conversion-rate-optimization' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Landing Page Design', 'url': SCHEMA_CONFIG.url + '/services/landing-page-design' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'WordPress Development', 'url': SCHEMA_CONFIG.url + '/services/wordpress-development' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Shopify Development', 'url': SCHEMA_CONFIG.url + '/services/shopify-development' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Website Redesign', 'url': SCHEMA_CONFIG.url + '/services/website-redesign' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Website Maintenance', 'url': SCHEMA_CONFIG.url + '/services/website-maintenance' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Google Business Profile Optimization', 'url': SCHEMA_CONFIG.url + '/services/google-business-profile-optimization' }},
+                { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Custom Web Tools', 'url': SCHEMA_CONFIG.url + '/services/custom-tools' }}
             ]
         }
     });

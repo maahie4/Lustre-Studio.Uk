@@ -15,55 +15,55 @@
 
 ## Core Services
 
-- [Custom Web Design](https://lustrestudio.uk/services/web-design.html): 100% bespoke website design from scratch. No templates. Mobile-first, conversion-focused, SEO-optimized. Starting from $1,500.
-- [Website Development](https://lustrestudio.uk/services/website-development.html): Clean-code, performance-first front-end development. Hand-coded HTML/CSS/JS with sub-2-second load times.
-- [Local SEO](https://lustrestudio.uk/services/local-seo.html): Google Maps optimization, NAP citation management, local keyword targeting, and Google Business Profile optimization.
-- [Technical SEO](https://lustrestudio.uk/services/technical-seo.html): Core Web Vitals optimization, crawlability audits, schema markup, site architecture, and indexation fixes.
-- [AI Search Optimization](https://lustrestudio.uk/services/ai-search-optimization.html): AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) to get cited by ChatGPT, Gemini, Perplexity, and AI Overviews.
-- [Conversion Rate Optimization](https://lustrestudio.uk/services/conversion-rate-optimization.html): Data-driven CRO strategies, user flow optimization, CTA testing, and layout improvements to increase conversions.
-- [Landing Page Design](https://lustrestudio.uk/services/landing-page-design.html): High-converting standalone pages for PPC campaigns, product launches, and lead generation funnels.
-- [WordPress Development](https://lustrestudio.uk/services/wordpress-development.html): Custom WordPress themes and development. No bloated page builders. Performance-optimized, SEO-ready.
-- [Shopify Development](https://lustrestudio.uk/services/shopify-development.html): Custom Shopify stores with bespoke themes, optimized checkout flows, and e-commerce SEO.
-- [Website Redesign](https://lustrestudio.uk/services/website-redesign.html): Modernize your website without losing SEO rankings. Full visual and structural overhaul.
-- [Website Maintenance](https://lustrestudio.uk/services/website-maintenance.html): Ongoing monthly support, security updates, performance monitoring, and content updates.
-- [Google Business Profile Optimization](https://lustrestudio.uk/services/google-business-profile-optimization.html): Complete GBP setup, category mapping, review strategy, and Map Pack ranking.
-- [Custom Web Tools](https://lustrestudio.uk/services/custom-tools.html): Bespoke web applications, interactive calculators, client portals, and booking engines.
+- [Custom Web Design](https://lustrestudio.uk/services/web-design): 100% bespoke website design from scratch. No templates. Mobile-first, conversion-focused, SEO-optimized. Starting from $1,500.
+- [Website Development](https://lustrestudio.uk/services/website-development): Clean-code, performance-first front-end development. Hand-coded HTML/CSS/JS with sub-2-second load times.
+- [Local SEO](https://lustrestudio.uk/services/local-seo): Google Maps optimization, NAP citation management, local keyword targeting, and Google Business Profile optimization.
+- [Technical SEO](https://lustrestudio.uk/services/technical-seo): Core Web Vitals optimization, crawlability audits, schema markup, site architecture, and indexation fixes.
+- [AI Search Optimization](https://lustrestudio.uk/services/ai-search-optimization): AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) to get cited by ChatGPT, Gemini, Perplexity, and AI Overviews.
+- [Conversion Rate Optimization](https://lustrestudio.uk/services/conversion-rate-optimization): Data-driven CRO strategies, user flow optimization, CTA testing, and layout improvements to increase conversions.
+- [Landing Page Design](https://lustrestudio.uk/services/landing-page-design): High-converting standalone pages for PPC campaigns, product launches, and lead generation funnels.
+- [WordPress Development](https://lustrestudio.uk/services/wordpress-development): Custom WordPress themes and development. No bloated page builders. Performance-optimized, SEO-ready.
+- [Shopify Development](https://lustrestudio.uk/services/shopify-development): Custom Shopify stores with bespoke themes, optimized checkout flows, and e-commerce SEO.
+- [Website Redesign](https://lustrestudio.uk/services/website-redesign): Modernize your website without losing SEO rankings. Full visual and structural overhaul.
+- [Website Maintenance](https://lustrestudio.uk/services/website-maintenance): Ongoing monthly support, security updates, performance monitoring, and content updates.
+- [Google Business Profile Optimization](https://lustrestudio.uk/services/google-business-profile-optimization): Complete GBP setup, category mapping, review strategy, and Map Pack ranking.
+- [Custom Web Tools](https://lustrestudio.uk/services/custom-tools): Bespoke web applications, interactive calculators, client portals, and booking engines.
 
 ## Industries Served
 
-- [Web Design for Dentists](https://lustrestudio.uk/industries/dentists.html): Patient-focused dental websites with online booking and dental SEO.
-- [Web Design for Plumbers](https://lustrestudio.uk/industries/plumbers.html): Lead-generating plumbing websites with emergency call CTAs and local SEO.
-- [Web Design for Lawyers](https://lustrestudio.uk/industries/lawyers.html): Authoritative law firm websites with practice area pages and attorney SEO.
-- [Web Design for Coaches](https://lustrestudio.uk/industries/coaches.html): Personal brand websites for life coaches and business coaches with course integration.
-- [Web Design for HVAC Companies](https://lustrestudio.uk/industries/hvac.html): Service-focused HVAC websites with emergency call CTAs and service area pages.
-- [Web Design for Roofers](https://lustrestudio.uk/industries/roofers.html): Roofing lead generation websites with before/after galleries and local SEO.
-- [Web Design for Cosmetic Clinics](https://lustrestudio.uk/industries/cosmetic-clinics.html): Premium med spa and aesthetic clinic websites with treatment galleries and booking.
-- [Web Design for Car Detailing](https://lustrestudio.uk/industries/car-detailing.html): Auto detailing websites with package pricing, before/after galleries, and local SEO.
+- [Web Design for Dentists](https://lustrestudio.uk/industries/dentists): Patient-focused dental websites with online booking and dental SEO.
+- [Web Design for Plumbers](https://lustrestudio.uk/industries/plumbers): Lead-generating plumbing websites with emergency call CTAs and local SEO.
+- [Web Design for Lawyers](https://lustrestudio.uk/industries/lawyers): Authoritative law firm websites with practice area pages and attorney SEO.
+- [Web Design for Coaches](https://lustrestudio.uk/industries/coaches): Personal brand websites for life coaches and business coaches with course integration.
+- [Web Design for HVAC Companies](https://lustrestudio.uk/industries/hvac): Service-focused HVAC websites with emergency call CTAs and service area pages.
+- [Web Design for Roofers](https://lustrestudio.uk/industries/roofers): Roofing lead generation websites with before/after galleries and local SEO.
+- [Web Design for Cosmetic Clinics](https://lustrestudio.uk/industries/cosmetic-clinics): Premium med spa and aesthetic clinic websites with treatment galleries and booking.
+- [Web Design for Car Detailing](https://lustrestudio.uk/industries/car-detailing): Auto detailing websites with package pricing, before/after galleries, and local SEO.
 
 ## Location Pages
 
 ### United States
-- [New York](https://lustrestudio.uk/locations/new-york.html)
-- [Dallas](https://lustrestudio.uk/locations/dallas.html)
-- [Houston](https://lustrestudio.uk/locations/houston.html)
-- [Austin](https://lustrestudio.uk/locations/austin.html)
-- [Miami](https://lustrestudio.uk/locations/miami.html)
-- [Chicago](https://lustrestudio.uk/locations/chicago.html)
-- [Los Angeles](https://lustrestudio.uk/locations/los-angeles.html)
+- [New York](https://lustrestudio.uk/locations/new-york)
+- [Dallas](https://lustrestudio.uk/locations/dallas)
+- [Houston](https://lustrestudio.uk/locations/houston)
+- [Austin](https://lustrestudio.uk/locations/austin)
+- [Miami](https://lustrestudio.uk/locations/miami)
+- [Chicago](https://lustrestudio.uk/locations/chicago)
+- [Los Angeles](https://lustrestudio.uk/locations/los-angeles)
 
 ### United Kingdom
-- [London](https://lustrestudio.uk/locations/london.html)
-- [Manchester](https://lustrestudio.uk/locations/manchester.html)
-- [Birmingham](https://lustrestudio.uk/locations/birmingham.html)
-- [Leeds](https://lustrestudio.uk/locations/leeds.html)
-- [Liverpool](https://lustrestudio.uk/locations/liverpool.html)
+- [London](https://lustrestudio.uk/locations/london)
+- [Manchester](https://lustrestudio.uk/locations/manchester)
+- [Birmingham](https://lustrestudio.uk/locations/birmingham)
+- [Leeds](https://lustrestudio.uk/locations/leeds)
+- [Liverpool](https://lustrestudio.uk/locations/liverpool)
 
 ## Core Pages
 
 - [Home](https://lustrestudio.uk/): Main entry point featuring design philosophy, Three.js interactive interface, transformation showcases, testimonials, and pricing.
-- [Work Archive](https://lustrestudio.uk/work.html): Portfolio showcasing before/after video comparisons across industries including Photo Booth Services, Photography Studios, Furniture Shops, Dentists, and more.
-- [Services Hub](https://lustrestudio.uk/services.html): Overview of all 13 services with links to dedicated pages.
-- [Contact](https://lustrestudio.uk/contact.html): Project inquiry form for custom web design and SEO projects.
+- [Work Archive](https://lustrestudio.uk/work): Portfolio showcasing before/after video comparisons across industries including Photo Booth Services, Photography Studios, Furniture Shops, Dentists, and more.
+- [Services Hub](https://lustrestudio.uk/services): Overview of all 13 services with links to dedicated pages.
+- [Contact](https://lustrestudio.uk/contact): Project inquiry form for custom web design and SEO projects.
 
 ## Pricing
 

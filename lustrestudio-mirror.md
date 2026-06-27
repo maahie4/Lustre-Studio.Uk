@@ -16,7 +16,7 @@ This document serves as a complete markdown mirror of the official **Lustre Stud
 
 ---
 
-## 🏠 Home (`index.html`)
+## 🏠 Home (`index`)
 
 * **Hero Section**
   * **Subtitle:** `100% Custom Digital Spaces · Est. 2025`
@@ -92,7 +92,7 @@ This document serves as a complete markdown mirror of the official **Lustre Stud
 
 ---
 
-## 🛠️ Services (`services.html`)
+## 🛠️ Services (`services`)
 
 * **Header**
   * **Heading:** `Custom Design. Built to Rank.`
@@ -117,7 +117,7 @@ This document serves as a complete markdown mirror of the official **Lustre Stud
 
 ---
 
-## 📁 Work Archive (`work.html`)
+## 📁 Work Archive (`work`)
 
 * **Header**
   * **Heading:** `The Archive.`
@@ -142,7 +142,7 @@ This document serves as a complete markdown mirror of the official **Lustre Stud
 
 ---
 
-## 🔍 SEO & GBP Domination (`seo.html`)
+## 🔍 SEO & GBP Domination (`seo`)
 
 * **Header**
   * **Subtitle:** `Search Optimization`
@@ -171,7 +171,7 @@ This document serves as a complete markdown mirror of the official **Lustre Stud
 
 ---
 
-## ✉️ Contact & Inquiries (`contact.html`)
+## ✉️ Contact & Inquiries (`contact`)
 
 * **Header**
   * **Heading:** `Start your project.`

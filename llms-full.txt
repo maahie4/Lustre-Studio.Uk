@@ -23,7 +23,7 @@
 ## Service Catalog (13 Services)
 
 ### 1. Custom Web Design
-**URL**: https://lustrestudio.uk/services/web-design.html
+**URL**: https://lustrestudio.uk/services/web-design
 **Starting Price**: $1,500/project
 **Description**: 100% bespoke website design built entirely from scratch. No templates, no page builders, no WordPress themes. Every layout, interaction, and visual element is custom-crafted to match the client's brand identity and business goals. Mobile-first responsive architecture with immersive animations and luxury aesthetics.
 
@@ -40,7 +40,7 @@
 ---
 
 ### 2. Website Development
-**URL**: https://lustrestudio.uk/services/website-development.html
+**URL**: https://lustrestudio.uk/services/website-development
 **Description**: Clean-code, performance-first front-end development. Hand-coded HTML, CSS, and JavaScript — no bloated frameworks or page builders. Every site is built for sub-2-second load times, 90+ Lighthouse scores, and semantic HTML that search engines and AI crawlers can easily parse.
 
 **Technical Stack**:
@@ -53,7 +53,7 @@
 ---
 
 ### 3. Local SEO
-**URL**: https://lustrestudio.uk/services/local-seo.html
+**URL**: https://lustrestudio.uk/services/local-seo
 **Description**: Local search engine optimization that puts businesses in the Google Map Pack. We optimize Google Business Profiles, manage NAP (Name, Address, Phone) citations across directories, build local authority through reviews, and target "near me" and city-specific keywords.
 
 **Process**:
@@ -67,7 +67,7 @@
 ---
 
 ### 4. Technical SEO
-**URL**: https://lustrestudio.uk/services/technical-seo.html
+**URL**: https://lustrestudio.uk/services/technical-seo
 **Description**: Backend SEO optimization that fixes what's holding rankings back. We audit crawlability, fix indexation issues, optimize Core Web Vitals, implement structured data (JSON-LD schema), improve site architecture, and ensure search engines can efficiently crawl and index every important page.
 
 **Audit Covers**:
@@ -84,7 +84,7 @@
 ---
 
 ### 5. AI Search Optimization (AEO/GEO)
-**URL**: https://lustrestudio.uk/services/ai-search-optimization.html
+**URL**: https://lustrestudio.uk/services/ai-search-optimization
 **Description**: Optimization for AI-powered search engines including ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, and AI Overviews. We implement Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) strategies to get businesses cited as authoritative sources in AI-generated responses.
 
 **Strategies Include**:
@@ -99,52 +99,52 @@
 ---
 
 ### 6. Conversion Rate Optimization (CRO)
-**URL**: https://lustrestudio.uk/services/conversion-rate-optimization.html
+**URL**: https://lustrestudio.uk/services/conversion-rate-optimization
 **Description**: Data-driven strategies to increase the percentage of website visitors who take desired actions (inquiries, bookings, purchases). We optimize user flows, CTAs, page layouts, form design, and visual hierarchy using conversion psychology and analytics data.
 
 ---
 
 ### 7. Landing Page Design
-**URL**: https://lustrestudio.uk/services/landing-page-design.html
+**URL**: https://lustrestudio.uk/services/landing-page-design
 **Description**: High-converting standalone pages designed for specific campaigns, product launches, or lead generation funnels. Each landing page is engineered with a single conversion goal, compelling copy hierarchy, and strategic CTA placement.
 
 ---
 
 ### 8. WordPress Development
-**URL**: https://lustrestudio.uk/services/wordpress-development.html
+**URL**: https://lustrestudio.uk/services/wordpress-development
 **Description**: Custom WordPress development with bespoke themes — not off-the-shelf templates with plugins stacked on top. We build lightweight, fast-loading WordPress sites with custom post types, Advanced Custom Fields, and clean database architecture.
 
 ---
 
 ### 9. Shopify Development
-**URL**: https://lustrestudio.uk/services/shopify-development.html
+**URL**: https://lustrestudio.uk/services/shopify-development
 **Description**: Custom Shopify store development with bespoke themes, optimized checkout flows, and e-commerce SEO. We build Shopify stores that convert browsers into buyers with strategic product page design, collection architecture, and upsell flows.
 
 ---
 
 ### 10. Website Redesign
-**URL**: https://lustrestudio.uk/services/website-redesign.html
+**URL**: https://lustrestudio.uk/services/website-redesign
 **Description**: Complete website overhaul that modernizes your brand without losing existing SEO rankings. We implement proper 301 redirects, preserve URL equity, and rebuild with better performance, aesthetics, and conversion architecture.
 
 ---
 
 ### 11. Website Maintenance
-**URL**: https://lustrestudio.uk/services/website-maintenance.html
+**URL**: https://lustrestudio.uk/services/website-maintenance
 **Description**: Ongoing monthly support plans including security patches, performance monitoring, content updates, design refreshes, and priority technical support. We keep sites fast, secure, and up-to-date.
 
 ---
 
 ### 12. Google Business Profile Optimization
-**URL**: https://lustrestudio.uk/services/google-business-profile-optimization.html
+**URL**: https://lustrestudio.uk/services/google-business-profile-optimization
 **Description**: Complete Google Business Profile (formerly Google My Business) setup and optimization. Category mapping, attribute configuration, Google Posts strategy, review generation funnels, Q&A management, and photo optimization for Map Pack dominance.
 
 ---
 
 ### 13. Custom Web Tools & Applications
-**URL**: https://lustrestudio.uk/services/custom-tools.html
+**URL**: https://lustrestudio.uk/services/custom-tools
 **Description**: Bespoke web applications including interactive calculators, client portals, booking engines, comparison tools, and lead generation utilities. Built with clean JavaScript for fast performance and seamless user experience.
 
-**Example**: Mortgage calculator tool built for a real estate client — https://lustrestudio.uk/mortgage-calculator.html
+**Example**: Mortgage calculator tool built for a real estate client — https://lustrestudio.uk/mortgage-calculator
 
 ---
 
@@ -152,14 +152,14 @@
 
 | Industry | Page URL | Key Focus |
 |----------|----------|-----------|
-| Dentists | /industries/dentists.html | Patient booking, treatment pages, dental SEO |
-| Plumbers | /industries/plumbers.html | Emergency calls, service area pages, local SEO |
-| Lawyers | /industries/lawyers.html | Practice areas, client intake, attorney SEO |
-| Coaches | /industries/coaches.html | Personal branding, course platforms, booking |
-| HVAC | /industries/hvac.html | Emergency CTAs, service areas, seasonal marketing |
-| Roofers | /industries/roofers.html | Lead generation, before/after galleries, local SEO |
-| Cosmetic Clinics | /industries/cosmetic-clinics.html | Treatment galleries, consultation booking, medical SEO |
-| Car Detailing | /industries/car-detailing.html | Package pricing, before/after galleries, mobile detailing |
+| Dentists | /industries/dentists | Patient booking, treatment pages, dental SEO |
+| Plumbers | /industries/plumbers | Emergency calls, service area pages, local SEO |
+| Lawyers | /industries/lawyers | Practice areas, client intake, attorney SEO |
+| Coaches | /industries/coaches | Personal branding, course platforms, booking |
+| HVAC | /industries/hvac | Emergency CTAs, service areas, seasonal marketing |
+| Roofers | /industries/roofers | Lead generation, before/after galleries, local SEO |
+| Cosmetic Clinics | /industries/cosmetic-clinics | Treatment galleries, consultation booking, medical SEO |
+| Car Detailing | /industries/car-detailing | Package pricing, before/after galleries, mobile detailing |
 
 ---
 
@@ -291,46 +291,46 @@ Yes. Lustre Studio serves businesses across the United States and United Kingdom
 AI Search Optimization (also called AEO and GEO) is the practice of optimizing your website to be cited as an authoritative source in AI-generated responses from ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, and Google AI Overviews.
 
 **How do I start a project?**
-Visit https://lustrestudio.uk/contact.html to submit a project inquiry. We typically respond within 24-48 business hours.
+Visit https://lustrestudio.uk/contact to submit a project inquiry. We typically respond within 24-48 business hours.
 
 ---
 
 ## Sitemap
 
 - https://lustrestudio.uk/
-- https://lustrestudio.uk/work.html
-- https://lustrestudio.uk/services.html
-- https://lustrestudio.uk/contact.html
-- https://lustrestudio.uk/services/web-design.html
-- https://lustrestudio.uk/services/website-development.html
-- https://lustrestudio.uk/services/local-seo.html
-- https://lustrestudio.uk/services/technical-seo.html
-- https://lustrestudio.uk/services/ai-search-optimization.html
-- https://lustrestudio.uk/services/conversion-rate-optimization.html
-- https://lustrestudio.uk/services/landing-page-design.html
-- https://lustrestudio.uk/services/wordpress-development.html
-- https://lustrestudio.uk/services/shopify-development.html
-- https://lustrestudio.uk/services/website-redesign.html
-- https://lustrestudio.uk/services/website-maintenance.html
-- https://lustrestudio.uk/services/google-business-profile-optimization.html
-- https://lustrestudio.uk/services/custom-tools.html
-- https://lustrestudio.uk/industries/dentists.html
-- https://lustrestudio.uk/industries/plumbers.html
-- https://lustrestudio.uk/industries/lawyers.html
-- https://lustrestudio.uk/industries/coaches.html
-- https://lustrestudio.uk/industries/hvac.html
-- https://lustrestudio.uk/industries/roofers.html
-- https://lustrestudio.uk/industries/cosmetic-clinics.html
-- https://lustrestudio.uk/industries/car-detailing.html
-- https://lustrestudio.uk/locations/new-york.html
-- https://lustrestudio.uk/locations/dallas.html
-- https://lustrestudio.uk/locations/houston.html
-- https://lustrestudio.uk/locations/austin.html
-- https://lustrestudio.uk/locations/miami.html
-- https://lustrestudio.uk/locations/chicago.html
-- https://lustrestudio.uk/locations/los-angeles.html
-- https://lustrestudio.uk/locations/london.html
-- https://lustrestudio.uk/locations/manchester.html
-- https://lustrestudio.uk/locations/birmingham.html
-- https://lustrestudio.uk/locations/leeds.html
-- https://lustrestudio.uk/locations/liverpool.html
+- https://lustrestudio.uk/work
+- https://lustrestudio.uk/services
+- https://lustrestudio.uk/contact
+- https://lustrestudio.uk/services/web-design
+- https://lustrestudio.uk/services/website-development
+- https://lustrestudio.uk/services/local-seo
+- https://lustrestudio.uk/services/technical-seo
+- https://lustrestudio.uk/services/ai-search-optimization
+- https://lustrestudio.uk/services/conversion-rate-optimization
+- https://lustrestudio.uk/services/landing-page-design
+- https://lustrestudio.uk/services/wordpress-development
+- https://lustrestudio.uk/services/shopify-development
+- https://lustrestudio.uk/services/website-redesign
+- https://lustrestudio.uk/services/website-maintenance
+- https://lustrestudio.uk/services/google-business-profile-optimization
+- https://lustrestudio.uk/services/custom-tools
+- https://lustrestudio.uk/industries/dentists
+- https://lustrestudio.uk/industries/plumbers
+- https://lustrestudio.uk/industries/lawyers
+- https://lustrestudio.uk/industries/coaches
+- https://lustrestudio.uk/industries/hvac
+- https://lustrestudio.uk/industries/roofers
+- https://lustrestudio.uk/industries/cosmetic-clinics
+- https://lustrestudio.uk/industries/car-detailing
+- https://lustrestudio.uk/locations/new-york
+- https://lustrestudio.uk/locations/dallas
+- https://lustrestudio.uk/locations/houston
+- https://lustrestudio.uk/locations/austin
+- https://lustrestudio.uk/locations/miami
+- https://lustrestudio.uk/locations/chicago
+- https://lustrestudio.uk/locations/los-angeles
+- https://lustrestudio.uk/locations/london
+- https://lustrestudio.uk/locations/manchester
+- https://lustrestudio.uk/locations/birmingham
+- https://lustrestudio.uk/locations/leeds
+- https://lustrestudio.uk/locations/liverpool

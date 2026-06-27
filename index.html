@@ -26,8 +26,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="style.css">
     <script src="schema.js" defer></script>
     
@@ -135,21 +137,22 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div id="canvas-container"></div>
 <div class="vignette"></div>
 
 <nav>
     <div class="nav-links left">
-        <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
+        <a href="work">Work</a>
+        <a href="services">Services</a>
     </div>
 
     <a href="/" class="logo">lustrestudio</a>
 
     <div class="nav-links right">
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-nav-desktop" style="font-size: 0.65rem; padding: 0.8rem 1.4rem;">Inquire</a>
+        <a href="contact">Contact</a>
+        <a href="contact" class="btn btn-nav-desktop" style="font-size: 0.65rem; padding: 0.8rem 1.4rem;">Inquire</a>
     </div>
 
     <div class="menu-toggle" id="menuToggle">
@@ -161,13 +164,14 @@
 
 <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-close" id="mobileClose"><i class="ri-close-line"></i></div>
-    <a href="work.html">Work</a>
-    <a href="services.html">Services</a>
+    <a href="work">Work</a>
+    <a href="services">Services</a>
     <a href="/" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrestudio</a>
-    <a href="contact.html">Contact</a>
-    <a href="contact.html" style="color: #fff;">Inquire</a>
+    <a href="contact">Contact</a>
+    <a href="contact" style="color: #fff;">Inquire</a>
 </div>
 
+<main id="main-content">
 <section class="hero">
     <div class="container">
         <div class="hero-content">
@@ -175,7 +179,7 @@
             <h1 data-reveal>100% Custom design.<br>Built to rank higher.</h1>
             <p data-reveal>We design premium digital flagship experiences for e-commerce, lifestyle, services, cannabis, and beyond. Not just photographers—we are made for all industries.</p>
             
-            <a href="work.html" class="hero-cta" data-reveal>Explore The Archive &rarr;</a>
+            <a href="work" class="hero-cta" data-reveal>Explore The Archive &rarr;</a>
             
             <div class="stats-grid" data-reveal>
                 <div class="stat">
@@ -198,7 +202,7 @@
                 <span class="hero-label" data-reveal>The Evolution</span>
                 <h2 style="font-size: clamp(2.5rem, 5vw, 4rem);" data-reveal>Transformation<br>Showcase</h2>
             </div>
-            <a href="work.html" style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.8rem; color: var(--text-muted); text-decoration: none; margin-bottom: 1rem;" data-reveal>Archive &rarr;</a>
+            <a href="work" style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.8rem; color: var(--text-muted); text-decoration: none; margin-bottom: 1rem;" data-reveal>Archive &rarr;</a>
         </div>
 
         <div class="transformation-grid">
@@ -207,14 +211,16 @@
                 <div class="trans-comparison">
                     <div class="trans-side before">
                         <span class="trans-label">BEFORE</span>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                            <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970208/Photo_booth_website_before_knyyqx.mp4" type="video/mp4">
+                        <video muted loop playsinline webkit-playsinline preload="none" class="lazy-video">
+                            <source data-src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970208/Photo_booth_website_before_knyyqx.mp4" type="video/mp4">
+                            <track kind="captions" label="English" srclang="en" default>
                         </video>
                     </div>
                     <div class="trans-side after">
                         <span class="trans-label">AFTER</span>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                            <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970246/Photo_Booth_Website_After_wsojrm.mp4" type="video/mp4">
+                        <video muted loop playsinline webkit-playsinline preload="none" class="lazy-video">
+                            <source data-src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970246/Photo_Booth_Website_After_wsojrm.mp4" type="video/mp4">
+                            <track kind="captions" label="English" srclang="en" default>
                         </video>
                     </div>
                 </div>
@@ -233,7 +239,7 @@
                     </div>
                 </div>
                 <div class="trans-next">
-                    <a href="#trans-2"><i class="ri-arrow-down-line"></i></a>
+                    <a href="#trans-2" aria-label="View next project: Golden Glow Photography"><i class="ri-arrow-down-line" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -242,14 +248,16 @@
                 <div class="trans-comparison">
                     <div class="trans-side before">
                         <span class="trans-label">BEFORE</span>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                            <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029169/Recording_2026-04-24_161024_rp9jte.mp4" type="video/mp4">
+                        <video muted loop playsinline webkit-playsinline preload="none" class="lazy-video">
+                            <source data-src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029169/Recording_2026-04-24_161024_rp9jte.mp4" type="video/mp4">
+                            <track kind="captions" label="English" srclang="en" default>
                         </video>
                     </div>
                     <div class="trans-side after">
                         <span class="trans-label">AFTER</span>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                            <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029246/Recording_2026-04-24_160536_ro6nup.mp4" type="video/mp4">
+                        <video muted loop playsinline webkit-playsinline preload="none" class="lazy-video">
+                            <source data-src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029246/Recording_2026-04-24_160536_ro6nup.mp4" type="video/mp4">
+                            <track kind="captions" label="English" srclang="en" default>
                         </video>
                     </div>
                 </div>
@@ -268,7 +276,7 @@
                     </div>
                 </div>
                 <div class="trans-next">
-                    <a href="#trans-3"><i class="ri-arrow-down-line"></i></a>
+                    <a href="#trans-3" aria-label="View next project: Handcrafted Furniture Shop"><i class="ri-arrow-down-line" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -277,14 +285,16 @@
                 <div class="trans-comparison">
                     <div class="trans-side before">
                         <span class="trans-label">BEFORE</span>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                            <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391821/twos-before_hd0zoi.mp4" type="video/mp4">
+                        <video muted loop playsinline webkit-playsinline preload="none" class="lazy-video">
+                            <source data-src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391821/twos-before_hd0zoi.mp4" type="video/mp4">
+                            <track kind="captions" label="English" srclang="en" default>
                         </video>
                     </div>
                     <div class="trans-side after">
                         <span class="trans-label">AFTER</span>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                            <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391816/twos-after_johmut.mp4" type="video/mp4">
+                        <video muted loop playsinline webkit-playsinline preload="none" class="lazy-video">
+                            <source data-src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391816/twos-after_johmut.mp4" type="video/mp4">
+                            <track kind="captions" label="English" srclang="en" default>
                         </video>
                     </div>
                 </div>
@@ -465,7 +475,7 @@
         <div class="conversion-box" data-reveal style="margin-top: 10rem;">
             <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem;">Ready to elevate?</h2>
             <p style="margin-bottom: 3rem; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">Currently booking projects for Q3 2026. Let's build your digital home.</p>
-            <a href="contact.html" class="btn" style="font-size: 0.8rem; padding: 1.2rem 3rem;">Start Your Project</a>
+            <a href="contact" class="btn" style="font-size: 0.8rem; padding: 1.2rem 3rem;">Start Your Project</a>
         </div>
     </div>
 </section>
@@ -476,6 +486,7 @@
         <p>Lustre Studio is a 100% custom web design and SEO agency serving businesses in the United States and United Kingdom. We build bespoke, conversion-focused websites from scratch — no templates, no page builders. Every site is engineered to rank higher on Google, get cited by AI search engines (ChatGPT, Gemini, Perplexity), and convert visitors into paying clients. Services include custom web design, website development, local SEO, technical SEO, AI search optimization, CRO, WordPress and Shopify development, and Google Business Profile optimization. Pricing starts at $1,500 per project.</p>
     </div>
 </section>
+</main>
 
 <footer class="mega-footer">
     <div class="container">
@@ -486,54 +497,54 @@
                 <p style="margin-top: 1rem;"><a href="mailto:hello@lustrestudio.uk" style="text-decoration: underline; color: var(--text);">hello@lustrestudio.uk</a></p>
             </div>
             <div class="footer-col">
-                <h4>Services</h4>
-                <a href="services/web-design.html">Web Design</a>
-                <a href="services/website-development.html">Website Development</a>
-                <a href="services/local-seo.html">Local SEO</a>
-                <a href="services/technical-seo.html">Technical SEO</a>
-                <a href="services/ai-search-optimization.html">AI Search Optimization</a>
-                <a href="services/conversion-rate-optimization.html">CRO</a>
-                <a href="services/landing-page-design.html">Landing Page Design</a>
-                <a href="services/wordpress-development.html">WordPress</a>
-                <a href="services/shopify-development.html">Shopify</a>
-                <a href="services/website-redesign.html">Website Redesign</a>
-                <a href="services/website-maintenance.html">Maintenance</a>
-                <a href="services/google-business-profile-optimization.html">GBP Optimization</a>
-                <a href="services/custom-tools.html">Custom Tools</a>
+                <h2 class="footer-heading">Services</h2>
+                <a href="services/web-design">Web Design</a>
+                <a href="services/website-development">Website Development</a>
+                <a href="services/local-seo">Local SEO</a>
+                <a href="services/technical-seo">Technical SEO</a>
+                <a href="services/ai-search-optimization">AI Search Optimization</a>
+                <a href="services/conversion-rate-optimization">CRO</a>
+                <a href="services/landing-page-design">Landing Page Design</a>
+                <a href="services/wordpress-development">WordPress</a>
+                <a href="services/shopify-development">Shopify</a>
+                <a href="services/website-redesign">Website Redesign</a>
+                <a href="services/website-maintenance">Maintenance</a>
+                <a href="services/google-business-profile-optimization">GBP Optimization</a>
+                <a href="services/custom-tools">Custom Tools</a>
             </div>
             <div class="footer-col">
-                <h4>Industries</h4>
-                <a href="industries/dentists.html">Dentists</a>
-                <a href="industries/plumbers.html">Plumbers</a>
-                <a href="industries/lawyers.html">Lawyers</a>
-                <a href="industries/coaches.html">Coaches</a>
-                <a href="industries/hvac.html">HVAC</a>
-                <a href="industries/roofers.html">Roofers</a>
-                <a href="industries/cosmetic-clinics.html">Cosmetic Clinics</a>
-                <a href="industries/car-detailing.html">Car Detailing</a>
+                <h2 class="footer-heading">Industries</h2>
+                <a href="industries/dentists">Dentists</a>
+                <a href="industries/plumbers">Plumbers</a>
+                <a href="industries/lawyers">Lawyers</a>
+                <a href="industries/coaches">Coaches</a>
+                <a href="industries/hvac">HVAC</a>
+                <a href="industries/roofers">Roofers</a>
+                <a href="industries/cosmetic-clinics">Cosmetic Clinics</a>
+                <a href="industries/car-detailing">Car Detailing</a>
             </div>
             <div class="footer-col">
-                <h4>Locations</h4>
-                <a href="locations/new-york.html">New York</a>
-                <a href="locations/dallas.html">Dallas</a>
-                <a href="locations/houston.html">Houston</a>
-                <a href="locations/austin.html">Austin</a>
-                <a href="locations/miami.html">Miami</a>
-                <a href="locations/chicago.html">Chicago</a>
-                <a href="locations/los-angeles.html">Los Angeles</a>
-                <a href="locations/london.html">London</a>
-                <a href="locations/manchester.html">Manchester</a>
-                <a href="locations/birmingham.html">Birmingham</a>
-                <a href="locations/leeds.html">Leeds</a>
-                <a href="locations/liverpool.html">Liverpool</a>
+                <h2 class="footer-heading">Locations</h2>
+                <a href="locations/new-york">New York</a>
+                <a href="locations/dallas">Dallas</a>
+                <a href="locations/houston">Houston</a>
+                <a href="locations/austin">Austin</a>
+                <a href="locations/miami">Miami</a>
+                <a href="locations/chicago">Chicago</a>
+                <a href="locations/los-angeles">Los Angeles</a>
+                <a href="locations/london">London</a>
+                <a href="locations/manchester">Manchester</a>
+                <a href="locations/birmingham">Birmingham</a>
+                <a href="locations/leeds">Leeds</a>
+                <a href="locations/liverpool">Liverpool</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="work.html">Work</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
+                <a href="work">Work</a>
+                <a href="services">Services</a>
+                <a href="contact">Contact</a>
             </div>
             <div class="copyright">
                 &copy; 2026 Lustre Studio &mdash; Custom Web Design & SEO Agency
@@ -542,9 +553,11 @@
     </div>
 </footer>
 
-<!-- Three.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Three.js (deferred to avoid render-blocking) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script>
+// Wait for Three.js to load before initializing
+function initApp() {
 (function() {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -676,12 +689,33 @@
     }, observerOptions);
     document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 
+    // Lazy-load videos: only load src when they scroll into view
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                const source = video.querySelector('source[data-src]');
+                if (source && source.dataset.src) {
+                    source.src = source.dataset.src;
+                    source.removeAttribute('data-src');
+                    video.load();
+                    video.play().catch(() => {});
+                }
+                videoObserver.unobserve(video);
+            }
+        });
+    }, { rootMargin: '200px' });
+    document.querySelectorAll('.lazy-video').forEach(v => videoObserver.observe(v));
+
     // Inject homepage schemas
     if (typeof injectHomepageSchemas === 'function') {
         injectHomepageSchemas();
     }
 
 })();
+}
+// Deferred scripts execute before window 'load' event
+window.addEventListener('load', initApp);
 </script>
 </body>
 </html>
