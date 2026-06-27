@@ -229,3 +229,21 @@ function injectServicePageSchemas(serviceName, description, url, priceFrom, pric
         injectBreadcrumbSchema(breadcrumbs);
     }
 }
+
+// ─── Video Schema ───
+function injectVideoSchema(videos) {
+    if (!videos || videos.length === 0) return;
+    videos.forEach(video => {
+        injectSchema({
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            'name': video.name,
+            'description': video.description,
+            'thumbnailUrl': video.thumbnailUrl,
+            'uploadDate': video.uploadDate,
+            'contentUrl': video.contentUrl,
+            'embedUrl': video.embedUrl || video.contentUrl
+        });
+    });
+}
+

@@ -712,6 +712,54 @@ function initApp() {
         injectHomepageSchemas();
     }
 
+    // Inject video schemas
+    if (typeof injectVideoSchema === 'function') {
+        injectVideoSchema([
+            {
+                name: "Photo Booth Website Transformation - Before",
+                description: "Visual breakdown showing the photo booth booking portal website flow and layout before redesign.",
+                thumbnailUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970208/Photo_booth_website_before_knyyqx.jpg",
+                uploadDate: "2026-03-29T00:00:00Z",
+                contentUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970208/Photo_booth_website_before_knyyqx.mp4"
+            },
+            {
+                name: "Photo Booth Website Transformation - After",
+                description: "Bespoke user interface and booking portal built for photo booth booking flow optimization and conversions.",
+                thumbnailUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970246/Photo_Booth_Website_After_wsojrm.jpg",
+                uploadDate: "2026-03-29T00:00:00Z",
+                contentUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1776970246/Photo_Booth_Website_After_wsojrm.mp4"
+            },
+            {
+                name: "Golden Glow Photography - Before",
+                description: "Initial client portfolio website prior to redesign and search optimization.",
+                thumbnailUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029169/Recording_2026-04-24_161024_rp9jte.jpg",
+                uploadDate: "2026-04-24T00:00:00Z",
+                contentUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029169/Recording_2026-04-24_161024_rp9jte.mp4"
+            },
+            {
+                name: "Golden Glow Photography - After",
+                description: "Premium visual narrative and high-converting UX layout for professional photography studio.",
+                thumbnailUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029246/Recording_2026-04-24_160536_ro6nup.jpg",
+                uploadDate: "2026-04-24T00:00:00Z",
+                contentUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1777029246/Recording_2026-04-24_160536_ro6nup.mp4"
+            },
+            {
+                name: "Handcrafted Furniture Shop Website - Before",
+                description: "Original online shop website build for handcrafted furniture showroom.",
+                thumbnailUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391821/twos-before_hd0zoi.jpg",
+                uploadDate: "2026-05-12T00:00:00Z",
+                contentUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391821/twos-before_hd0zoi.mp4"
+            },
+            {
+                name: "Handcrafted Furniture Shop Website - After",
+                description: "Upgraded custom e-commerce and booking website for premium furniture provider.",
+                thumbnailUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391816/twos-after_johmut.jpg",
+                uploadDate: "2026-05-12T00:00:00Z",
+                contentUrl: "https://res.cloudinary.com/dt4nfkb5u/video/upload/v1780391816/twos-after_johmut.mp4"
+            }
+        ]);
+    }
+
 })();
 }
 // Deferred scripts execute before window 'load' event
