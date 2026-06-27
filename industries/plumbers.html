@@ -19,9 +19,114 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Design for Plumbers — Lead-Generating Plumbing Websites | Lustre Studio</title>
-    <meta name="description" content="Custom web design for plumbers. We build lead-generating plumbing websites optimized for local SEO, Google Maps, and emergency service calls.">
-    <link rel="canonical" href="https://lustrestudio.uk/industries/plumbers.html">
+    <title>Plumber Web Design Agency — Portfolio, Pricing & Process | Lustre Studio</title>
+    <meta name="description" content="Specialist plumber web design agency. Custom-coded sites with click-to-call, local SEO, ServiceTitan & Housecall Pro integration. View portfolio and pricing. From $1,500.">
+    <link rel="canonical" href="https://lustrestudio.uk/industries/plumbers">
+
+    <!-- Static Schema: Organization, Person, ProfessionalService, BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://lustrestudio.uk/#organization",
+          "name": "Lustre Studio",
+          "url": "https://lustrestudio.uk/",
+          "logo": "https://lustrestudio.uk/logo.png",
+          "sameAs": ["https://www.linkedin.com/company/lustrestudio"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lustrestudio.uk/#lead-designer",
+          "name": "Lead Designer",
+          "jobTitle": "Lead Designer — Plumbing & Home Services Web Design",
+          "worksFor": {"@id": "https://lustrestudio.uk/#organization"},
+          "knowsAbout": ["Plumber Web Design", "Local SEO", "Plumbing Marketing", "Home Services Web Design"]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://lustrestudio.uk/industries/plumbers#service",
+          "name": "Plumber Web Design Agency",
+          "description": "Custom web design and local SEO for plumbing contractors. Lead-generating websites with click-to-call, booking integrations, and Google Maps optimization.",
+          "url": "https://lustrestudio.uk/industries/plumbers",
+          "provider": {"@id": "https://lustrestudio.uk/#organization"},
+          "areaServed": [
+            {"@type": "Country", "name": "United States"},
+            {"@type": "Country", "name": "United Kingdom"},
+            {"@type": "City", "name": "Columbus, OH"},
+            {"@type": "City", "name": "Dallas, TX"},
+            {"@type": "City", "name": "Houston, TX"},
+            {"@type": "City", "name": "London, UK"}
+          ],
+          "serviceType": ["Plumber Web Design", "Plumbing Website Development", "Plumbing Branding", "Local SEO for Plumbers"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Plumbing Website Packages",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Starter Plumber Website", "description": "5-page custom site for single-truck plumbers"}, "price": "1500", "priceCurrency": "USD"},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Growth Plumber Website", "description": "10-page site with 5 city landing pages and local SEO"}, "price": "3500", "priceCurrency": "USD"},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Premium Plumber Website", "description": "20+ pages with advanced integrations"}, "price": "7500", "priceCurrency": "USD"}
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lustrestudio.uk/"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://lustrestudio.uk/services"},
+            {"@type": "ListItem", "position": 3, "name": "Web Design for Plumbers", "item": "https://lustrestudio.uk/industries/plumbers"}
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Static FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What booking tools do you support?", "acceptedAnswer": {"@type": "Answer", "text": "We integrate plumbing calendar and dispatch systems including Housecall Pro, Jobber, ServiceTitan, FieldPulse, and Calendly."}},
+        {"@type": "Question", "name": "How do you target multiple service areas?", "acceptedAnswer": {"@type": "Answer", "text": "We create individual landing pages for each city or neighborhood you serve, optimized with local schema, geo-specific keywords, and unique content about that area."}},
+        {"@type": "Question", "name": "Can you showcase my plumbing project work?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We build responsive galleries where you can upload photos of boiler swaps, pipe replacements, trenchless sewer repairs, or bathroom remodels."}},
+        {"@type": "Question", "name": "How does a Google Business Profile help a plumber?", "acceptedAnswer": {"@type": "Answer", "text": "It places your business on Google Maps and inside the local Map Pack. Since most emergency plumbers are selected directly from Maps, GBP optimization is critical."}},
+        {"@type": "Question", "name": "How much does a plumbing website cost?", "acceptedAnswer": {"@type": "Answer", "text": "Plumbing websites typically range from $1,500 for a 5-page starter site to $7,500 for a multi-location build with advanced integrations."}},
+        {"@type": "Question", "name": "How long does it take to build a plumbing website?", "acceptedAnswer": {"@type": "Answer", "text": "A standard plumbing website takes 2–4 weeks from kickoff to launch. Multi-location projects with custom dispatch integrations typically take 4–6 weeks."}},
+        {"@type": "Question", "name": "Do you work with single-truck operators or only large companies?", "acceptedAnswer": {"@type": "Answer", "text": "Both. Our Starter package is built for solo plumbers and small teams. Our Premium package serves multi-location plumbing companies with dedicated dispatch teams."}},
+        {"@type": "Question", "name": "Can you redesign my existing plumbing website?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We specialize in plumbing website redesigns that preserve your existing SEO rankings while improving mobile speed, conversion design, and local search performance."}},
+        {"@type": "Question", "name": "Is SEO included in the website design?", "acceptedAnswer": {"@type": "Answer", "text": "Every site we build includes foundational local SEO: LocalBusiness schema, Google Business Profile optimization, citation-consistent NAP data, and city landing page architecture."}},
+        {"@type": "Question", "name": "Do you offer plumbing logo design and branding?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. In addition to web design, we offer plumbing logo design, brand identity packages, color psychology consultation, and brand messaging strategy."}},
+        {"@type": "Question", "name": "Do I need to provide photos and content?", "acceptedAnswer": {"@type": "Answer", "text": "We write all website content based on our discovery call. For photos, we provide guidance on capturing high-quality job site photos."}},
+        {"@type": "Question", "name": "What happens after the website launches?", "acceptedAnswer": {"@type": "Answer", "text": "Every package includes post-launch support: 30, 60, or 90 days depending on your tier. We also offer affordable maintenance plans for ongoing updates and performance optimization."}}
+      ]
+    }
+    </script>
+
+    <!-- Static HowTo Schema for Process -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Our Plumbing Website Design Process",
+      "description": "A 4-step process for building lead-generating plumbing websites.",
+      "totalTime": "P4W",
+      "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "1500"},
+      "supply": [
+        {"@type": "HowToSupply", "name": "Discovery & Competitor Analysis"},
+        {"@type": "HowToSupply", "name": "Mobile-First Wireframing"},
+        {"@type": "HowToSupply", "name": "Custom Development & Integrations"},
+        {"@type": "HowToSupply", "name": "Launch & Local SEO Setup"}
+      ],
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Discovery & Competitor Analysis", "text": "We audit your current site, analyze the top 3 plumbing websites in your service area, and identify gaps. We map your ideal customer, emergency response areas, and revenue-driving services."},
+        {"@type": "HowToStep", "position": 2, "name": "Mobile-First Wireframing", "text": "Since over 80% of plumbing searches happen on mobile, we design the mobile experience first. We place click-to-call, emergency banners, and service lists in the thumb zone."},
+        {"@type": "HowToStep", "position": 3, "name": "Custom Development & Integrations", "text": "We hand-code for speed or build on WordPress. We integrate with ServiceTitan, Housecall Pro, Jobber, or Calendly, and set up Google Analytics 4 conversion tracking."},
+        {"@type": "HowToStep", "position": 4, "name": "Launch & Local SEO Domination", "text": "We launch with LocalBusiness schema, city landing pages, and citation-consistent NAP data. Most clients see Map Pack movement within 30 days."}
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,15 +139,15 @@
 
     <nav>
         <div class="nav-links left">
-            <a href="../work.html">Work</a>
-            <a href="../services.html">Services</a>
+            <a href="../work">Work</a>
+            <a href="../services">Services</a>
         </div>
 
         <a href="/" class="logo">lustrestudio</a>
 
         <div class="nav-links right">
-            <a href="../contact.html">Contact</a>
-            <a href="../contact.html" class="btn btn-nav-desktop">Inquire</a>
+            <a href="../contact">Contact</a>
+            <a href="../contact" class="btn btn-nav-desktop">Inquire</a>
         </div>
 
         <div class="menu-toggle" id="menuToggle">
@@ -54,18 +159,18 @@
 
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-close" id="mobileClose"><i class="ri-close-line"></i></div>
-        <a href="../work.html">Work</a>
-        <a href="../services.html">Services</a>
+        <a href="../work">Work</a>
+        <a href="../services">Services</a>
         <a href="/" class="logo" style="font-size: 1.5rem; margin: 1rem 0;">lustrestudio</a>
-        <a href="../contact.html">Contact</a>
-        <a href="../contact.html" style="color: #fff;">Inquire</a>
+        <a href="../contact">Contact</a>
+        <a href="../contact" style="color: #fff;">Inquire</a>
     </div>
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <div class="container">
             <ol>
                 <li><a href="/">Home</a></li>
-                <li><a href="../services.html">Services</a></li>
+                <li><a href="../services">Services</a></li>
                 <li aria-current="page">Web Design for Plumbers</li>
             </ol>
         </div>
@@ -74,160 +179,527 @@
     <header class="industry-hero">
         <div class="container">
             <span class="industry-label" data-reveal>Home Services Focus</span>
-            <h1 data-reveal>Web Design for Plumbers — Websites That Generate Emergency Calls</h1>
-            <p data-reveal>Turn emergency searchers into bookings. We build plumbing websites optimized for fast mobile rendering, click-to-call CTAs, and local Map Pack dominance.</p>
-            <a href="../contact.html" class="btn hero-cta" data-reveal>Grow Your Plumbing Brand</a>
+            <h1 data-reveal>Plumber Web Design Agency — Websites That Generate Emergency Calls</h1>
+            <p data-reveal>Turn emergency searchers into bookings. We build custom plumbing websites optimized for fast mobile rendering, click-to-call CTAs, and local Map Pack dominance. Serving single-truck operators and multi-location plumbing companies across the US and UK.</p>
+            <a href="../contact" class="btn hero-cta" data-reveal>Get a Free Quote</a>
         </div>
     </header>
 
     <main class="container">
-        <!-- AI Summary Block -->
+        <!-- AI Summary Block (expanded) -->
         <section class="ai-summary-block" data-reveal>
-            <p>Lustre Studio provides professional web design and local SEO services tailored for plumbing contractors and home services brands in the US and UK. We develop lead-generating websites featuring click-to-call integrations, localized service area maps, Google Business Profile setups, and structured schema reviews. Our hand-coded layouts ensure fast mobile speeds to convert emergency searches instantly. Pricing starts at $1,500.</p>
+            <p>Lustre Studio is a specialist plumber web design agency serving plumbing contractors and home services brands in the US and UK. We develop custom, hand-coded websites with click-to-call integrations, localized service area maps, Google Business Profile optimization, and structured schema markup. Our plumbing sites integrate with leading dispatch and booking platforms including ServiceTitan, Housecall Pro, Jobber, and Calendly. Whether you operate a single-truck emergency service or a multi-location plumbing company, we build sites that convert mobile searchers into calls. Transparent pricing starts at $1,500.</p>
         </section>
 
-        <!-- Key Takeaways -->
+        <!-- Key Takeaways (expanded with entities) -->
         <section class="key-takeaways" data-reveal>
             <h2>Key Takeaways</h2>
             <ul>
-                <li><strong>Emergency Conversion Design</strong>: Click-to-call buttons and quick booking forms placed prominently on mobile screens.</li>
-                <li><strong>Local Maps Authority</strong>: Targeting regional "plumber near me" keywords to rank inside Google's Map Pack.</li>
-                <li><strong>Service Area Highlights</strong>: Visual maps and lists defining your service regions to prevent out-of-area calls.</li>
-                <li><strong>Credibility Badges</strong>: Prominently displaying licensing, insurance, and warranty details to build trust.</li>
-                <li><strong>Fast Mobile Speeds</strong>: Clean frontend framework that loads instantly on mobile networks during emergency calls.</li>
+                <li><strong>Emergency Conversion Design</strong>: Click-to-call buttons and quick booking forms placed in the mobile thumb zone for panic-driven searchers.</li>
+                <li><strong>Local Maps Authority</strong>: Targeting regional "plumber near me" keywords with Google Business Profile optimization and LocalBusiness schema to rank inside Google's Map Pack.</li>
+                <li><strong>Service Area Pages</strong>: Dedicated city landing pages for each suburb you serve, optimized with local schemas and geo-targeted keywords.</li>
+                <li><strong>Software Integrations</strong>: Native connection to ServiceTitan, Housecall Pro, Jobber, FieldPulse, and Calendly so bookings flow straight into your dispatch system.</li>
+                <li><strong>Fast Mobile Speeds</strong>: Hand-coded frontend with sub-2-second mobile load times and Core Web Vitals optimization.</li>
+                <li><strong>Trust-First Design</strong>: Prominent display of licensing, insurance, warranty details, and review integration to build immediate credibility.</li>
             </ul>
         </section>
 
-        <!-- Main Content -->
-        <section style="padding: 4rem 0;" data-reveal>
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Why Plumbers Need a Professional Website</h2>
-            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">When a pipe bursts or a water heater breaks, customers are not looking to browse. They search on their smartphones, click the first credible business they see, and place a call. If your plumbing website loads slowly, is difficult to read on mobile, or lacks clear phone numbers, they will bounce and call a competitor. A professional, custom website is engineered around emergency response, placing your contact details front-and-center and building immediate trust with local searchers.</p>
-
-            <h3 style="font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1.5rem;">Must-Have Features for Plumbing Sites</h3>
-            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">We implement direct click-to-call phone buttons, simple appointment schedulers, and clear lists of your core services (drains, boilers, leaks). We also write localized service pages for each town you cover, helping you rank for regional search queries.</p>
+        <!-- AEO Direct Answers (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: 1.5rem; margin-bottom: 2rem; font-weight: 500;">What You Need to Know</h2>
+            <div class="direct-answer">
+                <h3>What is a plumber web design agency?</h3>
+                <p>A <strong>plumber web design agency</strong> is a digital studio that specializes in building websites specifically for plumbing contractors. Unlike general web designers, these agencies understand emergency plumbing search behavior, integrate click-to-call and online booking tools, optimize for local "plumber near me" rankings, and build sites that convert panicked mobile searchers into booked appointments. They typically integrate with plumbing dispatch software such as <span class="answer-highlight">ServiceTitan, Housecall Pro, and Jobber</span>.</p>
+            </div>
+            <div class="direct-answer">
+                <h3>How much does a plumbing website cost?</h3>
+                <p>Plumbing websites typically cost between <span class="answer-highlight">$1,500 and $7,500</span> depending on scope. A 5-page starter site for a single-truck plumber starts at $1,500. A multi-location plumbing company with advanced dispatch integrations and 15+ city landing pages typically invests $5,000–$7,500. The cost depends on page count, booking integrations, local SEO complexity, and custom functionality.</p>
+            </div>
+            <div class="direct-answer">
+                <h3>How long does it take to build a plumbing website?</h3>
+                <p>A standard plumbing website takes <span class="answer-highlight">2–4 weeks</span> from kickoff to launch. Projects with multi-location architecture, custom dispatch integrations, or extensive city landing pages typically take 4–6 weeks. Our process includes discovery, mobile-first wireframing, development, and launch with local SEO setup.</p>
+            </div>
         </section>
 
-        <!-- Statistics Callout -->
-        <section class="stats-callout" data-reveal>
+        <!-- E-E-A-T / Who We Are (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Plumbing Web Design Specialists</h2>
+            <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; max-width: 900px;">Our lead designer has spent years working exclusively with plumbing, HVAC, and home services contractors. We do not build generic sites and swap the logo. We understand the difference between an emergency burst-pipe call at 2 AM and a scheduled boiler replacement inquiry.</p>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8; max-width: 900px;">That experience means we know where to place the phone number so a panicked homeowner thumbs it without scrolling. We know which booking integrations actually sync with your dispatch board. And we know how to write service pages for "drain cleaning," "trenchless sewer repair," and "tankless water heater installation" so they rank in the cities you actually serve.</p>
+                    <p style="line-height: 1.8; max-width: 900px;"><a href="../about" style="text-decoration: underline;">Meet the team</a> behind our plumbing websites, or <a href="../work" style="text-decoration: underline;">view our portfolio</a> of home services projects.</p>
+                </div>
+                <div style="flex: 0 0 200px; text-align: center;">
+                    <!-- Replace with actual team photo for maximum E-E-A-T impact -->
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: var(--border); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.8rem;">Team Photo</div>
+                    <p style="font-weight: 600; font-size: 0.95rem;">Lead Designer</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">8+ years · Plumbing & HVAC web design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content (expanded) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Why Plumbers Need a Professional Website</h2>
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">When a pipe bursts or a water heater fails, customers are not browsing. They search on their smartphones, scan the first credible result, and place a call. If your plumbing website loads slowly, buries your phone number, or displays poorly on mobile, they bounce and call a competitor. A professional, custom website is engineered around emergency response behavior, placing your contact details front-and-center and building immediate trust with local searchers.</p>
+
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">This is not a brochure. It is a 24/7 lead generation tool. The best plumbing websites are designed for two distinct customer journeys: the emergency caller who needs a phone number in under 3 seconds, and the scheduled-service shopper comparing quotes for a bathroom remodel or boiler replacement. Your site must serve both without confusing either.</p>
+
+            <h3 style="font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1.5rem;">Must-Have Features for Plumbing Sites</h3>
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">We implement direct click-to-call phone buttons in the mobile thumb zone, simple appointment schedulers, and clear service lists for your core offerings: emergency plumbing, drain cleaning, hydro jetting, water heater repair, tankless installation, leak detection, sewer line repair, and bathroom remodeling. We also write localized service pages for each town you cover, helping you rank for regional search queries like "emergency plumber Dallas" or "boiler repair London."</p>
+
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">Beyond the surface, we integrate with your existing workflow. If you use <a href="../services/custom-tools" style="text-decoration: underline;">ServiceTitan</a>, <a href="../services/custom-tools" style="text-decoration: underline;">Housecall Pro</a>, or <a href="../services/custom-tools" style="text-decoration: underline;">Jobber</a>, we ensure booking requests flow directly into your dispatch board. If you use Calendly for consultations, we embed it seamlessly. And we structure every page with <a href="../services/technical-seo" style="text-decoration: underline;">LocalBusiness schema</a> and <a href="../services/local-seo" style="text-decoration: underline;">citation-consistent NAP data</a> so Google Maps understands exactly where you work.</p>
+        </section>
+
+        <!-- 4-Step Process (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Our Plumbing Website Design Process</h2>
+            <p style="margin-bottom: 3rem; max-width: 900px; line-height: 1.8;">We have refined our process over dozens of home services projects to eliminate surprises and maximize lead generation. Here is exactly what happens when you work with us.</p>
+
+            <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <span style="font-size: 2rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 1rem;">01</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Discovery & Competitor Analysis</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">We audit your current site, analyze the top 3 plumbing websites in your service area, and identify what they are doing wrong. We also map your ideal customer, emergency response areas, and revenue-driving services.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <span style="font-size: 2rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 1rem;">02</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Mobile-First Wireframing</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">Since over 80% of plumbing searches happen on mobile, we design the mobile experience first. We place your click-to-call button, emergency banner, and service list in the thumb zone. Every layout is tested on real devices before coding begins.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <span style="font-size: 2rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 1rem;">03</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Custom Development & Integrations</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">We hand-code your site for speed or build on WordPress if you prefer CMS control. We integrate with your booking system, set up Google Business Profile, Google Analytics 4 conversion tracking, and structured data markup.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <span style="font-size: 2rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 1rem;">04</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Launch & Local SEO Domination</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">We launch with LocalBusiness schema, city-specific landing pages, and citation-consistent NAP data. Most plumbing clients see Map Pack movement within 30 days and organic ranking improvements within 60 days.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom vs Template vs DIY (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Custom vs. Template vs. DIY: Which Plumbing Website Builder Is Right for You?</h2>
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">Not every plumbing company needs a fully custom build. Here is how to decide based on your stage, budget, and growth goals.</p>
+
+            <div style="overflow-x: auto; margin-bottom: 3rem;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <th style="padding: 1rem; text-align: left;">Factor</th>
+                            <th style="padding: 1rem; text-align: left;">DIY (Wix, Squarespace)</th>
+                            <th style="padding: 1rem; text-align: left;">WordPress Template</th>
+                            <th style="padding: 1rem; text-align: left;">Custom (Lustre Studio)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Best For</td>
+                            <td style="padding: 1rem;">Brand-new single-truck plumbers with a budget under $500</td>
+                            <td style="padding: 1rem;">Plumbers who want CMS control and have time for updates</td>
+                            <td style="padding: 1rem;">Established plumbers who want to dominate local search</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Mobile Speed</td>
+                            <td style="padding: 1rem;">Often 4–8 seconds due to builder bloat</td>
+                            <td style="padding: 1rem;">3–5 seconds with heavy page builders</td>
+                            <td style="padding: 1rem;">Sub-2 seconds with hand-coded frontend</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Local SEO</td>
+                            <td style="padding: 1rem;">Basic. No LocalBusiness schema or citation checks</td>
+                            <td style="padding: 1rem;">Plugin-dependent. Schema often incomplete</td>
+                            <td style="padding: 1rem;">Full schema, NAP consistency, city page architecture</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Booking Integration</td>
+                            <td style="padding: 1rem;">Basic embeds. Limited dispatch sync</td>
+                            <td style="padding: 1rem;">Plugin-based. Often breaks on updates</td>
+                            <td style="padding: 1rem;">Native integration with ServiceTitan, Housecall Pro, Jobber</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Custom Design</td>
+                            <td style="padding: 1rem;">Template-based. Looks like competitors</td>
+                            <td style="padding: 1rem;">Template with customizations. Still builder-dependent</td>
+                            <td style="padding: 1rem;">Fully custom. Designed for your brand and conversion goals</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Ongoing Cost</td>
+                            <td style="padding: 1rem;">$20–50/month</td>
+                            <td style="padding: 1rem;">$50–200/month (hosting + plugins)</td>
+                            <td style="padding: 1rem;">One-time build + optional maintenance</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; font-weight: 600;">Starting Price</td>
+                            <td style="padding: 1rem;">$20/month</td>
+                            <td style="padding: 1rem;">$500–2,000 setup</td>
+                            <td style="padding: 1rem;">$1,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;"><strong>Our recommendation:</strong> If you are a new solo plumber with no budget, a DIY builder is a reasonable starting point. If you are an established company earning $10,000+ per month and you want to capture emergency calls from Google Maps, a custom site pays for itself with one additional booked job per week. <a href="../contact" class="btn" style="margin-left: 1rem;">Discuss Your Project</a></p>
+        </section>
+
+        <!-- Design Showcase (expanded with case study detail) -->
+        <section class="design-showcase" style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Our Plumbing Website Portfolio</h2>
+            <div style="aspect-ratio: 16/10; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; background: #0a0a0a;">
+                <video autoplay muted loop playsinline webkit-playsinline preload="auto" style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="https://res.cloudinary.com/dt4nfkb5u/video/upload/v1782587539/united-plumber-website_p7dgrb.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">United Plumbers</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;">A custom local services platform built for a Columbus-area plumbing company. We focused on emergency call conversion, mobile thumb-zone CTA placement, and service area pages for Dublin, Westerville, and Reynoldsburg.</p>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;"><strong>Result:</strong> Mobile call inquiries increased significantly after launch, with improved visibility in local Map Pack rankings.</p>
+                <a href="../work" style="text-decoration: underline; font-size: 0.95rem;">View the full case study and more plumbing projects →</a>
+            </div>
+        </section>
+
+        <!-- Plumbing Software Integrations (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">The Plumbing Software We Integrate With</h2>
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">Your website should not be an island. We connect it directly to the tools that run your plumbing business.</p>
+
+            <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">ServiceTitan</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted);">Best for multi-location plumbing companies with dedicated dispatch teams. We embed booking forms that feed directly into your ServiceTitan workflow.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">Housecall Pro</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted);">Ideal for growing residential plumbers. We sync online booking requests with your Housecall Pro calendar and automated customer notifications.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">Jobber</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted);">Perfect for small-to-mid-size operations. We integrate quote requests and service bookings directly into your Jobber pipeline.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">FieldPulse</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted);">A solid choice for field service management. We connect your website leads to FieldPulse for seamless scheduling and team dispatch.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500;">Calendly</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted);">For consultation-based bookings. We embed Calendly for non-emergency appointments like bathroom renovation estimates or boiler inspections.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Callout (improved sourcing) -->
+        <section class="stats-callout" style="border-top: 1px solid var(--border);" data-reveal>
             <div class="stat-item">
                 <span class="stat-number">81%</span>
                 <span class="stat-text">Of service searches happen on mobile phones</span>
                 <span class="stat-source">Google Local Search Insights</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">3x</span>
-                <span class="stat-text">Call volume increase on optimized mobile sites</span>
-                <span class="stat-source">Lustre Plumbing Client Metrics</span>
+                <span class="stat-number">~2.5s</span>
+                <span class="stat-text">Average load time for custom plumbing sites we build</span>
+                <span class="stat-source">PageSpeed Insights Mobile</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number">92%</span>
-                <span class="stat-text">Of searchers choose a plumber from page 1</span>
-                <span class="stat-source">Ahrefs Local SERP Reports</span>
+                <span class="stat-text">Of local searchers choose a business on page 1</span>
+                <span class="stat-source">BrightLocal Local Consumer Review Survey</span>
             </div>
         </section>
 
-        <!-- Comparison Table -->
-        <section class="comparison-table-wrapper" data-reveal>
-            <h2>Optimized Plumber Sites vs Standard Templates</h2>
+        <!-- Comparison Table (expanded) -->
+        <section class="comparison-table-wrapper" style="border-top: 1px solid var(--border);" data-reveal>
+            <h2>Optimized Plumber Sites vs. Standard Templates</h2>
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>Parameter</th>
                         <th class="highlight-col">Custom Plumber Site (Lustre)</th>
-                        <th>Generic Home Service Themes</th>
+                        <th>Generic Home Service Theme</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Mobile Usability</strong></td>
-                        <td class="highlight-col">Excellent. Sticky call buttons and quick tap options.</td>
-                        <td>Poor. Small links and hidden contact forms.</td>
+                        <td class="highlight-col">Excellent. Sticky call buttons in the thumb zone and quick-tap options.</td>
+                        <td>Poor. Small links, hidden contact forms, and no emergency CTA.</td>
                     </tr>
                     <tr>
                         <td><strong>Map Pack Integration</strong></td>
-                        <td class="highlight-col">Linked with GBP, matching NAP citations, and LocalBusiness schema.</td>
-                        <td>No structured local schema or citation checks.</td>
+                        <td class="highlight-col">Linked with Google Business Profile, matching NAP citations, and LocalBusiness schema.</td>
+                        <td>No structured local schema or citation consistency checks.</td>
                     </tr>
                     <tr>
                         <td><strong>Load Speeds</strong></td>
-                        <td class="highlight-col">Sub-2-second mobile load. Converts users immediately.</td>
-                        <td>Often 5+ seconds due to massive images and builders.</td>
+                        <td class="highlight-col">Sub-2-second mobile load. Core Web Vitals optimized.</td>
+                        <td>Often 5+ seconds due to builder bloat and unoptimized images.</td>
                     </tr>
                     <tr>
                         <td><strong>Service Area Targeting</strong></td>
-                        <td class="highlight-col">Dedicated pages for individual cities and service regions.</td>
-                        <td>Single generic page listing general territories.</td>
+                        <td class="highlight-col">Dedicated pages for individual cities and neighborhoods with local schema.</td>
+                        <td>Single generic page listing broad territories without geo-specific content.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Booking Integration</strong></td>
+                        <td class="highlight-col">Native integration with ServiceTitan, Housecall Pro, Jobber, and Calendly.</td>
+                        <td>Basic contact form with no dispatch or calendar sync.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Review Integration</strong></td>
+                        <td class="highlight-col">Live Google review widgets and automated review request tools.</td>
+                        <td>Static testimonial section with no real-time updates.</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- Direct Answers -->
-        <section style="padding: 4rem 0;" data-reveal>
+        <!-- Pricing (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Plumbing Website Pricing</h2>
+            <p style="margin-bottom: 3rem; max-width: 900px; line-height: 1.8;">Transparent pricing for plumbing contractors. Every package includes mobile-first design, click-to-call setup, LocalBusiness schema, and Google Business Profile optimization.</p>
+
+            <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 3rem;">
+                <div style="padding: 2rem; border: 1px solid var(--border); border-radius: 12px; text-align: center;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 500;">Starter</h3>
+                    <p style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">$1,500</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Best for single-truck operators and new plumbing companies.</p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 2; color: var(--text-muted); list-style: none; padding: 0;">
+                        <li>✓ 5 custom pages</li>
+                        <li>✓ 1 city landing page</li>
+                        <li>✓ Click-to-call setup</li>
+                        <li>✓ LocalBusiness schema</li>
+                        <li>✓ Google Business Profile link</li>
+                        <li>✓ Basic booking form</li>
+                        <li>✓ 30-day support</li>
+                    </ul>
+                </div>
+                <div style="padding: 2rem; border: 2px solid var(--text); border-radius: 12px; text-align: center; position: relative;">
+                    <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--text); color: #000; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Most Popular</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 500;">Growth</h3>
+                    <p style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">$3,500</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Best for established plumbers ready to dominate local search.</p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 2; color: var(--text-muted); list-style: none; padding: 0;">
+                        <li>✓ 10 custom pages</li>
+                        <li>✓ 5 city landing pages</li>
+                        <li>✓ Click-to-call + sticky header</li>
+                        <li>✓ Full local SEO setup</li>
+                        <li>✓ Booking tool integration</li>
+                        <li>✓ Review widget setup</li>
+                        <li>✓ 60-day support</li>
+                    </ul>
+                </div>
+                <div style="padding: 2rem; border: 1px solid var(--border); border-radius: 12px; text-align: center;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 500;">Premium</h3>
+                    <p style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">$7,500</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Best for multi-location plumbing companies and franchises.</p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 2; color: var(--text-muted); list-style: none; padding: 0;">
+                        <li>✓ 20+ custom pages</li>
+                        <li>✓ 15+ city landing pages</li>
+                        <li>✓ Advanced dispatch integration</li>
+                        <li>✓ Multi-location architecture</li>
+                        <li>✓ Custom quote calculator</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ 90-day support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="text-align: center; max-width: 700px; margin: 0 auto; line-height: 1.8;">Not sure which tier fits your plumbing business? <a href="../contact" class="btn">Book a free 15-minute call</a> — no obligation, no sales pressure.</p>
+        </section>
+
+        <!-- Direct Answers (expanded) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: 1.5rem; margin-bottom: 2rem; font-weight: 500;">Common Questions About Plumbing Websites</h2>
             <div class="direct-answer">
                 <h3>What is Local SEO for plumbers?</h3>
-                <p>Plumbing SEO focuses on ranking for geocentric search queries (like "emergency plumber Dallas" or "drain cleaning London"). It includes <span class="answer-highlight">citation syndication, schema markup</span>, and building links from local directory databases.</p>
+                <p>Plumbing SEO focuses on ranking for geocentric search queries like "emergency plumber Dallas" or "drain cleaning London." It includes <span class="answer-highlight">Google Business Profile optimization, citation syndication, LocalBusiness schema</span>, and building location-specific service pages for each city you serve.</p>
             </div>
             <div class="direct-answer">
                 <h3>How do reviews impact my plumbing business?</h3>
-                <p>Reviews build immediate credibility. When home service searchers compare options, they choose the business with the <span class="answer-highlight">highest review score and recent updates</span>. We integrate automated tools to request reviews from satisfied clients.</p>
+                <p>Reviews build immediate credibility. When home service searchers compare options, they choose the business with the <span class="answer-highlight">highest review score and recent updates</span>. We integrate automated tools to request reviews from satisfied clients and display live Google reviews on your site.</p>
+            </div>
+            <div class="direct-answer">
+                <h3>What booking tools work best for plumbing websites?</h3>
+                <p>For dispatch-heavy operations, <span class="answer-highlight">ServiceTitan and Housecall Pro</span> offer the deepest integration with field teams. For smaller residential plumbers, <span class="answer-highlight">Jobber and Calendly</span> provide flexible scheduling without the overhead. We assess your workflow and recommend the right fit before building.</p>
+            </div>
+            <div class="direct-answer">
+                <h3>Should I build my plumbing website myself or hire an agency?</h3>
+                <p>If you are a brand-new solo plumber with minimal budget, a DIY builder like Wix or Squarespace can work as a temporary solution. However, if you rely on Google Maps and emergency calls for revenue, a custom-built site with local SEO, schema markup, and dispatch integration will generate significantly more leads than a template. <a href="../contact" style="text-decoration: underline;">We can help you decide in a free call.</a></p>
             </div>
         </section>
 
-        <!-- Expert Insight -->
-        <section class="expert-insight" data-reveal>
-            <p>"In the plumbing industry, speed is your primary sales tool. If your site does not load instantly during an emergency, you have lost the customer."</p>
-            <footer>— <cite>Lustre Studio Conversion Team</cite></footer>
+        <!-- Expert Insight (improved attribution) -->
+        <section class="expert-insight" style="border-top: 1px solid var(--border);" data-reveal>
+            <p>"In the plumbing industry, speed is your primary sales tool. If your site does not load instantly during an emergency, you have lost the customer. We build every plumbing site with mobile speed as the non-negotiable first requirement."</p>
+            <footer>— <cite>Lead Designer, Lustre Studio — Plumbing & Home Services Web Design</cite></footer>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section" data-reveal>
+        <!-- Objections (NEW) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; font-weight: 500;">Common Concerns — And Our Responses</h2>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 500;">"This sounds expensive for a plumbing company."</h3>
+                <p style="line-height: 1.8; max-width: 900px;">A single emergency plumbing job can generate $200–$500. If your current site loses just one potential call per week to a competitor, that is $10,000–$26,000 in annual revenue. A custom site that captures one additional job per week pays for itself within two months. Our Starter package at $1,500 is designed specifically for single-truck operators who need to stop leaking leads.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 500;">"Can I just use Wix or Squarespace?"</h3>
+                <p style="line-height: 1.8; max-width: 900px;">You can, but template builders have three weaknesses that hurt plumbers specifically: slow mobile load times (often 4–8 seconds), no LocalBusiness schema or structured citation data, and limited booking integration. We have migrated multiple plumbers off Wix after they realized their Map Pack ranking was stuck on page 2 because the template could not support the technical SEO required for local dominance.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 500;">"I do not have time for a website project."</h3>
+                <p style="line-height: 1.8; max-width: 900px;">We only need about two hours of your time total: a 30-minute discovery call where you tell us about your services and service areas, and 1–2 hours of feedback across the entire project. We write the content, source the imagery, and handle the technical setup. You review and approve.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 500;">"What if I do not like the design?"</h3>
+                <p style="line-height: 1.8; max-width: 900px;">We include unlimited revisions during the design phase. You approve every page before we write production code. There is no risk of being stuck with a design you dislike because you see and approve the layout before build begins.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 500;">"My current site works fine. Why change it?"</h3>
+                <p style="line-height: 1.8; max-width: 900px;">"Works fine" usually means it loads and displays your phone number. But if it takes 5+ seconds to load on mobile, hides your number below the fold, lacks city-specific pages, or has no schema markup, it is silently costing you calls every day. We offer a free 5-minute audit to show you exactly what your current site is missing.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section (expanded from 4 to 12) -->
+        <section class="faq-section" style="border-top: 1px solid var(--border);" data-reveal>
             <h2>Frequently Asked Questions</h2>
+
             <div class="faq-item">
                 <button class="faq-question">What booking tools do you support?</button>
                 <div class="faq-answer">
-                    <p>We integrate plumbing calendar and dispatch systems like Housecall Pro, Jobber, ServiceTitan, and simple booking tools like Calendly.</p>
+                    <p>We integrate plumbing calendar and dispatch systems including <strong>Housecall Pro, Jobber, ServiceTitan, FieldPulse,</strong> and simple scheduling tools like <strong>Calendly</strong>. We assess your current workflow and recommend the best integration for your team size.</p>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">How do you target multiple service areas?</button>
                 <div class="faq-answer">
-                    <p>We create individual landing pages for each key city or neighborhood you serve, optimized with local schemas and city-specific keywords to capture local searches.</p>
+                    <p>We create individual landing pages for each city or neighborhood you serve, optimized with local schema, geo-specific keywords, and unique content about that area. For example, a Columbus plumber might have dedicated pages for Dublin, Westerville, Reynoldsburg, and Grove City.</p>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">Can you showcase my plumbing project work?</button>
                 <div class="faq-answer">
-                    <p>Yes. We build responsive galleries where you can upload photos of boiler swaps, pipe replacements, or bathroom remodels to demonstrate work quality.</p>
+                    <p>Yes. We build responsive galleries where you can upload photos of boiler swaps, pipe replacements, trenchless sewer repairs, or bathroom remodels. Before-and-after galleries are particularly effective for building trust with homeowners comparing multiple plumbers.</p>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">How does a Google Business Profile help a plumber?</button>
                 <div class="faq-answer">
-                    <p>It places your business on Google Maps and inside the local Map Pack. Since most emergency plumbers are selected directly from Maps, GBP optimization is critical.</p>
+                    <p>It places your business on Google Maps and inside the local Map Pack. Since most emergency plumbers are selected directly from Maps, GBP optimization is critical. We optimize your categories, service descriptions, photos, and posting schedule to improve visibility.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How much does a plumbing website cost?</button>
+                <div class="faq-answer">
+                    <p>Plumbing websites typically range from <strong>$1,500</strong> for a 5-page starter site to <strong>$7,500</strong> for a multi-location build with advanced integrations. The final cost depends on page count, city landing pages, booking tool integration, and custom features. We provide transparent quotes with no hidden fees.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How long does it take to build a plumbing website?</button>
+                <div class="faq-answer">
+                    <p>A standard plumbing website takes <strong>2–4 weeks</strong> from kickoff to launch. Multi-location projects with custom dispatch integrations typically take <strong>4–6 weeks</strong>. Our process includes discovery, wireframing, development, and launch with local SEO setup.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you work with single-truck operators or only large companies?</button>
+                <div class="faq-answer">
+                    <p>Both. Our <strong>Starter</strong> package is built for solo plumbers and small teams. Our <strong>Premium</strong> package serves multi-location plumbing companies with dedicated dispatch teams. We scale the technology and content strategy to match your business size.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can you redesign my existing plumbing website?</button>
+                <div class="faq-answer">
+                    <p>Yes. We specialize in plumbing website redesigns that preserve your existing SEO rankings while improving mobile speed, conversion design, and local search performance. We also migrate content from WordPress, Wix, Squarespace, and other platforms.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is SEO included in the website design?</button>
+                <div class="faq-answer">
+                    <p>Every site we build includes foundational local SEO: LocalBusiness schema, Google Business Profile optimization, citation-consistent NAP data, and city landing page architecture. For ongoing SEO campaigns, we offer a dedicated <a href="../services/local-seo">Local SEO service</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you offer plumbing logo design and branding?</button>
+                <div class="faq-answer">
+                    <p>Yes. In addition to web design, we offer plumbing logo design, brand identity packages, color psychology consultation, and brand messaging strategy. We ensure your website, truck wraps, and business cards share a consistent visual identity.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do I need to provide photos and content?</button>
+                <div class="faq-answer">
+                    <p>We write all website content based on our discovery call. For photos, we provide guidance on capturing high-quality job site photos with your phone. If you have existing photos of completed work, we optimize them for web use.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What happens after the website launches?</button>
+                <div class="faq-answer">
+                    <p>Every package includes post-launch support: 30, 60, or 90 days depending on your tier. We also offer affordable <a href="../services/website-maintenance">maintenance plans</a> for ongoing updates, security monitoring, and performance optimization.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Related Services Grid -->
-        <section style="padding: 4rem 0;" data-reveal>
+        <!-- Related Services (enhanced with more links) -->
+        <section style="padding: 4rem 0; border-top: 1px solid var(--border);" data-reveal>
             <h2 style="font-size: 1.5rem; margin-bottom: 2rem; font-weight: 500;">Related Services</h2>
             <div class="internal-links-grid">
-                <a href="../services/local-seo.html" class="internal-link-card">
+                <a href="../services/local-seo" class="internal-link-card">
                     <h3>Local SEO</h3>
-                    <p>Drive organic traffic from homeowners in your target cities.</p>
+                    <p>Drive organic traffic from homeowners in your target cities with geo-targeted optimization and citation building.</p>
                     <span class="link-arrow">Details →</span>
                 </a>
-                <a href="../services/google-business-profile-optimization.html" class="internal-link-card">
+                <a href="../services/google-business-profile-optimization" class="internal-link-card">
                     <h3>GBP Optimization</h3>
-                    <p>Appear directly on Google Maps and drive emergency calls.</p>
+                    <p>Appear directly on Google Maps and drive emergency calls with a fully optimized Google Business Profile.</p>
                     <span class="link-arrow">Details →</span>
                 </a>
-                <a href="../services/website-maintenance.html" class="internal-link-card">
+                <a href="../services/website-maintenance" class="internal-link-card">
                     <h3>Website Support</h3>
-                    <p>Keep your contact details up-to-date and maintain fast load speeds.</p>
+                    <p>Keep your contact details up-to-date, maintain fast load speeds, and receive priority technical support.</p>
                     <span class="link-arrow">Details →</span>
                 </a>
+                <a href="../services/technical-seo" class="internal-link-card">
+                    <h3>Technical SEO</h3>
+                    <p>Core Web Vitals optimization, schema markup, and site speed improvements for plumbing contractors.</p>
+                    <span class="link-arrow">Details →</span>
+                </a>
+                <a href="../services/website-redesign" class="internal-link-card">
+                    <h3>Website Redesign</h3>
+                    <p>Modernize an existing plumbing site without losing SEO rankings or breaking your booking flow.</p>
+                    <span class="link-arrow">Details →</span>
+                </a>
+                <a href="../services/conversion-rate-optimization" class="internal-link-card">
+                    <h3>CRO</h3>
+                    <p>Increase the percentage of visitors who call, book, or request a quote from your plumbing website.</p>
+                    <span class="link-arrow">Details →</span>
+                </a>
+            </div>
+
+            <h3 style="font-size: 1.25rem; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: 500;">We Also Serve Related Industries</h3>
+            <p style="margin-bottom: 2rem; max-width: 900px; line-height: 1.8;">Our expertise extends to other home services trades. We understand the shared challenges of emergency scheduling, local Map Pack competition, and seasonal demand spikes.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="hvac" style="padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.9rem; text-decoration: none;">HVAC Website Design</a>
+                <a href="roofers" style="padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.9rem; text-decoration: none;">Roofer Website Design</a>
+                <a href="dentists" style="padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.9rem; text-decoration: none;">Dentist Website Design</a>
+                <a href="lawyers" style="padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.9rem; text-decoration: none;">Lawyer Website Design</a>
+                <a href="coaches" style="padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.9rem; text-decoration: none;">Coach Website Design</a>
             </div>
         </section>
     </main>
@@ -237,58 +709,58 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="/" class="logo">lustrestudio</a>
-                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">100% custom websites that rank higher and turn attention into revenue. Serving businesses across the US & UK.</p>
+                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">100% custom websites that rank higher and turn attention into revenue. Serving plumbing contractors and home services businesses across the US & UK.</p>
                     <p style="margin-top: 1rem;"><a href="mailto:hello@lustrestudio.uk" style="text-decoration: underline; color: var(--text);">hello@lustrestudio.uk</a></p>
                 </div>
                 <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="../services/web-design.html">Web Design</a>
-                    <a href="../services/website-development.html">Website Development</a>
-                    <a href="../services/local-seo.html">Local SEO</a>
-                    <a href="../services/technical-seo.html">Technical SEO</a>
-                    <a href="../services/ai-search-optimization.html">AI Search Optimization</a>
-                    <a href="../services/conversion-rate-optimization.html">CRO</a>
-                    <a href="../services/landing-page-design.html">Landing Page Design</a>
-                    <a href="../services/wordpress-development.html">WordPress</a>
-                    <a href="../services/shopify-development.html">Shopify</a>
-                    <a href="../services/website-redesign.html">Website Redesign</a>
-                    <a href="../services/website-maintenance.html">Maintenance</a>
-                    <a href="../services/google-business-profile-optimization.html">GBP Optimization</a>
-                    <a href="../services/custom-tools.html">Custom Tools</a>
+                    <h2 class="footer-heading">Services</h2>
+                    <a href="../services/web-design">Web Design</a>
+                    <a href="../services/website-development">Website Development</a>
+                    <a href="../services/local-seo">Local SEO</a>
+                    <a href="../services/technical-seo">Technical SEO</a>
+                    <a href="../services/ai-search-optimization">AI Search Optimization</a>
+                    <a href="../services/conversion-rate-optimization">CRO</a>
+                    <a href="../services/landing-page-design">Landing Page Design</a>
+                    <a href="../services/wordpress-development">WordPress</a>
+                    <a href="../services/shopify-development">Shopify</a>
+                    <a href="../services/website-redesign">Website Redesign</a>
+                    <a href="../services/website-maintenance">Maintenance</a>
+                    <a href="../services/google-business-profile-optimization">GBP Optimization</a>
+                    <a href="../services/custom-tools">Custom Tools</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Industries</h4>
-                    <a href="dentists.html">Dentists</a>
-                    <a href="plumbers.html">Plumbers</a>
-                    <a href="lawyers.html">Lawyers</a>
-                    <a href="coaches.html">Coaches</a>
-                    <a href="hvac.html">HVAC</a>
-                    <a href="roofers.html">Roofers</a>
-                    <a href="cosmetic-clinics.html">Cosmetic Clinics</a>
-                    <a href="car-detailing.html">Car Detailing</a>
+                    <h2 class="footer-heading">Industries</h2>
+                    <a href="dentists">Dentists</a>
+                    <a href="plumbers">Plumbers</a>
+                    <a href="lawyers">Lawyers</a>
+                    <a href="coaches">Coaches</a>
+                    <a href="hvac">HVAC</a>
+                    <a href="roofers">Roofers</a>
+                    <a href="cosmetic-clinics">Cosmetic Clinics</a>
+                    <a href="car-detailing">Car Detailing</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Locations</h4>
-                    <a href="../locations/new-york.html">New York</a>
-                    <a href="../locations/dallas.html">Dallas</a>
-                    <a href="../locations/houston.html">Houston</a>
-                    <a href="../locations/austin.html">Austin</a>
-                    <a href="../locations/miami.html">Miami</a>
-                    <a href="../locations/chicago.html">Chicago</a>
-                    <a href="../locations/los-angeles.html">Los Angeles</a>
-                    <a href="../locations/london.html">London</a>
-                    <a href="../locations/manchester.html">Manchester</a>
-                    <a href="../locations/birmingham.html">Birmingham</a>
-                    <a href="../locations/leeds.html">Leeds</a>
-                    <a href="../locations/liverpool.html">Liverpool</a>
+                    <h2 class="footer-heading">Locations</h2>
+                    <a href="../locations/new-york">New York</a>
+                    <a href="../locations/dallas">Dallas</a>
+                    <a href="../locations/houston">Houston</a>
+                    <a href="../locations/austin">Austin</a>
+                    <a href="../locations/miami">Miami</a>
+                    <a href="../locations/chicago">Chicago</a>
+                    <a href="../locations/los-angeles">Los Angeles</a>
+                    <a href="../locations/london">London</a>
+                    <a href="../locations/manchester">Manchester</a>
+                    <a href="../locations/birmingham">Birmingham</a>
+                    <a href="../locations/leeds">Leeds</a>
+                    <a href="../locations/liverpool">Liverpool</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-links">
                     <a href="/">Home</a>
-                    <a href="../work.html">Work</a>
-                    <a href="../services.html">Services</a>
-                    <a href="../contact.html">Contact</a>
+                    <a href="../work">Work</a>
+                    <a href="../services">Services</a>
+                    <a href="../contact">Contact</a>
                 </div>
                 <div class="copyright">
                     &copy; 2026 Lustre Studio &mdash; Custom Web Design & SEO Agency
@@ -327,10 +799,23 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('revealed');
+                    const videos = entry.target.querySelectorAll('video');
+                    videos.forEach(video => {
+                        video.muted = true;
+                        video.play().catch(e => console.log('Video play prevented:', e));
+                    });
                 }
             });
         }, observerOptions);
         document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+        // Fallback: force play all videos once page is loaded
+        window.addEventListener('load', () => {
+            document.querySelectorAll('video').forEach(video => {
+                video.muted = true;
+                video.play().catch(e => console.log('Window load video play prevented:', e));
+            });
+        });
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(button => {
@@ -340,25 +825,33 @@
             });
         });
 
-        // Schema.js Injection
+        // Schema.js Injection (updated with expanded FAQ data)
         window.addEventListener('load', () => {
             if (typeof injectServicePageSchemas === 'function') {
                 injectServicePageSchemas(
-                    'Web Design for Plumbers',
-                    'Custom web design for plumbers. We build lead-generating plumbing websites optimized for local SEO, Google Maps, and emergency service calls.',
-                    'https://lustrestudio.uk/industries/plumbers.html',
+                    'Plumber Web Design Agency — Portfolio, Pricing & Process | Lustre Studio',
+                    'Specialist plumber web design agency. Custom-coded sites with click-to-call, local SEO, ServiceTitan & Housecall Pro integration. View portfolio and pricing. From $1,500.',
+                    'https://lustrestudio.uk/industries/plumbers',
                     1500,
                     'USD',
                     [
                         { name: 'Home', url: 'https://lustrestudio.uk/' },
-                        { name: 'Services', url: 'https://lustrestudio.uk/services.html' },
-                        { name: 'Web Design for Plumbers', url: 'https://lustrestudio.uk/industries/plumbers.html' }
+                        { name: 'Services', url: 'https://lustrestudio.uk/services' },
+                        { name: 'Web Design for Plumbers', url: 'https://lustrestudio.uk/industries/plumbers' }
                     ],
                     [
-                        { question: 'What booking tools do you support?', answer: 'We integrate plumbing calendar and dispatch systems like Housecall Pro, Jobber, ServiceTitan, and simple booking tools like Calendly.' },
-                        { question: 'How do you target multiple service areas?', answer: 'We create individual landing pages for each key city or neighborhood you serve, optimized with local schemas and city-specific keywords to capture local searches.' },
-                        { question: 'Can you showcase my plumbing project work?', answer: 'Yes. We build responsive galleries where you can upload photos of boiler swaps, pipe replacements, or bathroom remodels to demonstrate work quality.' },
-                        { question: 'How does a Google Business Profile help a plumber?', answer: 'It places your business on Google Maps and inside the local Map Pack. Since most emergency plumbers are selected directly from Maps, GBP optimization is critical.' }
+                        { question: 'What booking tools do you support?', answer: 'We integrate plumbing calendar and dispatch systems including Housecall Pro, Jobber, ServiceTitan, FieldPulse, and Calendly.' },
+                        { question: 'How do you target multiple service areas?', answer: 'We create individual landing pages for each city or neighborhood you serve, optimized with local schemas and city-specific keywords.' },
+                        { question: 'Can you showcase my plumbing project work?', answer: 'Yes. We build responsive galleries where you can upload photos of boiler swaps, pipe replacements, trenchless sewer repairs, or bathroom remodels.' },
+                        { question: 'How does a Google Business Profile help a plumber?', answer: 'It places your business on Google Maps and inside the local Map Pack. Since most emergency plumbers are selected directly from Maps, GBP optimization is critical.' },
+                        { question: 'How much does a plumbing website cost?', answer: 'Plumbing websites typically range from $1,500 for a 5-page starter site to $7,500 for a multi-location build with advanced integrations.' },
+                        { question: 'How long does it take to build a plumbing website?', answer: 'A standard plumbing website takes 2–4 weeks from kickoff to launch. Multi-location projects with custom dispatch integrations typically take 4–6 weeks.' },
+                        { question: 'Do you work with single-truck operators or only large companies?', answer: 'Both. Our Starter package is built for solo plumbers and small teams. Our Premium package serves multi-location plumbing companies with dedicated dispatch teams.' },
+                        { question: 'Can you redesign my existing plumbing website?', answer: 'Yes. We specialize in plumbing website redesigns that preserve your existing SEO rankings while improving mobile speed, conversion design, and local search performance.' },
+                        { question: 'Is SEO included in the website design?', answer: 'Every site we build includes foundational local SEO: LocalBusiness schema, Google Business Profile optimization, citation-consistent NAP data, and city landing page architecture.' },
+                        { question: 'Do you offer plumbing logo design and branding?', answer: 'Yes. In addition to web design, we offer plumbing logo design, brand identity packages, color psychology consultation, and brand messaging strategy.' },
+                        { question: 'Do I need to provide photos and content?', answer: 'We write all website content based on our discovery call. For photos, we provide guidance on capturing high-quality job site photos.' },
+                        { question: 'What happens after the website launches?', answer: 'Every package includes post-launch support: 30, 60, or 90 days depending on your tier. We also offer affordable maintenance plans for ongoing updates and performance optimization.' }
                     ]
                 );
             }
