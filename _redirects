@@ -1,0 +1,29 @@
+# Cloudflare Pages Redirects
+
+# 1. Legacy / Renamed page redirects
+/new-wedding-photographer-first-website-builder          /services/website-development 301
+/new-wedding-photographer-first-website-builder.html     /services/website-development 301
+/wedding-cost-nj-2026                                    / 301
+/wedding-cost-nj-2026.html                               / 301
+/wedding-photography-pricing-calculator                  / 301
+/wedding-photography-pricing-calculator.html             / 301
+/tools                                                   /services/custom-tools 301
+/tools.html                                              /services/custom-tools 301
+/instagram-reels-wedding-photographers-2026              / 301
+/instagram-reels-wedding-photographers-2026.html         / 301
+/blog                                                    / 301
+/blog.html                                               / 301
+/blog/nyc-wedding-photographer-pricing-2026              / 301
+/website                                                 /services/website-development 301
+/website.html                                            /services/website-development 301
+# Pages that should serve directly from root with clean URLs
+/google-business-profile-suspended-plumber                  /google-business-profile-suspended-plumber.html 200
+/google-business-profile-suspended-plumber.html             /google-business-profile-suspended-plumber 301
+/plumbing-website-not-converting-visitors-to-calls          /plumbing-website-not-converting-visitors-to-calls.html 200
+/plumbing-website-not-converting-visitors-to-calls.html     /plumbing-website-not-converting-visitors-to-calls 301
+
+# Legacy / typo slugs
+/plumbing-website-not-converting-calls                      /plumbing-website-not-converting-visitors-to-calls 301
+/plumbing-website-not-converting-calls.html                 /plumbing-website-not-converting-visitors-to-calls 301
+
+/q3-estimated-taxes-2026-deadline-guide.html /q3-estimated-taxes-2026-deadline-guide 301
