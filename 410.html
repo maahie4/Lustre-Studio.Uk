@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>410 Page Gone — Lustre Studio</title>
+    <meta name="description" content="This page or resource has been permanently removed as part of our editorial updates. Explore our latest bridal guides, style tools, and inspiration.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#2C2521">
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y47ZH5Y44"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8Y47ZH5Y44');
+    </script>
+
+    <!-- Microsoft Clarity Tracking Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wtq9jpoplb");
+    </script>
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --espresso: #2C2521;
+            --espresso-light: #3D3430;
+            --espresso-medium: #4A3F3A;
+            --ivory: #F8F5EF;
+            --cream: #EFE9DF;
+            --cream-dark: #E6DED2;
+            --off-white: #FAF8F5;
+            --taupe: #9A8D82;
+            --taupe-light: #B5AAA0;
+            --taupe-lighter: #D4CCC3;
+            --gold: #B59A70;
+            --gold-light: #C9B28F;
+            --font-serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+            --container-max: 800px;
+            --container-wide: 1400px;
+            --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-base: 0.4s var(--ease-out);
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--espresso);
+            background-color: var(--ivory);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all var(--transition-base);
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 clamp(24px, 4vw, 60px);
+        }
+
+        /* NAVIGATION */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(248, 245, 239, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 204, 195, 0.4);
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(24px, 4vw, 60px);
+            height: 72px;
+            max-width: var(--container-wide);
+            margin: 0 auto;
+        }
+
+        .nav__logo {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: var(--espresso);
+            text-transform: uppercase;
+        }
+
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav__link {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--espresso);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav__link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .nav__quiz {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--espresso);
+            padding: 10px 24px;
+            border: 1px solid var(--taupe-lighter);
+            transition: all var(--transition-base);
+        }
+
+        .nav__quiz:hover {
+            border-color: var(--espresso);
+            background: var(--espresso);
+            color: var(--ivory);
+        }
+
+        .nav__toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            color: var(--espresso);
+        }
+
+        .nav__toggle span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--espresso);
+            margin: 5px 0;
+            transition: var(--transition-base);
+        }
+
+        .nav__toggle.active span:nth-child(1) {
+            transform: translateY(6.5px) rotate(45deg);
+        }
+
+        .nav__toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav__toggle.active span:nth-child(3) {
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--ivory);
+            z-index: 999;
+            padding: 40px 24px;
+            flex-direction: column;
+            gap: 24px;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            color: var(--espresso);
+            text-align: center;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 0 80px;
+        }
+
+        .gone-card {
+            text-align: center;
+            background: var(--off-white);
+            border: 1px solid var(--cream-dark);
+            padding: clamp(40px, 7vw, 80px) clamp(24px, 5vw, 60px);
+            box-shadow: 0 8px 32px rgba(44, 37, 33, 0.03);
+            position: relative;
+        }
+
+        .gone-code {
+            font-family: var(--font-serif);
+            font-size: clamp(64px, 12vw, 110px);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .gone-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--taupe);
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .gone-label::before,
+        .gone-label::after {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .gone-title {
+            font-family: var(--font-serif);
+            font-weight: 300;
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: var(--espresso);
+            margin-bottom: 20px;
+        }
+
+        .gone-description {
+            color: var(--espresso-medium);
+            max-width: 520px;
+            margin: 0 auto 36px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--ivory);
+            background: var(--espresso);
+            border: 1px solid var(--espresso);
+            padding: 14px 32px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--espresso-light);
+            border-color: var(--espresso-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--espresso);
+            background: transparent;
+            border: 1px solid var(--taupe-lighter);
+            padding: 14px 32px;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--espresso);
+            background: var(--espresso);
+            color: var(--ivory);
+            transform: translateY(-2px);
+        }
+
+        .quick-links-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--taupe);
+            margin-bottom: 16px;
+            border-top: 1px solid var(--cream-dark);
+            padding-top: 32px;
+        }
+
+        .quick-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .quick-links a {
+            font-size: 13px;
+            color: var(--espresso-medium);
+            border-bottom: 1px solid transparent;
+        }
+
+        .quick-links a:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--espresso);
+            color: var(--ivory);
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--espresso-light);
+        }
+
+        .footer__inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: clamp(30px, 5vw, 60px);
+            margin-bottom: 50px;
+        }
+
+        .footer__logo {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            color: var(--ivory);
+        }
+
+        .footer__description {
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--taupe-light);
+            max-width: 320px;
+        }
+
+        .footer__column h4 {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+        }
+
+        .footer__column ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer__column a {
+            font-size: 13px;
+            color: var(--taupe-lighter);
+        }
+
+        .footer__column a:hover {
+            color: var(--ivory);
+        }
+
+        .footer__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 30px;
+            border-top: 1px solid var(--espresso-medium);
+            font-size: 12px;
+            color: var(--taupe);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer__legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer__legal a {
+            color: var(--taupe);
+        }
+
+        .footer__legal a:hover {
+            color: var(--ivory);
+        }
+
+        @media (max-width: 900px) {
+            .footer__inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav__links, .nav__quiz {
+                display: none;
+            }
+            .nav__toggle {
+                display: block;
+            }
+            .footer__inner {
+                grid-template-columns: 1fr;
+            }
+            .footer__bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="nav" role="banner">
+        <div class="nav__inner">
+            <a href="/" class="nav__logo" aria-label="Lustre Studio Home">Lustre Studio</a>
+            <ul class="nav__links" role="navigation">
+                <li><a href="/#bridal-style" class="nav__link">Style Guides</a></li>
+                <li><a href="/#beauty" class="nav__link">Editorial</a></li>
+                <li><a href="/#planning" class="nav__link">Planning</a></li>
+                <li><a href="/bridal/wedding-dresses/wedding-dress-style-guide" class="nav__link">Dress Guide</a></li>
+                <li><a href="/contact" class="nav__link">Contact</a></li>
+            </ul>
+            <a href="/#quiz" class="nav__quiz">Take the Quiz</a>
+            <button class="nav__toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="/">Home</a>
+        <a href="/#bridal-style">Style Guides</a>
+        <a href="/#beauty">Editorial</a>
+        <a href="/#planning">Planning</a>
+        <a href="/bridal/wedding-dresses/wedding-dress-style-guide">Wedding Dress Guide</a>
+        <a href="/contact">Contact</a>
+        <a href="/#quiz" style="color: var(--gold); font-weight: 500;">Take the Quiz</a>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main">
+        <div class="container">
+            <div class="gone-card">
+                <div class="gone-code">410</div>
+                <div class="gone-label">Resource Permanently Removed</div>
+                <h1 class="gone-title">This Page Has Been Retired</h1>
+                <p class="gone-description">
+                    The requested page or resource has been permanently removed following our editorial evolution into modern bridal fashion, style guides, and curated wedding aesthetics.
+                </p>
+                <div class="btn-group">
+                    <a href="/" class="btn-primary">Return to Homepage</a>
+                    <a href="/bridal/wedding-dresses/wedding-dress-style-guide" class="btn-outline">Explore Dress Style Guide</a>
+                </div>
+
+                <div class="quick-links-title">Popular Bridal Guides</div>
+                <ul class="quick-links">
+                    <li><a href="/#bridal-style">Silhouettes &amp; Necklines</a></li>
+                    <li><a href="/#bridal-style">Veil Guide</a></li>
+                    <li><a href="/#beauty">Bridal Jewelry</a></li>
+                    <li><a href="/#planning">Budget &amp; Planning</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container" style="max-width: var(--container-wide);">
+            <div class="footer__inner">
+                <div>
+                    <p class="footer__logo">Lustre Studio</p>
+                    <p class="footer__description">
+                        A modern bridal style publication. Thoughtful guides, style tools, and curated inspiration.
+                    </p>
+                </div>
+                <div class="footer__column">
+                    <h4>Style</h4>
+                    <ul>
+                        <li><a href="/bridal/wedding-dresses/wedding-dress-style-guide">Wedding Dress Guide</a></li>
+                        <li><a href="/#bridal-style">Veils</a></li>
+                        <li><a href="/#beauty">Jewelry</a></li>
+                        <li><a href="/#beauty">Bridal Beauty</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Planning</h4>
+                    <ul>
+                        <li><a href="/#planning">Budget Calculator</a></li>
+                        <li><a href="/#planning">Timeline</a></li>
+                        <li><a href="/#planning">Checklist</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@lustrestudio.uk">hello@lustrestudio.uk</a></li>
+                        <li><a href="https://www.pinterest.co.uk/lustrestudio" target="_blank" rel="noopener">Pinterest</a></li>
+                        <li><a href="https://www.instagram.com/lustrestudio" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@lustrestudio" target="_blank" rel="noopener">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Lustre Studio. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Use</a>
+                    <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            var mobileToggle = document.getElementById('mobileToggle');
+            var mobileMenu = document.getElementById('mobileMenu');
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    var isOpen = mobileMenu.classList.contains('active');
+                    mobileMenu.classList.toggle('active');
+                    mobileToggle.classList.toggle('active');
+                    mobileToggle.setAttribute('aria-expanded', !isOpen);
+                    document.body.style.overflow = isOpen ? '' : 'hidden';
+                });
+
+                var mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('active');
+                        mobileToggle.classList.remove('active');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

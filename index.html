@@ -1664,6 +1664,17 @@
         }
 
         @media (max-width: 640px) {
+            .hero__actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero__actions .btn-primary,
+            .hero__actions .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+
             .start-here__grid {
                 grid-template-columns: 1fr;
             }
@@ -1682,11 +1693,18 @@
 
             .newsletter__form {
                 flex-direction: column;
+                width: 100%;
             }
 
             .newsletter__input {
+                width: 100%;
                 border-right: 1px solid var(--taupe-lighter);
-                border-bottom: none;
+                border-bottom: 1px solid var(--taupe-lighter);
+                margin-bottom: 8px;
+            }
+
+            .newsletter__submit {
+                width: 100%;
             }
 
             .footer__inner {
@@ -1696,6 +1714,13 @@
             .footer__bottom {
                 flex-direction: column;
                 text-align: center;
+                gap: 16px;
+            }
+
+            .footer__legal {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 16px;
             }
 
             .hero__image img {
@@ -1804,7 +1829,8 @@
                          alt="Bride in an elegant modern minimalist wedding gown with open back, holding a bouquet of white roses in a warm ivory studio with soft natural light"
                          width="720" height="960"
                          fetchpriority="high"
-                         itemprop="image">
+                         itemprop="image"
+                         loading="lazy">
                 </div>
             </div>
         </section>

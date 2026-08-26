@@ -385,17 +385,85 @@
         .footer__legal a { color: var(--taupe); }
         .footer__legal a:hover { color: var(--ivory); }
 
+        .nav__mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        .nav__mobile-toggle span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--espresso);
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .nav__mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(4.6px);
+        }
+        .nav__mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .nav__mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-4.6px);
+        }
+
+        /* MOBILE OVERLAY */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: var(--ivory);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s var(--ease-smooth);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            color: var(--espresso);
+        }
+
         @media (max-width: 900px) {
             .nav__links, .nav__quiz { display: none; }
+            .nav__mobile-toggle { display: flex; }
             .footer__inner { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 600px) {
+            .legal-box { padding: 24px 18px; }
             .footer__inner { grid-template-columns: 1fr; }
             .footer__bottom { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
+        <a href="/">Home</a>
+        <a href="/#bridal-style">Bridal Style</a>
+        <a href="/#beauty">Beauty</a>
+        <a href="/#planning">Wedding Planning</a>
+        <a href="/#inspiration">Inspiration</a>
+        <a href="/contact">Contact</a>
+    </div>
 
     <!-- Navigation -->
     <nav class="nav" id="mainNav" role="navigation">
@@ -409,6 +477,11 @@
                 <li><a href="/contact" class="nav__link">Contact</a></li>
             </ul>
             <a href="/#quiz" class="nav__quiz">Take the Bridal Quiz</a>
+            <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -509,5 +582,30 @@
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var mobileToggle = document.getElementById('mobileToggle');
+            var mobileMenu = document.getElementById('mobileMenu');
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    var isOpen = mobileMenu.classList.contains('active');
+                    mobileMenu.classList.toggle('active');
+                    mobileToggle.classList.toggle('active');
+                    mobileToggle.setAttribute('aria-expanded', !isOpen);
+                    document.body.style.overflow = isOpen ? '' : 'hidden';
+                });
+
+                var mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('active');
+                        mobileToggle.classList.remove('active');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
