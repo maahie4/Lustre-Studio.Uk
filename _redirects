@@ -1,29 +1,151 @@
 # Cloudflare Pages Redirects
+# 410 Gone for all previous pages & slugs (pivot away from prior niches)
 
-# 1. Legacy / Renamed page redirects
-/new-wedding-photographer-first-website-builder          /services/website-development 301
-/new-wedding-photographer-first-website-builder.html     /services/website-development 301
-/wedding-cost-nj-2026                                    / 301
-/wedding-cost-nj-2026.html                               / 301
-/wedding-photography-pricing-calculator                  / 301
-/wedding-photography-pricing-calculator.html             / 301
-/tools                                                   /services/custom-tools 301
-/tools.html                                              /services/custom-tools 301
-/instagram-reels-wedding-photographers-2026              / 301
-/instagram-reels-wedding-photographers-2026.html         / 301
-/blog                                                    / 301
-/blog.html                                               / 301
-/blog/nyc-wedding-photographer-pricing-2026              / 301
-/website                                                 /services/website-development 301
-/website.html                                            /services/website-development 301
-# Pages that should serve directly from root with clean URLs
-/google-business-profile-suspended-plumber                  /google-business-profile-suspended-plumber.html 200
-/google-business-profile-suspended-plumber.html             /google-business-profile-suspended-plumber 301
-/plumbing-website-not-converting-visitors-to-calls          /plumbing-website-not-converting-visitors-to-calls.html 200
-/plumbing-website-not-converting-visitors-to-calls.html     /plumbing-website-not-converting-visitors-to-calls 301
+# Static assets to preserve
+/style.css                                                 /style.css 200
+/schema.js                                                 /schema.js 200
+/robots.txt                                                /robots.txt 200
+/sitemap.xml                                               /sitemap.xml 200
+/llms.txt                                                  /llms.txt 200
+/llms-full.txt                                             /llms-full.txt 200
+/favicon.ico                                               /favicon.ico 200
 
-# Legacy / typo slugs
-/plumbing-website-not-converting-calls                      /plumbing-website-not-converting-visitors-to-calls 301
-/plumbing-website-not-converting-calls.html                 /plumbing-website-not-converting-visitors-to-calls 301
+# Home page / Index
+/                                                          /index.html 200
+/index.html                                                / 301
 
-/q3-estimated-taxes-2026-deadline-guide.html /q3-estimated-taxes-2026-deadline-guide 301
+# --- Legacy Wedding & Old Content ---
+/new-wedding-photographer-first-website-builder            / 410
+/new-wedding-photographer-first-website-builder.html       / 410
+/wedding-cost-nj-2026                                      / 410
+/wedding-cost-nj-2026.html                                 / 410
+/wedding-photography-pricing-calculator                   / 410
+/wedding-photography-pricing-calculator.html              / 410
+/instagram-reels-wedding-photographers-2026               / 410
+/instagram-reels-wedding-photographers-2026.html          / 410
+/blog                                                      / 410
+/blog.html                                                 / 410
+/blog/nyc-wedding-photographer-pricing-2026               / 410
+/website                                                   / 410
+/website.html                                              / 410
+/tools                                                     / 410
+/tools.html                                                / 410
+
+# Active Pages
+/contact                                                   /contact.html 200
+/contact.html                                              /contact 301
+/privacy                                                   /privacy.html 200
+/privacy.html                                              /privacy 301
+/terms                                                     /terms.html 200
+/terms.html                                                /terms 301
+/affiliate-disclosure                                      /affiliate-disclosure.html 200
+/affiliate-disclosure.html                                 /affiliate-disclosure 301
+/affiliate                                                 /affiliate-disclosure.html 200
+/affiliate.html                                            /affiliate-disclosure 301
+
+# --- Core Pages ---
+/work                                                      / 410
+/work.html                                                 / 410
+/services                                                  / 410
+/services.html                                             / 410
+/seo                                                       / 410
+/seo.html                                                  / 410
+/mortgage-calculator                                       / 410
+/mortgage-calculator.html                                  / 410
+/seo-proposal-customwoodexperts                            / 410
+/seo-proposal-customwoodexperts.html                       / 410
+
+# --- Standalone / Plumbing / Tax / Guide Pages ---
+/google-business-profile-suspended-plumber                 / 410
+/google-business-profile-suspended-plumber.html            / 410
+/plumbing-website-not-converting-visitors-to-calls         / 410
+/plumbing-website-not-converting-visitors-to-calls.html    / 410
+/plumbing-website-not-converting-calls                     / 410
+/plumbing-website-not-converting-calls.html                / 410
+/website-design-for-plumbers-london                        / 410
+/website-design-for-plumbers-london.html                   / 410
+/website-design-for-plumbers-columbus                      / 410
+/website-design-for-plumbers-columbus.html                 / 410
+/q3-estimated-taxes-2026-deadline-guide                    / 410
+/q3-estimated-taxes-2026-deadline-guide.html               / 410
+
+# --- Service Pages ---
+/services/web-design                                       / 410
+/services/web-design.html                                  / 410
+/services/website-development                              / 410
+/services/website-development.html                         / 410
+/services/local-seo                                        / 410
+/services/local-seo.html                                   / 410
+/services/technical-seo                                    / 410
+/services/technical-seo.html                               / 410
+/services/ai-search-optimization                           / 410
+/services/ai-search-optimization.html                      / 410
+/services/conversion-rate-optimization                     / 410
+/services/conversion-rate-optimization.html                / 410
+/services/landing-page-design                              / 410
+/services/landing-page-design.html                         / 410
+/services/wordpress-development                            / 410
+/services/wordpress-development.html                       / 410
+/services/shopify-development                              / 410
+/services/shopify-development.html                         / 410
+/services/website-redesign                                 / 410
+/services/website-redesign.html                            / 410
+/services/website-maintenance                              / 410
+/services/website-maintenance.html                         / 410
+/services/google-business-profile-optimization             / 410
+/services/google-business-profile-optimization.html        / 410
+/services/custom-tools                                     / 410
+/services/custom-tools.html                                / 410
+
+# --- Industry Pages ---
+/industries/dentists                                       / 410
+/industries/dentists.html                                  / 410
+/industries/plumbers                                       / 410
+/industries/plumbers.html                                  / 410
+/industries/lawyers                                        / 410
+/industries/lawyers.html                                   / 410
+/industries/coaches                                        / 410
+/industries/coaches.html                                   / 410
+/industries/hvac                                           / 410
+/industries/hvac.html                                      / 410
+/industries/roofers                                        / 410
+/industries/roofers.html                                   / 410
+/industries/cosmetic-clinics                               / 410
+/industries/cosmetic-clinics.html                          / 410
+/industries/car-detailing                                  / 410
+/industries/car-detailing.html                             / 410
+
+# --- Location Pages (US) ---
+/locations/new-york                                        / 410
+/locations/new-york.html                                   / 410
+/locations/dallas                                          / 410
+/locations/dallas.html                                     / 410
+/locations/houston                                         / 410
+/locations/houston.html                                    / 410
+/locations/austin                                          / 410
+/locations/austin.html                                     / 410
+/locations/miami                                           / 410
+/locations/miami.html                                      / 410
+/locations/chicago                                         / 410
+/locations/chicago.html                                    / 410
+/locations/los-angeles                                     / 410
+/locations/los-angeles.html                                / 410
+
+# --- Location Pages (UK) ---
+/locations/london                                          / 410
+/locations/london.html                                     / 410
+/locations/manchester                                      / 410
+/locations/manchester.html                                 / 410
+/locations/birmingham                                      / 410
+/locations/birmingham.html                                 / 410
+/locations/leeds                                           / 410
+/locations/leeds.html                                      / 410
+/locations/liverpool                                       / 410
+/locations/liverpool.html                                  / 410
+
+# --- Wildcard / Folder Fallbacks ---
+/services/*                                                / 410
+/industries/*                                              / 410
+/locations/*                                               / 410
+
+
